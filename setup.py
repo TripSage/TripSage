@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='octavia',
+    name='tripsage',
     version='1.0.2',
     description='Initial Setup for HW01',
     author=['Dhruvil', 'Sreemoyee', 'Poorvaja', 'Neeraj', 'Sameer'],
