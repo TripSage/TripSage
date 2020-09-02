@@ -5,15 +5,22 @@
     </title>
 </head>
 
+<!-- block/endblock: sections to replace in a template-->
+
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 <body>
     <h1> Choose your Trip </h1>
-    <form action="{% url 'Form:display' trips.id %}" method="post">
+    <form action = "" methood = "POST">
         {% csrf_token %}
+        <table>
+            {{ form.as_table}}
+        </table>
+        <!-- 
         {% for trip in trips.trip_type.all %}
         <input type="radio" name="trip_type" id="trips{{ forloop.counter }}" value="{{ trip_type }}">
+        <!~~ value: initial value in field when first displayed ~~>
         <label for="Trip{{ forloop.counter }}">{{ trips.trip_type }}</label><br>
-        {% endfor %}
+        {% endfor %} -->
 <input type="submit" value="Vote">
 </form>
 </body>
