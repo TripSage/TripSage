@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to TripSage</title>
+    <!-- Custom styles for this template-->
+    <link href="{% static 'css/form-style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+
+<h3>This is the landing page of TripSage</h3>
+
+<div>
+
+  <form>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </form>
+
+</div>
+
+</body>
+
+</html>
