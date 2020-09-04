@@ -1,5 +1,5 @@
 from django.db import models
-from django.forms import ModelForm
+#from django.forms import ModelForm
 
 # Create your models here.
 
@@ -72,13 +72,6 @@ class Visit(models.Model):
             raise ValidationError('End time cannot be before Start')
         return cleaned_data
 
-class CityForm(ModelForm):
-    class Meta:
-        model = City
-        fields = ['cityId', 'cityName']
 
-class TripForm(ModelForm):
-    class Meta:
-        model = Trip
-        fields = ['tripId', 'tripName', 'tran', 'no_people', 'tripType', 'start', 'end']
+
 
