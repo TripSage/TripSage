@@ -19,9 +19,9 @@ class Trip(models.Model):
 
     no_people = models.IntegerField()
     TYPE_TRIP = [
-        ('advt': 'Adventurous'),
-        ('kd': 'Kid-Friendly'),
-        ('relax': 'Relaxing')
+        ('advt', 'Adventurous'),
+        ('kd', 'Kid-Friendly'),
+        ('relax', 'Relaxing')
     ]
     tripType = models.CharField(max_length= 10, choices = TYPE_TRIP)
     start = models.DateField()
@@ -34,7 +34,7 @@ class Trip(models.Model):
         return cleaned_data
 
 class Places(models.Model):
-    placeId = models.Field(primary=True)
+    placeId = models.Field(primary_key=True)
     placeName = models.CharField(max_length = 200)
     timeVisit = models.DateField()
 
@@ -48,10 +48,10 @@ class Contains(models.Model):
 
 class Tags(models.Model):
     TAG =  [
-        ('cv19': 'Covid-19 Warning Zone'),
-        ('ind': 'Indoors'),
-        ('pop': 'Popular'),
-        ('safe': 'Safe Place to Visit during Covid')
+        ('cv19', 'Covid-19 Warning Zone'),
+        ('ind', 'Indoors'),
+        ('pop', 'Popular'),
+        ('safe', 'Safe Place to Visit during Covid')
     ]
     # tags of safe and unsafe depend on population
     tagName = models.CharField(max_length= 10, choices = TAG)
