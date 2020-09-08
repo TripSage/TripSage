@@ -1,0 +1,21 @@
+<!doctype html>
+<head>
+    <title>
+        TripSage
+    </title>
+</head>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+<body>
+    <h1> Choose your Trip </h1>
+    <form action="{% url 'polls:vote' question.id %}" method="post">
+        {% csrf_token %}
+        {% for trip in Trip.trip_type.all %}
+        <input type="radio" name="trip_type" id="Trip{{ forloop.counter }}" value="{{ trip_type }}">
+        <label for="Trip{{ forloop.counter }}">{{ Trip.trip_type }}</label><br>
+        {% endfor %}
+<input type="submit" value="Vote">
+</form>
+</body>
+
+</html>
