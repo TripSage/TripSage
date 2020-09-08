@@ -6,7 +6,7 @@ The only Itinerary planner, you will ever need
 ![GitHub issues](https://img.shields.io/github/issues-raw/TripSage/TripSage)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/TripSage/TripSage)
 ![GitHub](https://img.shields.io/github/license/TripSage/TripSage)
-
+![](http://estruyf-github.azurewebsites.net/api/VisitorHit?user=estruyf&repo=github-visitors-badge&countColorcountColor&countColor=%237B1E7A)
 
 ## Group:
 1. [Dhruvil Shah](mailto:dshah4@ncsu.edu) (dshah4)<br>
