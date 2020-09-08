@@ -64,7 +64,7 @@
                 'z-index': ''
               });
             s.stickyElement.parent().removeClass(s.className);
-            s.stickyElement.trigger('sticky-end', [s]);
+            s.stickyElement.trigger('sticky-endDate', [s]);
             s.currentTop = null;
           }
         }
@@ -96,7 +96,7 @@
             s.stickyElement.parent().addClass(s.className);
 
             if (s.currentTop === null) {
-              s.stickyElement.trigger('sticky-start', [s]);
+              s.stickyElement.trigger('sticky-startDate', [s]);
             } else {
               // sticky is started but it have to be repositioned
               s.stickyElement.trigger('sticky-update', [s]);
@@ -113,7 +113,7 @@
             s.currentTop = newTop;
           }
 
-          // Check if sticky has reached end of container and stop sticking
+          // Check if sticky has reached endDate of container and stop sticking
           var stickyWrapperContainer = s.stickyWrapper.parent();
           var unstick = (s.stickyElement.offset().top + s.stickyElement.outerHeight() >= stickyWrapperContainer.offset().top + stickyWrapperContainer.outerHeight()) && (s.stickyElement.offset().top <= s.topSpacing);
 

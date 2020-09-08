@@ -1,77 +1,87 @@
+from django.core.exceptions import ValidationError
 from django.db import models
-#from django.forms import ModelForm
+from django.forms import ModelForm
 
 # Create your models here.
 
 class City(models.Model):
-    cityId = models.Field(primary_key = True)
-    cityName = models.CharField(max_length = 500)
+    cityId = models.Field(primary_key=True)
+    cityName = models.CharField(max_length=500)
+
 
 class Trip(models.Model):
-    tripId = models.Field(primary_key = True)
-    tripName = models.CharField(max_length = 200)
-    TRANSP = [
+    tripId = models.Field(primary_key=True)
+    tripName = models.CharField(max_length=200)
+    transportMode = [
         ('car', 'Car'),
-        ('bus', 'bus'),
-        ('sub', 'Subway')
+        ('bus', 'Bus'),
+        ('sub', 'Subway'),
+        ('fly', 'Flight')
     ]
-    tran = models.CharField(max_length = 5, choices = TRANSP)
+    transMode = models.CharField(max_length=5, choices=transportMode)
 
-    no_people = models.IntegerField()
-    TYPE_TRIP = [
+    noPeopleTrip = models.IntegerField()
+    typeTrip = [
         ('advt', 'Adventurous'),
         ('kd', 'Kid-Friendly'),
         ('relax', 'Relaxing')
     ]
-    tripType = models.CharField(max_length= 10, choices = TYPE_TRIP)
-    start = models.DateField()
-    end = models.DateField()
-    source_city = models.ForeignKey(City, on_delete = models.CASCADE)
+    tripType = models.CharField(max_length=10, choices=typeTrip)
+    startDate = models.DateField()
+    endDate = models.DateField()
+    sourceCity = models.ForeignKey(City, on_delete=models.CASCADE)
 
     def clean(self):
-        if (end < start):
-            raise ValidationError('End Date cannot be before Start')
-        return cleaned_data
+        if self.endDate < self.startDate:
+            raise ValidationError('Invalid Dates')
+        return
+
 
 class Places(models.Model):
     placeId = models.Field(primary_key=True)
-    placeName = models.CharField(max_length = 200)
+    placeName = models.CharField(max_length=200)
     timeVisit = models.DateField()
 
+
 class Destinations(models.Model):
-    tripId = models.ForeignKey(Trip, on_delete = models.CASCADE)
-    cityID = models.ForeignKey(City, on_delete = models.CASCADE)
+    tripId = models.ForeignKey(Trip, on_delete=models.CASCADE)
+    cityID = models.ForeignKey(City, on_delete=models.CASCADE)
+
 
 class Contains(models.Model):
-    cityID = models.ForeignKey(City, on_delete = models.CASCADE)
-    placeID = models.ForeignKey(Places, on_delete = models.CASCADE)
+    cityID = models.ForeignKey(City, on_delete=models.CASCADE)
+    placeID = models.ForeignKey(Places, on_delete=models.CASCADE)
+
 
 class Tags(models.Model):
-    TAG =  [
+    TAG = [
         ('cv19', 'Covid-19 Warning Zone'),
         ('ind', 'Indoors'),
         ('pop', 'Popular'),
         ('safe', 'Safe Place to Visit during Covid')
     ]
     # tags of safe and unsafe depend on population
-    tagName = models.CharField(max_length= 10, choices = TAG)
-    tagID = models.Field(primary_key = True)
+    tagName = models.CharField(max_length=10, choices=TAG)
+    tagID = models.Field(primary_key=True)
+
 
 class Tagged_as(models.Model):
-    placeID = models.ForeignKey(Places, on_delete = models.CASCADE)
-    tagID = models.ForeignKey(Tags, on_delete = models.CASCADE)
+    placeID = models.ForeignKey(Places, on_delete=models.CASCADE)
+    tagID = models.ForeignKey(Tags, on_delete=models.CASCADE)
+
 
 class Visit(models.Model):
-    tripId = models.ForeignKey(Trip, on_delete = models.CASCADE)
-    placeID = models.ForeignKey(Places, on_delete = models.CASCADE)
+    tripId = models.ForeignKey(Trip, on_delete=models.CASCADE)
+    placeID = models.ForeignKey(Places, on_delete=models.CASCADE)
     start = models.DateField()
     end = models.DateField()
 
     def clean(self):
-        if (end < start):
+        if self.end < self.start:
             raise ValidationError('End time cannot be before Start')
-        return cleaned_data
+        return
 
-
-
-
+class TripForm(ModelForm):
+    class Meta:
+        model = Trip
+        exclude = ['tripId']
