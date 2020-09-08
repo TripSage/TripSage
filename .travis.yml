@@ -1,18 +1,18 @@
- language: python
+language: python
 
- python:
-   - 3.6
-  
- install:
-   - pip install -r requirements.txt
-  
- script:
-   - pytest --flake8
+python:
+ - 3.6
+
+install:
+ - pip install -r requirements.txt
+
+script:
+ - pytest --flake8
 
 
- notifications:
-   email:
-     - ppenmet@ncsu.edu
-     - sadhika2@ncsu.edu
-     - sray9@ncsu.edu
-     - nshukla2@ncsu.edu
+notifications:
+ email:
+   - ppenmet@ncsu.edu
+   - sadhika2@ncsu.edu
+   - sray9@ncsu.edu
+   - nshukla2@ncsu.edu
