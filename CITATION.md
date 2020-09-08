@@ -1,24 +1,22 @@
 # Cite as ...
 
-Dhruvil Shah, PPenmetsa, neeraj, & sameeradh, sray93. <br>
-(2020, August 17).
-dhruvil009/HW01: Version 1.0.2 <br>
-(Version v1.0.2). Zenodo. <br>
-http://doi.org/10.5281/zenodo.3988670
+Dhruvil Shah, PPenmetsa, & sameeradh. <br>
+(2020, September 8).
+TripSage/TripSage: Initial Release  <br>
+(Version v1.0.0). Zenodo. <br>
+https://doi.org/10.5281/zenodo.4019814
 
 ```bibtex
-@software{dhruvil_shah_2020_3988670,
+@software{dhruvil_shah_2020_4019814,
   author       = {Dhruvil Shah and
                   PPenmetsa and
-                  neeraj and
-                  sameeradh and
-                  sray93},
-  title        = {dhruvil009/HW01: Version 1.0.2},
-  month        = aug,
+                  sameeradh},
+  title        = {TripSage/TripSage: Initial Release},
+  month        = sep,
   year         = 2020,
   publisher    = {Zenodo},
-  version      = {v1.0.2},
-  doi          = {10.5281/zenodo.3988670},
-  url          = {https://doi.org/10.5281/zenodo.3988670}
+  version      = {v1.0.0},
+  doi          = {10.5281/zenodo.4019814},
+  url          = {https://doi.org/10.5281/zenodo.4019814}
 }
 ```
