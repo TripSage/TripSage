@@ -12,6 +12,6 @@ class TripForm(ModelForm):
     class Meta:
         modelT = models.Trip
         modelP = models.Places
-        fields = ['tripId', 'tripName', 'tran', 'no_people', 'tripType', 'start', 'end', 'placeName']
+        fields = ['tripId', 'tripName', 'transMode', 'noPeopleTrip', 'tripType', 'startDate', 'endDate', 'placeName']
 
 # TO DO: create forms and validation for PlaceID vs TripID 

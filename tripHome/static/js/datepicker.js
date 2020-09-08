@@ -44,16 +44,16 @@ var DEFAULTS = {
   // The initial date
   date: null,
 
-  // The start view date
+  // The startDate view date
   startDate: null,
 
-  // The end view date
+  // The endDate view date
   endDate: null,
 
-  // The start view when initialized
+  // The startDate view when initialized
   startView: 0, // 0 for days, 1 for months, 2 for years
 
-  // The start day of the week
+  // The startDate day of the week
   // 0 for Sunday, 1 for Monday, 2 for Tuesday, 3 for Wednesday,
   // 4 for Thursday, 5 for Friday, 6 for Saturday
   weekStart: 0,
@@ -440,7 +440,7 @@ var methods = {
 
 
   /**
-   * Set the start view date with a new date
+   * Set the startDate view date with a new date
    *
    * @param {Date} date
    */
@@ -456,7 +456,7 @@ var methods = {
 
 
   /**
-   * Set the end view date with a new date
+   * Set the endDate view date with a new date
    *
    * @param {Date} date
    */
