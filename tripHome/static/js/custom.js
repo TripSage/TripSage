@@ -197,4 +197,27 @@ $(document).ready(function(){
 
 });	
 
+$("#destinationSelection").select2({
+    maximumSelectionLength: 2
+  });
+
+  $("#sourceSelection").select2({
+    maximumSelectionLength: 1
+  });
+
+  $("#travelSelection").select2({
+    maximumSelectionLength: 2
+  });
+
+  $("#transportSelection").select2({
+    maximumSelectionLength: 2
+  });
+
+  function saveData(){
+
+    destination_choices = [];
+    var destinationChoice = $("#destinationSelection").select2('data');
+    destinationChoice.forEach(function(d){destination_choices.push(d.id)});
+    console.log("Hello")
+  }
 	
