@@ -1,6 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.db import models
-
+from django.forms import ModelForm
 
 # Create your models here.
 
@@ -81,3 +81,7 @@ class Visit(models.Model):
             raise ValidationError('End time cannot be before Start')
         return
 
+class TripForm(ModelForm):
+    class Meta:
+        model = Trip
+        exclude = ['tripId']
