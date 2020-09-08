@@ -8,6 +8,19 @@ The only Itinerary planner, you will ever need
 ![GitHub](https://img.shields.io/github/license/TripSage/TripSage)
 ![](http://estruyf-github.azurewebsites.net/api/VisitorHit?user=estruyf&repo=github-visitors-badge&countColorcountColor&countColor=%237B1E7A)
 
+## How to Run: </br>
+Navigate to the folder TripSage, this is the Django project. </br>
+Run on the command line: </br>
+
+python manage.py runserver
+</br>
+This will run the html homepage.
+</br>
+## Inspirations: </br>
+1. Sygic Travel </br>
+This travel website creates a personalized itinerary when users give information about where they are going for the number of days they plan for by creating a custom itinerary of the top attractions in that place, along with where they should go on which day. The app clubs nearby attractions together, along with timings of nearby attractions.
+
+</br>
 ## Group:
 1. [Dhruvil Shah](mailto:dshah4@ncsu.edu) (dshah4)<br>
 2. [Neeraj Shukla](mailto:nshukla2@ncsu.edu) (nshukla2)<br>
