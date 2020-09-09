@@ -1,16 +1,16 @@
 from django.core.exceptions import ValidationError
 from django.db import models
-from django.forms import ModelForm
+
 
 # Create your models here.
 
 class City(models.Model):
-    cityId = models.Field(primary_key=True)
+    cityId = models.AutoField(primary_key=True)
     cityName = models.CharField(max_length=500)
 
 
 class Trip(models.Model):
-    tripId = models.Field(primary_key=True)
+    tripId = models.AutoField(primary_key=True)
     tripName = models.CharField(max_length=200)
     transportMode = [
         ('car', 'Car'),
@@ -38,7 +38,7 @@ class Trip(models.Model):
 
 
 class Places(models.Model):
-    placeId = models.Field(primary_key=True)
+    placeId = models.AutoField(primary_key=True)
     placeName = models.CharField(max_length=200)
     timeVisit = models.DateField()
 
@@ -81,7 +81,3 @@ class Visit(models.Model):
             raise ValidationError('End time cannot be before Start')
         return
 
-class TripForm(ModelForm):
-    class Meta:
-        model = Trip
-        exclude = ['tripId']

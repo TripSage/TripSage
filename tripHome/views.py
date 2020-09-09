@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from . models import Trip
+from . forms import TripForm
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
@@ -8,19 +9,32 @@ from django.views.decorators.csrf import csrf_exempt
 def postData(request):
     if request.is_ajax():
         #do something
-        request_data = request.POST
+        tripInstance = Trip()
+        form = TripForm(request.POST or None)
+        if form.is_valid():
+            tripInstance.transp = request.POST['transp']
+            # iterating over choice in html:
+            # {% for value, text in form.[field_name].field.choices %}
+            # {{ value }}: {{ text }}
+            # % endfor %}
+            tripInstance.no_people = request.POST['no_people']
+            tripInstance.start = request.POST['start_date']
+            tripInstance.end = request.POST['end_date']
+            tripInstance.source_city = request.POST['source_city']
+
+        #request_data = request.POST
         return HttpResponse("OK")
 
-        try:
-            transp = request.POST['transp']
-            no_people = request.POST['no_people']
-            start = request.POST['start_date']
-            end = request.POST['end_date']
-            source_city = request.POST['soource_city']
+        # try:
+        #     transp = request.POST['transp']
+        #     no_people = request.POST['no_people']
+        #     start = request.POST['start_date']
+        #     end = request.POST['end_date']
+        #     source_city = request.POST['soource_city']
 
-        except (KeyError, Trip.DoesNotExist):
-        #return render(request)
-            return None
+        # except (KeyError, Trip.DoesNotExist):
+        # #return render(request)
+        #     return None
 
 
 def index(request):
