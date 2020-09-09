@@ -5,18 +5,13 @@ $(document).ready(function(){
     
 
         /*==================================
-
 * Author        : "ThemeSine"
-
 * Template Name : Travel HTML Template
-
 * Version       : 1.0
-
 ==================================== */
 
 
         /*=========== TABLE OF CONTENTS ===========
-
 1. Scroll To Top
 2. Range js
 3. Countdown timer
@@ -218,6 +213,40 @@ $("#destinationSelection").select2({
     destination_choices = [];
     var destinationChoice = $("#destinationSelection").select2('data');
     destinationChoice.forEach(function(d){destination_choices.push(d.id)});
-    console.log("Hello")
+
+    source_choices = [];
+    var sourceChoice = $("#sourceSelection").select2('data');
+    sourceChoice.forEach(function(d){source_choices.push(d.id)});
+    source_choices = source_choices[0];
+
+    trip_kinds = [];
+    var tripKind = $("#travelSelection").select2('data');
+    tripKind.forEach(function(d){trip_kinds.push(d.id)});
+
+    mode_transports =[];
+    var modeTransport = $("#transportSelection").select2('data');
+    modeTransport.forEach(function(d){mode_transports.push(d.id)});
+
+    start_date = $("#start_date")[0].value
+    end_date = $("#end_date")[0].value
+
+    members_count = $("#members_count")[0].value
+
+    budget_range = $("#amount")[0].value
+    var token = '{{csrf_token}}';
+    $.ajax({
+        headers: { "X-CSRFToken": token },
+        method: 'POST',
+        url: 'ajax/submit/',
+        data: {'yourJavaScriptArrayKey': members_count},
+  
+        success: function (data) {
+             //this gets called when server returns an OK response
+             alert("it worked!");
+        },
+        error: function (data) {
+             alert("it didnt work");
+        }
+    });
+
   }
-	
