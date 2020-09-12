@@ -34,7 +34,7 @@ This project and everyone participating in it is governed by the [Code of Conduc
 
 
 ## You are contributing to this repository which is under Apache License: 🏅
-Refer [LICENSE](https://github.com/dhruvil009/HW01/blob/master/LICENSE) for more information
+Refer [LICENSE](https://github.com/TripSage/TripSage/blob/master/LICENSE) for more information
 
 
 ## Styleguides
