@@ -8,6 +8,9 @@ The only Itinerary planner, you will ever need
 ![GitHub](https://img.shields.io/github/license/TripSage/TripSage)
 ![](http://estruyf-github.azurewebsites.net/api/VisitorHit?user=estruyf&repo=github-visitors-badge&countColorcountColor&countColor=%237B1E7A)
 
+[<img src = "https://github.com/TripSage/TripSage/blob/master/Assets/TripSage%20Playable.png">](https://youtu.be/mCrnA4Ykzn4)
+
+
 ## How to Run: </br>
 Navigate to the folder TripSage, this is the Django project. </br>
 Run on the command line: </br>
