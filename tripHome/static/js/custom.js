@@ -208,45 +208,79 @@ $("#destinationSelection").select2({
     maximumSelectionLength: 2
   });
 
-  function saveData(){
+//   const userAction = async () => {
+//       alert("Entered");
+//   const response = await fetch("https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Raleigh&key=AIzaSyAIsboWfXVchmgBxPGKG5lUF9AENUKcSI8");
+//   const myJson = await response.json(); //extract JSON from the http response
+//   alert(myJson);
+// }
+// async function userAction() {
+//     alert("entered");
+//     var xhttp = new XMLHttpRequest();
+//     xhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//       document.getElementsByClassName("html-tag").innerHTML = this.responseText;
+//     }
+//   };
+//   xhttp.open("GET", "demo_get.asp", true);
+//   xhttp.send();
+// }
+  // function saveData(){
+  //
+  //   destination_choices = [];
+  //   var destinationChoice = $("#destinationSelection").select2('data');
+  //   destinationChoice.forEach(function(d){destination_choices.push(d.id)});
+  //   var destination = destination_choices[0];
+  //   var request = new XMLHttpRequest();
+  //   request.open('GET', "https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Raleigh&key=AIzaSyAIsboWfXVchmgBxPGKG5lUF9AENUKcSI8", true);
+  //   request.onload = function () {
+  // // Begin accessing JSON data here
+  //        var data = JSON.parse(this.response)
+  //
+  //         if (request.status >= 200 && request.status < 400) {
+  //           data.forEach((movie) => {
+  //             console.log(movie.title)
+  //           })
+  //         } else {
+  //           console.log('error')
+  //         }
+  //       }
+  //
+  //       request.send()
+  //
+  //   source_choices = [];
+  //   var sourceChoice = $("#sourceSelection").select2('data');
+  //   sourceChoice.forEach(function(d){source_choices.push(d.id)});
+  //   source_choices = source_choices[0];
+  //
+  //   trip_kinds = [];
+  //   var tripKind = $("#travelSelection").select2('data');
+  //   tripKind.forEach(function(d){trip_kinds.push(d.id)});
+  //
+  //   mode_transports =[];
+  //   var modeTransport = $("#transportSelection").select2('data');
+  //   modeTransport.forEach(function(d){mode_transports.push(d.id)});
+  //
+  //   start_date = $("#start_date")[0].value
+  //   end_date = $("#end_date")[0].value
+  //
+  //   members_count = $("#members_count")[0].value
+  //
+  //   budget_range = $("#amount")[0].value
+    // var token = '{{csrf_token}}';
+    // $.ajax({
+    //     headers: { "X-CSRFToken": token },
+    //     method: 'POST',
+    //     url: 'ajax/submit/',
+    //     data: {'yourJavaScriptArrayKey': members_count},
+    //
+    //     success: function (data) {
+    //          //this gets called when server returns an OK response
+    //          alert("it worked!");
+    //     },
+    //     error: function (data) {
+    //          alert("it didnt work");
+    //     }
+    // });
 
-    destination_choices = [];
-    var destinationChoice = $("#destinationSelection").select2('data');
-    destinationChoice.forEach(function(d){destination_choices.push(d.id)});
-
-    source_choices = [];
-    var sourceChoice = $("#sourceSelection").select2('data');
-    sourceChoice.forEach(function(d){source_choices.push(d.id)});
-    source_choices = source_choices[0];
-
-    trip_kinds = [];
-    var tripKind = $("#travelSelection").select2('data');
-    tripKind.forEach(function(d){trip_kinds.push(d.id)});
-
-    mode_transports =[];
-    var modeTransport = $("#transportSelection").select2('data');
-    modeTransport.forEach(function(d){mode_transports.push(d.id)});
-
-    start_date = $("#start_date")[0].value
-    end_date = $("#end_date")[0].value
-
-    members_count = $("#members_count")[0].value
-
-    budget_range = $("#amount")[0].value
-    var token = '{{csrf_token}}';
-    $.ajax({
-        headers: { "X-CSRFToken": token },
-        method: 'POST',
-        url: 'ajax/submit/',
-        data: {'yourJavaScriptArrayKey': members_count},
-  
-        success: function (data) {
-             //this gets called when server returns an OK response
-             alert("it worked!");
-        },
-        error: function (data) {
-             alert("it didnt work");
-        }
-    });
-
-  }
+  // }

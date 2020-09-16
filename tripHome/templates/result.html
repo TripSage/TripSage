@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restuarants</title>
+</head>
+<body>
+<p>List of Restaurants in Raleigh with their ratings out of 5</p>
+<div class="data">
+    {% for res in data %}
+        <li>{{ res|safe }}</li>
+    {% endfor %}
+</div><!--/.col-->
+
+</body>
+</html>

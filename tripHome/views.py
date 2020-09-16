@@ -1,10 +1,42 @@
+import xmltodict
 from django.shortcuts import render
 from . models import Trip
 from . forms import TripForm
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+import xml.etree.ElementTree as ET
+import requests
+import json
 
-# Create your views here.
+def getResponse(request):
+    response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Raleigh"
+                            "&key=AIzaSyAIsboWfXVchmgBxPGKG5lUF9AENUKcSI8")
+    root = ET.fromstring(response.content)
+    print(root)
+    root = ET.fromstring(response.content)
+    data_dict = xmltodict.parse(response.content)
+    json_data = json.dumps(data_dict)
+    results = json.loads(json_data)
+    values = results.items()
+    list_items = []
+    for item in values:
+        list_items = item
+    a = list_items[1].items()
+    val = []
+    for b in a:
+        val.append(b)
+    data = val[1][1]
+    items_name = []
+    items_rating = []
+    for item in data:
+        r = json.dumps(item)
+        loaded_r = json.loads(r)
+        items_name.append(loaded_r['name'])
+        items_rating.append(loaded_r['rating'])
+
+    new_data = zip(items_name, items_rating)
+    return render(request, 'result.html', {'data': new_data})
+
 @csrf_exempt
 def postData(request):
     if request.is_ajax():
