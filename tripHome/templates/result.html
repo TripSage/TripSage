@@ -1,16 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Restuarants</title>
-</head>
-<body>
-<p>List of Restaurants in Raleigh with their ratings out of 5</p>
-<div class="data">
-    {% for res in data %}
-        <li>{{ res|safe }}</li>
-    {% endfor %}
-</div><!--/.col-->
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    {% load static %}#}
+{#    <link rel="stylesheet" href= "{% static 'css/SuggestionsPage.css' %}" />#}
+{#    <meta charset="UTF-8">#}
+{#    <title>TripSage</title>#}
+{#</head>#}
+{#<body>#}
+{#<p>List of Restaurants in Raleigh with their ratings out of 5</p>#}
+{#<div class="data">#}
+{#    {% for res in data %}#}
+{#        <div class="card">#}
+{#            <img src="https://s26561.pcdn.co/wp-content/uploads/2017/06/Louisville-KY1.jpg" alt="Avatar" style="width:100%">#}
+{#            <div class="container">#}
+{#                <div>#}
+{#                    <h4><b>{{ res|safe }}</b></h4>#}
+{#                    <p>{{ "covid" }}</p>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#    {% endfor %}#}
+{#</div><!--/.col-->#}
+{##}
+{#</body>#}
+{#</html>#}
 
+<body>
+  <div class="py-5">
+    <div class="container">
+      {% for res in data %}
+          <div class="row hidden-md-up">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-block">
+                  <img src="https://s26561.pcdn.co/wp-content/uploads/2017/06/Louisville-KY1.jpg" alt="Avatar" style="width:100%">
+                  <h4 class="card-title">{{ res.0 }}</h4>
+                  <h6 class="card-subtitle text-muted">Covid | {{ res.1 }} | {{ len(data) }} | BestTime</h6>
+                  <p class="card-text p-y-1">Description of Place.</p>
+                  <a href="#" class="card-link">Remove</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-block">
+                  <img src="https://s26561.pcdn.co/wp-content/uploads/2017/06/Louisville-KY1.jpg" alt="Avatar" style="width:100%">
+                  <h4 class="card-title">{{ res.0 }}</h4>
+                  <h6 class="card-subtitle text-muted">Covid | {{ res.1 }} |  BestTime</h6>
+                  <p class="card-text p-y-1">Description of Place.</p>
+                  <a href="#" class="card-link">Remove</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-block">
+                  <img src="https://s26561.pcdn.co/wp-content/uploads/2017/06/Louisville-KY1.jpg" alt="Avatar" style="width:100%">
+                  <h4 class="card-title">{{ res.0 }}</h4>
+                  <h6 class="card-subtitle text-muted">Covid | {{ res.1 }} |  BestTime</h6>
+                  <p class="card-text p-y-1">Description of Place.</p>
+                  <a href="#" class="card-link">Remove</a>
+                </div>
+              </div>
+            </div>
+          </div><br>
+        {% endfor %}
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
 </body>
-</html>

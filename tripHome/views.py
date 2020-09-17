@@ -9,7 +9,7 @@ import requests
 import json
 
 def getResponse(request):
-    response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Raleigh"
+    response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Mumbai"
                             "&key=AIzaSyAIsboWfXVchmgBxPGKG5lUF9AENUKcSI8")
     root = ET.fromstring(response.content)
     print(root)
@@ -31,9 +31,10 @@ def getResponse(request):
     for item in data:
         r = json.dumps(item)
         loaded_r = json.loads(r)
-        items_name.append(loaded_r['name'])
-        items_rating.append(loaded_r['rating'])
-
+        items_name.append(str(loaded_r['name']))
+        items_rating.append(str(loaded_r['rating']))
+    items_name = items_name[:6]
+    items_rating = items_rating[:6]
     new_data = zip(items_name, items_rating)
     return render(request, 'result.html', {'data': new_data})
 
