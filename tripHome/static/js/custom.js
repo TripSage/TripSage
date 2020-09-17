@@ -228,21 +228,24 @@ $("#destinationSelection").select2({
     data_dict["startDate"]=start_date;
     data_dict["endDate"]=end_date;
 
-    var token = '{{csrf_token}}';
-    $.ajax({
-        headers: { "X-CSRFToken": token },
-        method: 'POST',
-        content_type='application/json',
-        url: 'ajax/submit/',
-        data: {'requestData': JSON.stringify(data_dict)},
-    
-        success: function (data) {
-             //this gets called when server returns an OK response
-             alert("it worked!");
-        },
-        error: function (data) {
-             alert("it didnt work");
-        }
-    });
+    localStorage.clear();
+    localStorage.setItem("searchItems",JSON.stringify(data_dict))
+    var url = 'submit/restaurants'; 
+    document.location.href = url;
+
+    // var token = '{{csrf_token}}';
+    // $.ajax({
+    //     headers: { "X-CSRFToken": token },
+    //     method: 'POST',
+    //     url: 'ajax/submit/',
+    //     data: {'requestData': JSON.stringify(data_dict)},
+    //     success: function (data) {
+    //         var url = 'submit/restaurants'; 
+    //         document.location.href = url;
+    //     },
+    //     error: function (data) {
+    //          alert("it didnt work");
+    //     }
+    // });
 
   }

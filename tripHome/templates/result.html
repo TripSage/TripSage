@@ -5,6 +5,8 @@
     <title>Restuarants</title>
 </head>
 <body>
+{% load static %}
+<script src="{% static 'js/resultsPage.js' %}"></script>
 <p>List of Restaurants in Raleigh with their ratings out of 5</p>
 <div class="data">
     {% for res in data %}
