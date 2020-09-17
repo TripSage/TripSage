@@ -8,7 +8,7 @@ The only Itinerary planner, you will ever need
 ![GitHub](https://img.shields.io/github/license/TripSage/TripSage)
 ![](http://estruyf-github.azurewebsites.net/api/VisitorHit?user=estruyf&repo=github-visitors-badge&countColorcountColor&countColor=%237B1E7A)
 
-[<img src = "https://github.com/TripSage/TripSage/blob/master/Assets/TripSage%20Playable.png">](https://youtu.be/mCrnA4Ykzn4)
+[<img src = "https://github.com/TripSage/TripSage/blob/master/Assets/TripSage%20Playable.png">](https://youtu.be/N0GYVmutWzM)
 
 
 ## How to Run: </br>
@@ -25,6 +25,7 @@ This travel website creates a personalized itinerary when users give information
 
 </br>
 ## Group:
+
 1. [Dhruvil Shah](mailto:dshah4@ncsu.edu) (dshah4)<br>
 2. [Neeraj Shukla](mailto:nshukla2@ncsu.edu) (nshukla2)<br>
 3. [Poorvaja Penmetsa](mailto:ppenmet@ncsu.edu) (ppenmet)<br>
