@@ -10,13 +10,15 @@ import json
 
 @csrf_exempt
 def getResponse(request):
-<<<<<<< HEAD
-    response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Mumbai"
-=======
+
     clientData = json.loads(request.POST['requestData'])
-    response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Raleigh"
->>>>>>> 22119095a8c6730b7ebde013110a2662627a310f
-                            "&key=AIzaSyAIsboWfXVchmgBxPGKG5lUF9AENUKcSI8")
+    location = clientData["destination"]
+    #save data by user
+    # change resposne url
+    # multiple response
+    # create dictionary
+    api = "https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+"+location+"&key=AIzaSyAIsboWfXVchmgBxPGKG5lUF9AENUKcSI8"
+    response = requests.get(api)
     root = ET.fromstring(response.content)
     root = ET.fromstring(response.content)
     data_dict = xmltodict.parse(response.content)

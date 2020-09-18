@@ -8,14 +8,13 @@ $(document).ready(function(){
         url: 'results',
         data: {'requestData': localStorage.getItem("searchItems")},
         success: function (data) {
-            console.log("Hi");
+            document.getElementById("data").innerHTML=data; 
         },
         error: function (data) {
              alert("it didnt work");
         }
     });
 
-        
 
 });	
 
