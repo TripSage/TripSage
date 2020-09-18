@@ -4,6 +4,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class City(models.Model):
     cityId = models.AutoField(primary_key=True)
     cityName = models.CharField(max_length=500)
@@ -13,19 +14,15 @@ class Trip(models.Model):
     tripId = models.AutoField(primary_key=True)
     tripName = models.CharField(max_length=200)
     transportMode = [
-        ('car', 'Car'),
-        ('bus', 'Bus'),
-        ('sub', 'Subway'),
-        ('fly', 'Flight')
+        ("car", "Car"),
+        ("bus", "Bus"),
+        ("sub", "Subway"),
+        ("fly", "Flight"),
     ]
     transMode = models.CharField(max_length=5, choices=transportMode)
 
     noPeopleTrip = models.IntegerField()
-    typeTrip = [
-        ('advt', 'Adventurous'),
-        ('kd', 'Kid-Friendly'),
-        ('relax', 'Relaxing')
-    ]
+    typeTrip = [("advt", "Adventurous"), ("kd", "Kid-Friendly"), ("relax", "Relaxing")]
     tripType = models.CharField(max_length=10, choices=typeTrip)
     startDate = models.DateField()
     endDate = models.DateField()
@@ -33,7 +30,7 @@ class Trip(models.Model):
 
     def clean(self):
         if self.endDate < self.startDate:
-            raise ValidationError('Invalid Dates')
+            raise ValidationError("Invalid Dates")
         return
 
 
@@ -55,10 +52,10 @@ class Contains(models.Model):
 
 class Tags(models.Model):
     TAG = [
-        ('cv19', 'Covid-19 Warning Zone'),
-        ('ind', 'Indoors'),
-        ('pop', 'Popular'),
-        ('safe', 'Safe Place to Visit during Covid')
+        ("cv19", "Covid-19 Warning Zone"),
+        ("ind", "Indoors"),
+        ("pop", "Popular"),
+        ("safe", "Safe Place to Visit during Covid"),
     ]
     # tags of safe and unsafe depend on population
     tagName = models.CharField(max_length=10, choices=TAG)
@@ -78,6 +75,5 @@ class Visit(models.Model):
 
     def clean(self):
         if self.end < self.start:
-            raise ValidationError('End time cannot be before Start')
+            raise ValidationError("End time cannot be before Start")
         return
-

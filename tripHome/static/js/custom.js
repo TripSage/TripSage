@@ -1,251 +1,159 @@
-$(document).ready(function(){
+$(document).ready(function () {
+  "use strict";
 
-	"use strict";
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 600) {
+      $(".return-to-top").fadeIn();
+    } else {
+      $(".return-to-top").fadeOut();
+    }
+  });
 
+  $(".return-to-top").on("click", function () {
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      1500
+    );
 
-		$(window).on('scroll',function () {
+    return false;
+  });
 
-			if ($(this).scrollTop() > 600) {
-
-				$('.return-to-top').fadeIn();
-
-			} else {
-
-				$('.return-to-top').fadeOut();
-
-			}
-
-		});
-
-		$('.return-to-top').on('click',function(){
-
-				$('html, body').animate({
-
-				scrollTop: 0
-
-			}, 1500);
-
-			return false;
-
-		});
-
-    // 2. range js
-        
-        $( "#slider-range" ).slider({
-            range: true,
-            min: 0,
-            max: 12000,
-            values: [ 2677, 9241 ],
-            slide: function( event, ui ) {
-            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-            }
-        });
-        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-        
-        
-        // Quantity Buttons Shop
-    
-        $(".qtyplus").on("click", function(){
-        var b = $(this).parents(".quantity-form").find("input.qty"),
-                c = parseInt(b.val(), 10) + 1,
-                d = parseInt(b.attr("max"), 10);
-            d || (d = 9999999999), c <= d && (b.val(c), b.change())
-        });
-        $(".qtyminus").on("click", function(){
-            var b = $(this).parents(".quantity-form").find("input.qty"),
-                c = parseInt(b.val(), 10) - 1,
-                d = parseInt(b.attr("min"), 10);
-            d || (d = 1), c >= d && (b.val(c), b.change())
-        });
+  $("#slider-range").slider({
+    range: true,
+    min: 0,
+    max: 12000,
+    values: [2677, 9241],
+    slide: function (event, ui) {
+      $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+    },
+  });
+  $("#amount").val(
+    "$" +
+      $("#slider-range").slider("values", 0) +
+      " - $" +
+      $("#slider-range").slider("values", 1)
+  );
 
 
-    // 3.Countdown timer 
-        
-        function makeTimer() {
 
-                var endTime = new Date("March 7, 2018 12:00:00 PDT");            
-                var endTime = (Date.parse(endTime)) / 1000;
+  // 5. datepicker
+  $('[data-toggle="datepicker"]').datepicker();
 
-                var now = new Date();
-                var now = (Date.parse(now) / 1000);
+  // 6. Smooth Scroll spy
 
-                var timeLeft = endTime - now;
+  $(".header-area").sticky({
+    topSpacing: 0,
+  });
 
-                var days = Math.floor(timeLeft / 86400); 
-                var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
-                var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
-                var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+  //=============
 
-                if (hours < "10") { hours = "0" + hours; }
-                if (minutes < "10") { minutes = "0" + minutes; }
-                if (seconds < "10") { seconds = "0" + seconds; }
+  $("li.smooth-menu a").bind("click", function (event) {
+    event.preventDefault();
+    var anchor = $(this);
+    $("html, body")
+      .stop()
+      .animate(
+        {
+          scrollTop: $(anchor.attr("href")).offset().top - -1,
+        },
+        1200,
+        "easeInOutExpo"
+      );
+  });
 
-                $("#days").html(days + '<span class="camp">Days</span>');
-                $("#hours").html(hours + '<span class="camp">Hour</span>');
-                $("#minutes").html(minutes + '<span class="camp">Minute</span>');
-                $("#seconds").html(seconds + '<span class="camp">Second</span>');       
+  $("body").scrollspy({
+    target: ".navbar-collapse",
+    offset: 0,
+  });
 
-        }
-        
-        setInterval(function() { makeTimer(); }, 1000);
+  // 7.animation support
 
-    // 4. owl carousel
-    
-        // i. #testimonial-carousel
-    
-        
-        var owl=$('#testemonial-carousel');
-        owl.owlCarousel({
-            items:3,
-            margin:0,
-            
-            loop:true,
-            autoplay:true,
-            smartSpeed:1000,
-            
-            //nav:false,
-            //navText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-            
-            dots:true,
-            autoplayHoverPause:true,
-        
-            responsiveClass:true,
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    640:{
-                        items:1
-                    },
-                    767:{
-                        items:2
-                    },
-                    992:{
-                        items:3
-                    }
-                }
-            
-            
-        });
+  $(window).load(function () {
+    $(".about-us-txt h2")
+      .removeClass("animated fadeInUp")
+      .css({ opacity: "0" });
+    $(".about-us-txt button")
+      .removeClass("animated fadeInDown")
+      .css({ opacity: "0" });
+  });
 
-    // 5. datepicker
-            $('[data-toggle="datepicker"]').datepicker();
+  $(window).load(function () {
+    $(".about-us-txt h2").addClass("animated fadeInUp").css({ opacity: "0" });
+    $(".about-us-txt button")
+      .addClass("animated fadeInDown")
+      .css({ opacity: "0" });
+  });
+});
 
-    // 6. Smooth Scroll spy
-        
-        $('.header-area').sticky({
-           topSpacing:0
-        });
-        
-        //=============
-
-        $('li.smooth-menu a').bind("click", function(event) {
-            event.preventDefault();
-            var anchor = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $(anchor.attr('href')).offset().top - -1
-            }, 1200,'easeInOutExpo');
-        });
-        
-        $('body').scrollspy({
-            target:'.navbar-collapse',
-            offset:0
-        });
-
-    // 7.animation support
-
-        $(window).load(function(){
-
-            $(".about-us-txt h2").removeClass("animated fadeInUp").css({'opacity':'0'});
-            $(".about-us-txt button").removeClass("animated fadeInDown").css({'opacity':'0'});
-        });
-
-        $(window).load(function(){
-
-            $(".about-us-txt h2").addClass("animated fadeInUp").css({'opacity':'0'});
-            $(".about-us-txt button").addClass("animated fadeInDown").css({'opacity':'0'});
-
-        });
-        
-
-});	
-
+// Initializing the forms as select2, select2 provides a flexibility over select tag
 $("#destinationSelection").select2({
-    maximumSelectionLength: 2
+  maximumSelectionLength: 2,
+});
+
+$("#sourceSelection").select2({
+  maximumSelectionLength: 1,
+});
+
+$("#travelSelection").select2({
+  maximumSelectionLength: 2,
+});
+
+$("#transportSelection").select2({
+  maximumSelectionLength: 2,
+});
+
+// Function which collects the user data in localstorage
+function saveData() {
+  destination_choices = [];
+  var destinationChoice = $("#destinationSelection").select2("data");
+  destinationChoice.forEach(function (d) {
+    destination_choices.push(d.id);
+  });
+  var destination = destination_choices[0];
+
+  data_dict = {};
+
+  source_choices = [];
+  var sourceChoice = $("#sourceSelection").select2("data");
+  sourceChoice.forEach(function (d) {
+    source_choices.push(d.id);
+  });
+  source_choices = source_choices[0];
+
+  trip_kinds = [];
+  var tripKind = $("#travelSelection").select2("data");
+  tripKind.forEach(function (d) {
+    trip_kinds.push(d.id);
   });
 
-  $("#sourceSelection").select2({
-    maximumSelectionLength: 1
+  mode_transports = [];
+  var modeTransport = $("#transportSelection").select2("data");
+  modeTransport.forEach(function (d) {
+    mode_transports.push(d.id);
   });
 
-  $("#travelSelection").select2({
-    maximumSelectionLength: 2
-  });
+  start_date = $("#start_date")[0].value;
+  end_date = $("#end_date")[0].value;
 
-  $("#transportSelection").select2({
-    maximumSelectionLength: 2
-  });
+  members_count = $("#members_count")[0].value;
+  budget_range = $("#amount")[0].value;
 
+  data_dict["source"] = source_choices;
+  data_dict["destination"] = destination;
+  data_dict["tripType"] = trip_kinds;
+  data_dict["modeTransport"] = modeTransport;
+  data_dict["startDate"] = start_date;
+  data_dict["endDate"] = end_date;
 
-  function saveData(){
+  // clear the local storage
+  localStorage.clear();
+
+  //save the data to local storage
+  localStorage.setItem("searchItems", JSON.stringify(data_dict));
   
-    destination_choices = [];
-    var destinationChoice = $("#destinationSelection").select2('data');
-    destinationChoice.forEach(function(d){destination_choices.push(d.id)});
-    var destination = destination_choices[0];
-  
-    data_dict={}
-    
-    source_choices = [];
-    var sourceChoice = $("#sourceSelection").select2('data');
-    sourceChoice.forEach(function(d){source_choices.push(d.id)});
-    source_choices = source_choices[0];
-   
-  
-    trip_kinds = [];
-    var tripKind = $("#travelSelection").select2('data');
-    tripKind.forEach(function(d){trip_kinds.push(d.id)});
-    
-  
-    mode_transports =[];
-    var modeTransport = $("#transportSelection").select2('data');
-    modeTransport.forEach(function(d){mode_transports.push(d.id)});
-   
-  
-    start_date = $("#start_date")[0].value
-    end_date = $("#end_date")[0].value
-
-
-  
-    members_count = $("#members_count")[0].value
-    budget_range = $("#amount")[0].value
-
-    data_dict["source"]=source_choices;
-    data_dict["destination"]=destination;
-    data_dict["tripType"]=trip_kinds;
-    data_dict["modeTransport"]=modeTransport;
-    data_dict["startDate"]=start_date;
-    data_dict["endDate"]=end_date;
-
-    localStorage.clear();
-    localStorage.setItem("searchItems",JSON.stringify(data_dict))
-    var url = 'search'; 
-    document.location.href = url;
-
-    // var token = '{{csrf_token}}';
-    // $.ajax({
-    //     headers: { "X-CSRFToken": token },
-    //     method: 'POST',
-    //     url: 'ajax/submit/',
-    //     data: {'requestData': JSON.stringify(data_dict)},
-    //     success: function (data) {
-    //         var url = 'submit/restaurants'; 
-    //         document.location.href = url;
-    //     },
-    //     error: function (data) {
-    //          alert("it didnt work");
-    //     }
-    // });
-
-  }
+  //redirect to results page
+  var url = "search";
+  document.location.href = url;
+}
