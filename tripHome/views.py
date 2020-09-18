@@ -30,8 +30,8 @@ def getResponse(request):
         + "&key=AIzaSyAIsboWfXVchmgBxPGKG5lUF9AENUKcSI8"
     )
     response = requests.get(api)
-    root = ET.fromstring(response.content)
-    root = ET.fromstring(response.content)
+    # root used to debug and print user dictionary
+    # root = ET.fromstring(response.content)
     data_dict = xmltodict.parse(response.content)
     json_data = json.dumps(data_dict)
     results = json.loads(json_data)

@@ -97,7 +97,7 @@ $("#sourceSelection").select2({
 });
 
 $("#travelSelection").select2({
-  maximumSelectionLength: 2,
+  maximumSelectionLength: 1,
 });
 
 $("#transportSelection").select2({

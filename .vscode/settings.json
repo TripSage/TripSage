@@ -1,0 +1,7 @@
+{
+    "debug.allowBreakpointsEverywhere": true,
+    "python.dataScience.alwaysScrollOnNewCell": true,
+    "python.linting.pylintEnabled": true,
+    "eslint.lintTask.enable": true,
+    "python.linting.flake8Enabled": true
+}
