@@ -230,7 +230,7 @@ $("#destinationSelection").select2({
 
     localStorage.clear();
     localStorage.setItem("searchItems",JSON.stringify(data_dict))
-    var url = 'submit/restaurants'; 
+    var url = 'search'; 
     document.location.href = url;
 
     // var token = '{{csrf_token}}';

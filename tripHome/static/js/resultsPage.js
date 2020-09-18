@@ -1,16 +1,14 @@
 $(document).ready(function(){
 
-	
-    var data_dict = localStorage.getItem("searchItems")
 
     var token = '{{csrf_token}}';
     $.ajax({
         headers: { "X-CSRFToken": token },
         method: 'POST',
-        url: 'ajax/submit/',
-        data: {'requestData': JSON.stringify(data_dict)},
+        url: 'results',
+        data: {'requestData': localStorage.getItem("searchItems")},
         success: function (data) {
-            
+            console.log("Hi");
         },
         error: function (data) {
              alert("it didnt work");
