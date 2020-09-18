@@ -10,8 +10,12 @@ import json
 
 @csrf_exempt
 def getResponse(request):
+<<<<<<< HEAD
+    response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Mumbai"
+=======
     clientData = json.loads(request.POST['requestData'])
     response = requests.get("https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Raleigh"
+>>>>>>> 22119095a8c6730b7ebde013110a2662627a310f
                             "&key=AIzaSyAIsboWfXVchmgBxPGKG5lUF9AENUKcSI8")
     root = ET.fromstring(response.content)
     root = ET.fromstring(response.content)
@@ -32,9 +36,10 @@ def getResponse(request):
     for item in data:
         r = json.dumps(item)
         loaded_r = json.loads(r)
-        items_name.append(loaded_r['name'])
-        items_rating.append(loaded_r['rating'])
-
+        items_name.append(str(loaded_r['name']))
+        items_rating.append(str(loaded_r['rating']))
+    items_name = items_name[:6]
+    items_rating = items_rating[:6]
     new_data = zip(items_name, items_rating)
     return HttpResponse(new_data)
 
