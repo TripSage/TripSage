@@ -112,6 +112,7 @@ function saveData() {
     destination_choices.push(d.id);
   });
   var destination = destination_choices[0];
+  var destination_selected = destination_choices;
 
   data_dict = {};
 
@@ -142,6 +143,7 @@ function saveData() {
 
   data_dict["source"] = source_choices;
   data_dict["destination"] = destination;
+  data_dict['destination_selected'] = destination_selected;
   data_dict["tripType"] = trip_kinds;
   data_dict["modeTransport"] = modeTransport;
   data_dict["startDate"] = start_date;
