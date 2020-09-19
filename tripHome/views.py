@@ -55,10 +55,12 @@ def getResponse(request):
                     val.append(b)
                 if len(val) > 1:
                     data = val[1][1]
+                    complete_data = {}
                     for item in data[:3]:
                         r = json.dumps(item)
                         loaded_r = json.loads(r)
-                        complete_data.add((str(loaded_r["name"]), str(loaded_r["rating"])))
+                        #complete_data.add((str(loaded_r["name"]), str(loaded_r["rating"])))
+                        complete_data[str(loaded_r["name"])] = str(loaded_r["rating"])
         final_data[city] = complete_data
     return HttpResponse(json.dumps(final_data))
 

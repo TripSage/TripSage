@@ -24,5 +24,6 @@ $(document).ready(function () {
 });
 
 function showData(data){
+  parsed_data = JSON.parse(data)
   document.getElementById("data").innerHTML = data;
 }
