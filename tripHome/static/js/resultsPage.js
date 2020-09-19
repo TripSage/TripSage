@@ -7,11 +7,17 @@ $(document).ready(function () {
     method: "POST",
     url: "results",
     data: { requestData: localStorage.getItem("searchItems") },
+    beforeSend: function(){
+      $(".loader").show();
+       }, 
     success: function (data) {
       document.getElementById("data").innerHTML = data;
     },
     error: function (data) {
       alert("it didnt work");
     },
+    complete:function(data){
+      $(".loader").hide();
+       }
   });
 });
