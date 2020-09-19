@@ -11,7 +11,8 @@ $(document).ready(function () {
       $(".loader").show();
        }, 
     success: function (data) {
-      document.getElementById("data").innerHTML = data;
+
+      showData(data);
     },
     error: function (data) {
       alert("it didnt work");
@@ -21,3 +22,7 @@ $(document).ready(function () {
        }
   });
 });
+
+function showData(data){
+  document.getElementById("data").innerHTML = data;
+}
