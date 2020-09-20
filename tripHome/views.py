@@ -19,17 +19,15 @@ from json import dumps, loads, JSONEncoder, JSONDecoder
 def getResponse(request):
     # getting the landing page data in form of dictionary
     clientData = json.loads(request.POST["requestData"])
-    # getting just the first destination selected
-    location = clientData["destination"]
     # getting the list of all the destinations
-    location_list = clientData["destination_selected"] 
+    location_list = clientData["destination_selected"]
     trip_kind = clientData["tripType"]  # getting trip type
 
     # Map for the type of the trip to the places user can visit
     type_places_map = {
         "adventurous": ["tourist_attraction", "stadium"],
         "kids": ["amusement_park", "museum"],
-        "relaxing": ["art_gallery", "church", "spa"]
+        "relaxing": ["art_gallery", "church", "spa"],
     }
     # save data by user
     # change response url
@@ -41,9 +39,13 @@ def getResponse(request):
     for city in location_list:
         for type in trip_kind:
             for place in type_places_map[type]:
-                api = ("https://maps.googleapis.com/maps/api/place/textsearch/xml?query=" +
-                       place + "+in+" + city + 
-                       "&key=AIzaSyAIsboWfXVchmgBxPGKG5lUF9AENUKcSI8")
+                api = (
+                    "https://maps.googleapis.com/maps/api/place/textsearch/xml?query="
+                    + place
+                    + "+in+"
+                    + city
+                    + "&key=AIzaSyAIsboWfXVchmgBxPGKG5lUF9AENUKcSI8"
+                )
                 response = requests.get(api)
                 data_dict = xmltodict.parse(response.content)
                 json_data = json.dumps(data_dict)

@@ -37,11 +37,7 @@ class Trip(models.Model):
 class Places(models.Model):
     placeId = models.AutoField(primary_key=True)
     placeName = models.CharField(max_length=200)
-    TIME_VISIT = [
-        ("mor", "Morning"),
-        ("aft", "Afternoon"),
-        ("eve", "Evening"),
-    ]
+    TIME_VISIT = [("mor", "Morning"), ("aft", "Afternoon"), ("eve", "Evening")]
     visitName = models.CharField(max_length=3, choices=TIME_VISIT)
 
 
