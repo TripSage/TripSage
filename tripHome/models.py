@@ -37,7 +37,12 @@ class Trip(models.Model):
 class Places(models.Model):
     placeId = models.AutoField(primary_key=True)
     placeName = models.CharField(max_length=200)
-    timeVisit = models.DateField()
+    TIME_VISIT = [
+        ("mor", "Morning"),
+        ("aft", "Afternoon"),
+        ("eve", "Evening"),
+    ]
+    visitName = models.CharField(max_length=3, choices=TIME_VISIT)
 
 
 class Destinations(models.Model):
@@ -58,7 +63,7 @@ class Tags(models.Model):
         ("safe", "Safe Place to Visit during Covid"),
     ]
     # tags of safe and unsafe depend on population
-    tagName = models.CharField(max_length=10, choices=TAG)
+    tagName = models.CharField(max_length=5, choices=TAG)
     tagID = models.Field(primary_key=True)
 
 

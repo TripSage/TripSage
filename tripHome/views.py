@@ -10,17 +10,19 @@ from json import dumps, loads, JSONEncoder, JSONDecoder
 
 
 #############################
-## Function to get data from api 
-## When user click on search, a
-## post call is made which lands
-## on this function
+# Function to get data from api
+# When user click on search, a
+# post call is made which lands
+# on this function
 #############################
 @csrf_exempt
 def getResponse(request):
     # getting the landing page data in form of dictionary
     clientData = json.loads(request.POST["requestData"])
-    location = clientData["destination"]  # getting just the first destination selected
-    location_list = clientData["destination_selected"]  # getting the list of all the destinations
+    # getting just the first destination selected
+    location = clientData["destination"]
+    # getting the list of all the destinations
+    location_list = clientData["destination_selected"] 
     trip_kind = clientData["tripType"]  # getting trip type
 
     # Map for the type of the trip to the places user can visit
@@ -40,7 +42,8 @@ def getResponse(request):
         for type in trip_kind:
             for place in type_places_map[type]:
                 api = ("https://maps.googleapis.com/maps/api/place/textsearch/xml?query=" +
-                       place + "+in+" + city + "&key=AIzaSyAIsboWfXVchmgBxPGKG5lUF9AENUKcSI8")
+                       place + "+in+" + city + 
+                       "&key=AIzaSyAIsboWfXVchmgBxPGKG5lUF9AENUKcSI8")
                 response = requests.get(api)
                 data_dict = xmltodict.parse(response.content)
                 json_data = json.dumps(data_dict)
@@ -59,21 +62,21 @@ def getResponse(request):
                     for item in data[:3]:
                         r = json.dumps(item)
                         loaded_r = json.loads(r)
-                        #complete_data.add((str(loaded_r["name"]), str(loaded_r["rating"])))
+                        # complete_data.add((str(loaded_r["name"]), str(loaded_r["rating"])))
                         complete_data[str(loaded_r["name"])] = str(loaded_r["rating"])
         final_data[city] = complete_data
     return HttpResponse(json.dumps(final_data))
 
 
 #############################
-## Function to render the results page
+# Function to render the results page
 #############################
 def resultsPage(request):
     return render(request, "result.html", {"data": ""})
 
 
 #############################
-## Function to render the main page
+# Function to render the main page
 #############################
 def index(request):
     # Render the HTML template index.html with the data in the context variable
