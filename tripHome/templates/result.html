@@ -2,22 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Restuarants</title>
+    <title>TripSage</title>
     {% load static %}
     <link rel="stylesheet" href= "{% static 'css/result.css' %}" />
+    <style>
+        #ral{
+          color: red;
+          background: lightcyan;
+            margin: 3%;
+        }
+
+      #ashe{
+          color: red;
+          background: lightcyan;
+          margin: 3%;
+      }
+
+      #char{
+          color: red;
+          background: lightcyan;
+          margin: 3%;
+      }
+
+      h3{
+          color: blue;
+          text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+      }
+      h2{
+          color: purple;
+      }
+    </style>
 </head>
 <body>
 {% load static %}
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/resultsPage.js' %}"></script>
-<p>List of Restaurants in Raleigh with their ratings out of 5</p>
+<h2>Places along with their ratings only for you........</h2>
+
 <div class="loader"></div>
-<div id="data">
-{#    {% for a in complete_data %}#}
-{#        <p>{{  a.0 }}</p>#}
-{#        <br/>#}
-{#    {% endfor %}#}
-</div><!--/.col-->
+<div id="ral">
+</div>
+<div id="ashe">
+</div>
+<div id="char">
+</div>
 
 </body>
 </html>
