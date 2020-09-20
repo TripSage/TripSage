@@ -9,7 +9,7 @@ install:
 
 script:
  - pytest --pylint
- - python manage.py
+ - python manage.py test
 
 notifications:
  email:
