@@ -5,10 +5,11 @@ python:
 
 install:
  - pip install -r requirements.txt
+ - pip install pep8
 
 script:
  - pytest --pep8
-
+ - python manage.py runserver
 
 notifications:
  email:
@@ -16,3 +17,4 @@ notifications:
    - sadhika2@ncsu.edu
    - sray9@ncsu.edu
    - nshukla2@ncsu.edu
+   - dshah4@ncsu.edu
