@@ -56,7 +56,7 @@ def getResponse(request):
                 if len(val) > 1:
                     data = val[1][1]
                     complete_data = {}
-                    for item in data[:3]:
+                    for item in data[:6]:
                         r = json.dumps(item)
                         loaded_r = json.loads(r)
                         #complete_data.add((str(loaded_r["name"]), str(loaded_r["rating"])))
