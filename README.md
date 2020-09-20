@@ -31,31 +31,30 @@ python manage.py runserver </br>
 ## Project Structure:</br>
 (Disclaimer: Need some knowledge of Django to understand Project structure, please go through above resources if needed)</br>
 TripSage/</br>
-  tripHome/</br>
-    models.py - Describes tables for database</br>
-      Each function describes a table in the database (check documentation for more information)</br>
-    views.py - Render the pages, call APIs, send information back to the database </br>
-			getResponse - </br>
-        1. Calls API </br>
-        2. Checks results for duplicates and standard number of places for each activity according to the dictionary type_places_map </br>
-        3. Stores results in JSON object </br>
-    </br>
-		resultsPage - renders results.html </br>
-		index - renders index.html </br>
-		urls.py - maps url patterns to functions in views.py </br>
-		templates/ </br>
-			index.html - extends to base_generic.html </br>
-			base_generic.html - landing page </br>
-			result.html - results page </br>
-		static/ </br>
-			js/ </br>
-				custom.js </br>
-          saveData() - saves data from landing page and redirects to results.html </br>
+&nbsp; tripHome/</br>
+&nbsp;&nbsp; models.py - Describes tables for database</br>
+&nbsp;&nbsp;&nbsp; Each function describes a table in the database (check documentation for more information)</br>
+&nbsp;&nbsp; views.py - Render the pages, call APIs, send information back to the database </br>
+&nbsp;&nbsp;&nbsp; getResponse - </br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1. Calls API </br>
+&nbsp;&nbsp;&nbsp;&nbsp; 2. Checks results for duplicates and standard number of places for each activity according to the dictionary type_places_map </br>
+&nbsp;&nbsp;&nbsp;&nbsp; 3. Stores results in JSON object </br>
+&nbsp;&nbsp;&nbsp; resultsPage - renders results.html </br>
+&nbsp;&nbsp;&nbsp; index - renders index.html </br>
+&nbsp;&nbsp;&nbsp; urls.py - maps url patterns to functions in views.py </br>
+&nbsp;&nbsp;&nbsp; templates/ </br>
+&nbsp;&nbsp;&nbsp;&nbsp; index.html - extends to base_generic.html </br>
+&nbsp;&nbsp;&nbsp;&nbsp; base_generic.html - landing page </br>
+&nbsp;&nbsp;&nbsp;&nbsp; result.html - results page </br>
+&nbsp;&nbsp;&nbsp; static/ </br>
+&nbsp;&nbsp;&nbsp;&nbsp; js/ </br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; custom.js </br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; saveData() - saves data from landing page and redirects to results.html </br>
 </br>
 </br>
 ## Inspirations: </br>
 1. Sygic Travel </br>
-This travel website creates a personalized itinerary when users give information about where they are going for the number of days they plan for by creating a custom itinerary of the top attractions in that place, along with where they should go on which day. The app clubs nearby attractions together, along with timings of nearby attractions.
+&nbsp; This travel website creates a personalized itinerary when users give information about where they are going for the number of days they plan for by creating a custom itinerary of the top attractions in that place, along with where they should go on which day. The app clubs nearby attractions together, along with timings of nearby attractions.
 
 </br>
 ## Group:
