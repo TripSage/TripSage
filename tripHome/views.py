@@ -1,12 +1,9 @@
 import xmltodict
 from django.shortcuts import render
-from .models import Trip
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-import xml.etree.ElementTree as ET
 import requests
 import json
-from json import dumps, loads, JSONEncoder, JSONDecoder
 
 
 #############################
@@ -40,7 +37,8 @@ def getResponse(request):
         for type in trip_kind:
             for place in type_places_map[type]:
                 api = (
-                    "https://maps.googleapis.com/maps/api/place/textsearch/xml?query="
+                    "https://maps.googleapis.com/maps/api/" +
+                    "place/textsearch/xml?query="
                     + place
                     + "+in+"
                     + city
@@ -64,8 +62,8 @@ def getResponse(request):
                     for item in data[:6]:
                         r = json.dumps(item)
                         loaded_r = json.loads(r)
-                        # complete_data.add((str(loaded_r["name"]), str(loaded_r["rating"])))
-                        complete_data[str(loaded_r["name"])] = str(loaded_r["rating"])
+                        name = str(loaded_r["name"])
+                        complete_data[name] = str(loaded_r["rating"])
         final_data[city] = complete_data
     return HttpResponse(json.dumps(final_data))
 

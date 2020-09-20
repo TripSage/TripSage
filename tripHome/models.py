@@ -22,7 +22,8 @@ class Trip(models.Model):
     transMode = models.CharField(max_length=5, choices=transportMode)
 
     noPeopleTrip = models.IntegerField()
-    typeTrip = [("advt", "Adventurous"), ("kd", "Kid-Friendly"), ("relax", "Relaxing")]
+    typeTrip = [("advt", "Adventurous"), ("kd", "Kid-Friendly"),
+                ("relax", "Relaxing")]
     tripType = models.CharField(max_length=10, choices=typeTrip)
     startDate = models.DateField()
     endDate = models.DateField()
