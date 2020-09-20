@@ -36,8 +36,6 @@ $(document).ready(function () {
       $("#slider-range").slider("values", 1)
   );
 
-
-
   // 5. datepicker
   $('[data-toggle="datepicker"]').datepicker();
 
@@ -143,7 +141,7 @@ function saveData() {
 
   data_dict["source"] = source_choices;
   data_dict["destination"] = destination;
-  data_dict['destination_selected'] = destination_selected;
+  data_dict["destination_selected"] = destination_selected;
   data_dict["tripType"] = trip_kinds;
   data_dict["modeTransport"] = modeTransport;
   data_dict["startDate"] = start_date;
@@ -154,7 +152,7 @@ function saveData() {
 
   //save the data to local storage
   localStorage.setItem("searchItems", JSON.stringify(data_dict));
-  
+
   //redirect to results page
   var url = "search";
   document.location.href = url;
