@@ -24,7 +24,8 @@ Check out the basics: https://developer.mozilla.org/en-US/docs/Learn/Server-side
 This tutorial also covers Django.</br>
 </br>
 ## How to Run: </br>
-Navigate to the folder TripSage, this is the Django project. </br>
+Clone the git repository to the desired folder location on your system
+Navigate to the folder TripSage. This is the Django project. tripHome is the application for the project. A project can have multiple applications. </br>
 Run on the command line: </br>
 python manage.py runserver </br>
 </br>
@@ -34,9 +35,9 @@ TripSage/</br>
 &nbsp; tripHome/</br>
 &nbsp;&nbsp; models.py - Describes tables for database</br>
 &nbsp;&nbsp;&nbsp; Each function describes a table in the database (check documentation for more information)</br>
-&nbsp;&nbsp; views.py - Render the pages, call APIs, send information back to the database </br>
+&nbsp;&nbsp; views.py - A View is a python function or classe that takes a request and provides a response.</br> It can render the HTML pages, call APIs, push and retrieve data from tables in the database </br>
 &nbsp;&nbsp;&nbsp; getResponse - </br>
-&nbsp;&nbsp;&nbsp;&nbsp; 1. Calls API </br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1. Calls Google Geolocation API to fetch locations as per user's trip preference</br>
 &nbsp;&nbsp;&nbsp;&nbsp; 2. Checks results for duplicates and standard number of places for each activity according to the dictionary type_places_map </br>
 &nbsp;&nbsp;&nbsp;&nbsp; 3. Stores results in JSON object </br>
 &nbsp;&nbsp;&nbsp; resultsPage - renders results.html </br>
