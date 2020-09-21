@@ -10,7 +10,7 @@ The following is a set of guidelines for contributing to Project and its package
 [Code of Conduct](#code-of-conduct)
 
 [What should I know before I get started?](#what-should-i-know-before-i-get-started)
-  * [Licence Details]
+  * This project is built on Django web framework using Python, HTML, CSS and Ajax. A working knowlegde of these tools and technologies will be required to get started on this. Additional documentation to get familiar with these technologies are also provided with this project.
 
 [Styleguides](#styleguides)
   * [Git Commit Messages](#git-commit-messages)
