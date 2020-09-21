@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from __future__ import absolute_import
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
@@ -20,11 +21,10 @@ from django.views.generic import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
 
-urlpatterns = [
+urlpatterns = [         # pylint: disable=invalid-name
     path('admin/', admin.site.urls),
     path('tripHome/', include('tripHome.urls')),
     path('', RedirectView.as_view(url='tripHome/', permanent=True)),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
