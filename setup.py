@@ -1,3 +1,6 @@
+"""
+auto generated setup file
+"""
 from setuptools import setup
 
 setup(

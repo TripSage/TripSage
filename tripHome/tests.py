@@ -1,3 +1,5 @@
-from django.test import TestCase
+"""
+auto generated test file
+"""
 
 # Create your tests here.
