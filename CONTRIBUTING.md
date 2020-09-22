@@ -15,6 +15,8 @@ The following is a set of guidelines for contributing to Project and its package
 [Styleguides](#styleguides)
   * [Git Commit Messages](#git-commit-messages)
   * [Documentation Styleguide](#documentation-styleguide)
+  
+ [Selection of tech stack](#Selection of tech stack)
 
 
 ## Code of Conduct
@@ -49,6 +51,10 @@ Refer [LICENSE](https://github.com/TripSage/TripSage/blob/master/LICENSE) for mo
 ### Documentation Styleguide
 
 * Use [Markdown](https://daringfireball.net/projects/markdown).
+
+## Selection of tech stack
+* Why Django? : Written in python, Accelerates custom web application development, Easy to extend and scale
+* Why not Flask? : Not suitable for big applications, No admin site.
 
 ## How to start with contributing on this Project!
 * Start with User Login Functionality
