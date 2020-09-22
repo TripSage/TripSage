@@ -30,11 +30,6 @@ Want a more in-depth look at server-side development? </br>
 Check out the basics: https://developer.mozilla.org/en-US/docs/Learn/Server-side </br>
 This tutorial also covers Django.</br>
 </br>
-### New to AJAX? </br>
-Check out the basics of ajax at https://api.jquery.com/jquery.ajax/.  The site covers all the basics of ajax about writing asynchronous calls and provides in depth information about its parameters. </br>
-</br>
-For ajax documentation, please visit https://api.jquery.com/category/ajax/ </br>
-</br>
 ### How to Run: </br>
 Clone the git repository to the desired folder location on your system
 Navigate to the folder TripSage. This is the Django project. tripHome is the application for the project. A project can have multiple applications. </br>
