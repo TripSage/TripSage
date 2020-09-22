@@ -14,7 +14,7 @@ height="1.9042465004374454in"}
 
 # Table of Contents
 
-## 1.0 General Information
+## 1.0 [General Information](#general-information "Go to 1.0")
 
 ### 1.1 Purpose
 
@@ -24,7 +24,7 @@ height="1.9042465004374454in"}
 
 ### 1.4 Why TripSage
 
-## 2.0 Functional Requirements
+## 2.0 [Functional Requirements](#functional-specifications "Go to 2.0")
 
 ### 2.1 Overview
 
@@ -34,7 +34,7 @@ height="1.9042465004374454in"}
 
 ### 2.4 Use Cases
 
-## 3.0 Technical Specification
+## 3.0 [Technical Specification](#technical-specifications "Go to 3.0")
 
 ### 3.1 Software
 
@@ -52,25 +52,25 @@ height="1.9042465004374454in"}
 
 ### 3.8 Code Design Tools
 
-## 4.0 Future improvements: suggestions
+## 4.0 [Future improvements](#future-improvements "Go to 4.0")
 
 ### 4.1 What has been Implemented?
 
-4.2 What needs to be done?**
+### 4.2 What needs to be done?
 
-**4.3 Ambitious Suggestions**
+### 4.3 Ambitious Suggestions
 
-**5.0 Appendix and References**
+## 5.0 [Appendix and Resources](#appendix-and-resources "Go to 5.0")
 
-**5.1 Appendix A**
+### 5.1 Appendix A
 
-**5.2 Inspirations**
+### 5.2 Inspirations
 
-**5.3 Resources**
+### 5.3 Resources
 
-**1.0 General Information**
+# 1.0 General Information
 
-**1.1 Purpose: **
+## 1.1 Purpose: 
 
 The purpose of this document is to provide information about the
 TripSage web application to the current and future software developers.
@@ -82,7 +82,7 @@ interactions with users in detail. This also acts as a kind of guideline
 and continuing reference point as the developers write the programming
 code to extend the application's features.
 
-**1.2 Scope: **
+## 1.2 Scope: 
 
 This Functional and Technical Requirements Document outlines the
 functional, performance and other system requirements for theTripSage
@@ -94,7 +94,7 @@ section 2.3
 Low level technical requirements and implementation details of suggested
 features are out of the scope of this document.
 
-**1.2 Acronyms/Definitions**
+## 1.2 Acronyms/Definitions
 
 API: Application Programming Interface, a set of protocols or standards
 for communicating with web based applications
@@ -118,7 +118,7 @@ Google Geolocation API: It returns a location and accuracy radius based
 on information about cell towers and WiFi nodes that the mobile client
 can detect
 
-**1.4 Why TripSage**
+## 1.4 Why TripSage
 
 Travelling to a new country can be stressful. Couple that with COVID,
 almost impossible. But the mental health benefits of travelling to new
@@ -135,9 +135,9 @@ A new way of life doesn't have to mean you can't travel.
 
 Explore the new way of travelling with TripSage.
 
-**2.0 Functional Specifications:**
+# 2.0 Functional Specifications:
 
-**2.1 Overview**
+## 2.1 Overview
 
 TripSage is the ultimate itinerary planner to help users in their travel
 plans. This application will allow a user to plan their trip according
@@ -151,75 +151,43 @@ while adhering to the user's budget.
 The scope of TripSage can be defined using the following functionalities
 in a broad sense
 
--   Users can login to the website
+* Users can login to the website
+* Flow 1:
+    * Accept the inputs \[Appendix-A\] from the user.
+    * Display/suggest places to visit with the tags
+    1. Best time tovisit
+    2. Covid warnings
+    3. Type of the place (Adventurous, Sightseeing, good for food, sport, etc)
+* Users can pick the places to visit from these suggestions and press next.
+* TripSage will generate itineraries using the places users want to visit.
+* Tripsage will suggest the cheapest route to the user
+* Flow 2:
+    * Accept the inputs \[Appendix-A\] from the user.
+    * From the type of trip the user wants, TripSage generates an itinerary using the places to visit from the destination cities the user is planning to visit.
+    * Tripsage will suggest the cheapest route to the user
 
-<!-- -->
+## 2.2 Why Django?
 
--   Flow 1:
+**Why Django?** </br>
+</br>
+The purpose behind choosing Django was two-fold. We wanted to challenge ourselves with this project, but set realistic expectations. So, instead of learning a new language for web development, we decided to use a Python framework, a language our entire team (and many others) are comfortable with.  </br>
+</br>
+Also, Django follows MVT(model-view-template) architecture which can be used independently making it reliable, flexible and simple. Moreover, it has its own server and the learning curve is pretty minimum. Compared to Flask, Django is used for applications that serve more than just one requirement. We envision and designed TripSage to include many features, making Django the better choice.
+</br>
+## 2.3 Features
 
-    -   Accept the inputs \[Appendix-A\] from the user.
-
-    -   Display/suggest places to visit with the tags - 1. Best time to
-        > visit, 2. Covid warnings
-
-> 3\. Type of the place (Adventurous, Sightseeing, good for food, sport,
-> etc)
-
--   Users can pick the places to visit from these suggestions and press
-    > next.
-
--   TripSage will generate itineraries using the places users want to
-    > visit.
-
--   Tripsage will suggest the cheapest route to the user
-
-<!-- -->
-
--   Flow 2:
-
-    -   Accept the inputs \[Appendix-A\] from the user.
-
-    -   From the type of trip the user wants, TripSage generates an
-        > itinerary using the places to visit from the destination
-        > cities the user is planning to visit.
-
-    -   Tripsage will suggest the cheapest route to the user
-
-**2.2 Why Django?**
-
-Why Django?
-
-> The purpose behind choosing Django was two-fold. We wanted to
-> challenge ourselves with this project, but set realistic expectations.
-> So, instead of learning a new language for web development, we decided
-> to use a Python framework, a language our entire team (and many
-> others) are comfortable with.
->
-> Also, Django follows MVT(model-view-template) architecture which can
-> be used independently making it reliable, flexible and simple.
-> Moreover, it has its own server and the learning curve is pretty
-> minimum. Compared to Flask, Django is used for applications that serve
-> more than just one requirement. We envision and designed TripSage to
-> include many features, making Django the better choice.
-
-**2.2 Features**
-
-General set of features designed for TripSage:
-
+General set of features designed for TripSage: </br>
 1.  User account creation
 
 2.  Saving a trip
 
 3.  Sharing a trip with other users
 
-4.  Type of Trip: Suggestions for places to visit as per user's
-    > preferred type of vacation like relaxed, adventurous, travelling
-    > with kids.
+4.  Type of Trip: Suggestions for places to visit as per user's preferred type of vacation like relaxed, adventurous, travelling with kids.
 
 5.  Travel Dates: Suggestions based on the user's preferred travel dates
 
-6.  Mode of Transportation: Suggestions based on the user\'s preferred
-    > transportation mode like flight, car or bus.
+6.  Mode of Transportation: Suggestions based on the user\'s preferred transportation mode like flight, car or bus.
 
 7.  Budget: Adjustable budget to suit every user's needs
 
@@ -229,11 +197,9 @@ General set of features designed for TripSage:
 
 10. Covid -- 19 Statistics:
 
-    a.  Specified as \"High\", \"Medium\", \"Low\" based on the
-        > population at the specified location and whether the location
-        > is indoors or outdoors.
+    a.  Specified as \"High\", \"Medium\", \"Low\" based on the population at the specified location and whether the location is indoors or outdoors.
 
-**2.3 Use Cases**
+## 2.3 Use Cases
 
 **Planning a New Trip**
 
@@ -252,31 +218,21 @@ General set of features designed for TripSage:
 ![](media/image7.png){width="5.635416666666667in"
 height="2.6666666666666665in"}
 
-**3.0 Technical Specifications:**
+# 3.0 Technical Specifications:
 
-**3.1 Software**
+## 3.1 Software
 
-The TripSage application is built with Django, an open source web
-application framework, written in Python. The location data displayed in
-the itinerary is fetched using Google Geolocation API. Alternatively, in
-a different version, data will be stored in a SQLite3, also open source.
-The user interface is developed in HTML5, CSS3, JavaScript and Ajax. The
-backend is coded in Python. The application is compatible with all web
-browsers. The application code uses Git version control, and all commits
-will be archived in a designated repository.
+The TripSage application is built with Django, an open source web application framework, written in Python. The location data displayed in the itinerary is fetched using Google Geolocation API. Alternatively, in a different version, data will be stored in a SQLite3, also open source. The user interface is developed in HTML5, CSS3, JavaScript and Ajax. The backend is coded in Python. The application is compatible with all web browsers. The application code uses Git version control, and all commits will be archived in a designated repository.
 
-**3.2 Django Architecture**
+## 3.2 Django Architecture
 
 ![](media/image4.png){width="6.5in" height="2.073611111111111in"}
 
-TripSage is developed with Django, a high-level Python web application
-framework that enables the rapid development of web applications. It
-follows the MTV (Model Template View) architecture:
+TripSage is developed with Django, a high-level Python web application framework that enables the rapid development of web applications. It follows the MTV (Model Template View) architecture:
 
 1.  User requests for Django based website
 
-2.  URL calls corresponding function in **views.py** (mapping found in
-    > urls.py)
+2.  URL calls corresponding function in **views.py** (mapping found in urls.py)
 
     a.  view can take a request and return a response
 
@@ -286,88 +242,51 @@ follows the MTV (Model Template View) architecture:
 
 4.  Model is a class representing table/collection in models.py
 
-**3.3 Models**
+## 3.3 Models
 
 Following is the list of Models in TripSage and a brief description of
 each:
+City: To store cities
+Trip: To store the trips generated from the itinerary planner
+Places: Locations/spots within cities that will be displayed as part of the itinerary
+Destinations: The cities that can be destinations
+Contains: To store the mapping between Places and Cities
+Tags: Different tags which will be used to tag Places
+Tagged\_as: To store the mapping between Places and Tags
 
-> City: To store cities
->
-> Trip: To store the trips generated from the itinerary planner
->
-> Places: Locations/spots within cities that will be displayed as part
-> of the itinerary
->
-> Destinations: The cities that can be destinations
->
-> Contains: To store the mapping between Places and Cities
->
-> Tags: Different tags which will be used to tag Places
->
-> Tagged\_as: To store the mapping between Places and Tags
-
-**3.4 Functions**
+## 3.4 Functions
 
 ***TripSage/***
 
 ***tripHome/***
 
-> *[models.py]{.underline}* - Describes tables for database. Each
-> function describes a table in the database (check documentation for
-> more information)
->
-> *[views.py]{.underline}* - A View is a python function or classe that
-> takes a request and provides a response.
->
-> It can render the HTML pages, call APIs, push and retrieve data from
-> tables in the database
->
-> *getResponse* -
->
-> 1\. Calls Google Geolocation API to fetch locations as per user\'s trip
-> preference
->
-> 2\. Checks results for duplicates and standard number of places for each
-> activity according to the dictionary type\_places\_map
->
-> 3\. Stores results in JSON object
->
-> *resultsPage* - renders results.html
->
-> *index* - renders index.html
->
-> *[urls.py]{.underline}* - maps url patterns to functions in views.py
->
-> ***templates/***
->
-> *[index.html]{.underline}* - extends to base\_generic.html
->
-> *[base\_generic.html]{.underline}* - landing page
->
-> *[result.html]{.underline}* - results page
->
-> ***static/***
->
-> ***js/***
->
-> *[custom.js]{.underline} -* Functionality for base\_generic.html.
->
-> *saveData()* - saves data from landing page and redirects to
-> results.html
->
-> *[resultsPage.js]{.underline}* - Functionality for results.html.
-> Connects results.html to getResponse in views.py
->
-> *showData() -* JS for results.html
->
-> [ ]{.underline}
-
-**3.5 Entity Relationship Diagram for the Models**
+**[models.py]** - Describes tables for database. Each function describes a table in the database (check documentation for more information)
+**[views.py]** - A View is a python function or classe that takes a request and provides a response. It can render the HTML pages, call APIs, push and retrieve data from tables in the database
+*getResponse* -
+    1. Calls Google Geolocation API to fetch locations as per user\'s trip preference
+    2. Checks results for duplicates and standard number of places for each activity according to the dictionary type\_places\_map
+    3. Stores results in JSON object
+*resultsPage* - renders results.html
+*index* - renders index.html
+**[urls.py]** - maps url patterns to functions in views.py
+***templates/***
+**[index.html]** - extends to base\_generic.html
+**[base\_generic.html]** - landing page
+**[result.html]** - results page
+***static/***
+***js/***
+**[custom.js]** Functionality for base\_generic.html.
+*saveData()* - saves data from landing page and redirects to results.html
+**[resultsPage.js]** - Functionality for results.html. Connects results.html to getResponse in views.py
+*showData()* - JS for results.html
+</br>
+</br>
+## 3.5 Entity Relationship Diagram for the Models
 
 ![](media/image10.png){width="6.713542213473316in"
 height="6.958333333333333in"}
 
-**3.6 Logical Flow of Control:**
+## 3.6 Logical Flow of Control:
 
 The diagram below shows the flow of control from when a user enters
 their trip details on the landing page of tripHome to seeing their
@@ -377,7 +296,7 @@ results The bold text signifies start and end states.
 
 ![](media/image2.jpg){width="6.942708880139983in" height="3.09375in"}
 
-**3.7 Code Design Tools:**
+## 3.7 Code Design Tools:
 
 Our team uses VSCode and Pycharm.
 
@@ -393,9 +312,9 @@ VSCode, Pycharm: pylint (pep8)
 
 Black
 
-**4.0 Future improvements:**
+# 4.0 Future improvements
 
-**4.1 What has been Implemented?**
+## 4.1 What has been Implemented?
 
 The TripSage application currently supports the following
 functionalities:
@@ -408,7 +327,7 @@ The website uses Google Maps api to fetch the appropriate places for the
 given destination along with their ratings and displays the list of
 places.
 
-**4.2 What needs to be done?**
+## 4.2 What needs to be done?
 
 The following functionalities have not been implemented yet:
 
@@ -434,7 +353,7 @@ a trip planned to the exact dot, including the places, they want to
 visit and only need our assistance to schedule and get the cheapest
 travel route.
 
-**4.3 Ambitious Suggestions:**
+## 4.3 Ambitious Suggestions:
 
 While showing the suggestions itself, users can remove suggested places,
 modifying the itinerary dynamically.
@@ -442,9 +361,9 @@ modifying the itinerary dynamically.
 Dynamic computation of Popularity and covid tags based on the no of
 trips generated for the particular place on a given date.
 
-**5.0 Future improvements:**
+# 5.0 Appendix and Resources
 
-**5.1 Appendix A**
+## 5.1 Appendix A
 
 [Inputs from User:]{.underline}
 
@@ -466,7 +385,7 @@ trips generated for the particular place on a given date.
 8.  Type of the trip \-- optional, but have to enter if not entered the
     > list of places to visit
 
-**5.2 Inspirations**
+## 5.2 Inspirations
 
 1.  Sygic Travel \[[https://travel.sygic.com/en]{.underline}\] - Tell
     > Sygic where you\'re going and for how many days. Based on that,
@@ -479,7 +398,7 @@ trips generated for the particular place on a given date.
     > into the website, with the only feature missing is the ability to
     > suggest a cheapest route.
 
-**5.3 Resources**
+## 5.3 Resources
 
 1.  Django
 
