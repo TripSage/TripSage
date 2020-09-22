@@ -24,10 +24,9 @@ def get_response(request):
     """
     # getting the landing page data in form of dictionary
     client_data = json.loads(request.POST["requestData"])
-
-    complete_data = set()
     final_data = {}
     for city in client_data["destination_selected"]:
+        complete_data = {}
         for types in client_data["tripType"]:
             for place in TYPES_PLACE_MAP[types]:
                 api = (
@@ -47,8 +46,7 @@ def get_response(request):
                 for values in list_items[1].items():
                     val.append(values)
                 if len(val) > 1:
-                    complete_data = {}
-                    for values in val[1][1][:6]:
+                    for values in val[1][1][:3]:
                         loaded_r = json.loads(json.dumps(values))
                         complete_data[str(loaded_r["name"])] = str(loaded_r["rating"])
         final_data[city] = complete_data
