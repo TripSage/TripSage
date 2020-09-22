@@ -42,9 +42,6 @@ TripSage/</br>
 &nbsp; tripHome/</br>
 &nbsp;&nbsp; models.py </br>
 &nbsp;&nbsp; views.py </br>
-&nbsp;&nbsp;&nbsp; getResponse </br>
-&nbsp;&nbsp;&nbsp; resultsPage </br>
-&nbsp;&nbsp;&nbsp; index </br>
 &nbsp;&nbsp;&nbsp; urls.py </br>
 &nbsp;&nbsp;&nbsp; templates/ </br>
 &nbsp;&nbsp;&nbsp;&nbsp; index.html </br>
@@ -53,9 +50,7 @@ TripSage/</br>
 &nbsp;&nbsp;&nbsp; static/ </br>
 &nbsp;&nbsp;&nbsp;&nbsp; js/ </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; custom.js </br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; saveData() </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resultsPage.js </br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; showData() </br>
 </br>
 
 </br>
