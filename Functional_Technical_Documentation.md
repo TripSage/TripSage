@@ -203,7 +203,7 @@ General set of features designed for TripSage: </br>
 
 **Planning a New Trip**
 
-![](http://lmsotfy.com/so.png){width="6.5in" height="3.564583333333333in"}
+![](https://github.com/TripSage/TripSage/blob/master/Assets/TripSageEditTrip.png){width="6.5in" height="3.564583333333333in"}
 
 **Saving a Trip**
 
