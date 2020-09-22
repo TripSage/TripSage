@@ -49,3 +49,15 @@ Refer [LICENSE](https://github.com/TripSage/TripSage/blob/master/LICENSE) for mo
 ### Documentation Styleguide
 
 * Use [Markdown](https://daringfireball.net/projects/markdown).
+
+## How to start with contributing on this Project!
+* Start with User Login Functionality
+* Take a look at views.py - It is responsible for making requests via APIs and can get required response for you!
+* Take a look at URL.py under TripHome. This can save your life from dealing with different urls paths.
+* Then, it all break down to HTML pages, CSS and js files under templates and static folder respectively.
+
+## Issues for you to take care of!
+* https://github.com/TripSage/TripSage/issues
+
+
+
