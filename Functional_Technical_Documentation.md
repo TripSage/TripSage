@@ -290,11 +290,11 @@ Tagged\_as: To store the mapping between Places and Tags </br>
 
 The diagram below shows the flow of control from when a user enters their trip details on the landing page of tripHome to seeing their results The bold text signifies start and end states.</br>
 
-![](https://github.com/TripSage/TripSage/blob/master/Assets/Flow%20of%20Control%20(1).png){width="6.942708880139983in" height="3.09375in"}
+![](https://github.com/TripSage/TripSage/blob/master/Assets/Flow%20of%20Control%20(1).png)
 
 ## 3.7 Code Design Tools:
 
-Our team uses VSCode and Pycharm.
+Our team uses VSCode or Pycharm.
 </br>
 Linter:</br>
 VSCode, Pycharm: pylint</br>
@@ -319,7 +319,7 @@ The website uses Google Maps api to fetch the appropriate places for the given d
 
 The following functionalities have not been implemented yet:</br>
 </br>
-1. User Login: Update models.py \[Left to acquaint Team 2 about the database structure\] to include User \[EmailId, Password\] and Trips\_Planned \[EmailId, TripId\]. Implement authentication page and retrieve Trips saved by User.</br>
+1.User Login: Update models.py \[Left to acquaint Team 2 about the database structure\] to include User \[EmailId, Password\] and Trips\_Planned \[EmailId, TripId\]. Implement authentication page and retrieve Trips saved by User.</br>
 </br>
 2. Sharing Trips: Allow users to share trips they created with other users.</br>
 </br>
@@ -359,11 +359,11 @@ Dynamic computation of Popularity and covid tags based on the no of trips genera
 
 ## 5.2 Inspirations
 
-1.  Sygic Travel  \[[https://travel.sygic.com/en](https://travel.sygic.com/en)\]
+1.  Sygic Travel  https://travel.sygic.com/en
 </br>
 Tell Sygic where you\'re going and for how many days. Based on that, the app will create a custom itinerary of the top attractions in that place, along with where you should go on which day.
 
-2. Inspirock  \[[https://www.inspirock.com](https://www.inspirock.com)\]
+2. Inspirock  https://www.inspirock.com
 </br>
 A very close Itinerary planner with suggestion algorithm inbuilt into the website, with the only feature missing is the ability to suggest a cheapest route. </br>
 </br>
@@ -372,30 +372,21 @@ A very close Itinerary planner with suggestion algorithm inbuilt into the websit
 
 1.  Django
 </br>
-Check out the basics: [Writing your first Django app, part1](https://docs.djangoproject.com/en/3.1/intro/tutorial01/) </br>
+Check out the basics: Writing your first Django app, part1 - https://docs.djangoproject.com/en/3.1/intro/tutorial01/ </br>
 The first three parts of this 7 part tutorial cover most of the material needed for our project. </br>
 </br>
-For a more in-depth look at server-side development using Django: [Server-side website programming - Learn web development \|MDN](https://developer.mozilla.org/en-US/docs/Learn/Server-side)
+For a more in-depth look at server-side development using Django: Server-side website programming - Learn web development \|MDN - https://developer.mozilla.org/en-US/docs/Learn/Server-side
 </br>
 2.  AJAX
 </br>
-Check out the basics of ajax at [https://api.jquery.com/jquery.ajax/](https://api.jquery.com/jquery.ajax/). </br>
+Check out the basics of ajax at https://api.jquery.com/jquery.ajax/. </br>
 The site covers all the basics of ajax about writing asynchronous calls and provides in depth information about its parameters. </br>
 </br>
-For ajax documentation, please visit [https://api.jquery.com/category/ajax/](https://api.jquery.com/category/ajax/) </br>
+For ajax documentation, please visit https://api.jquery.com/category/ajax/ </br>
 
 3.  Google Map API
 
-> The Places API lets you search for place information using a variety of categories, including 	
-> establishments, prominent points of interest, and geographic locations. You can search for places 
-> either by proximity or a text string. A Place Search returns a list of places along with summary 
-> information about each place; additional information is available via a Place Details query. 
-> The Find Place request is an HTTP URL of the following form:
-> https://maps.googleapis.com/maps/api/place/findplacefromtext/output?parameters
-> where output may be either of the following values:
-> json (recommended) indicates output in JavaScript Object Notation (JSON)
-> xml indicates output as XML
-> We need to generate a key (from google cloud services) which can authenticate the request 
-> we send to Google Maps place API. Since, we connect/authorize the key using our gmail account, 
-> we use one of the gmail accounts from our group. For the extension, we can provide our key/can help generate a key for you.
+The Places API lets you search for place information using a variety of categories, including establishments, prominent points of interest, and geographic locations. You can search for places either by proximity or a text string. A Place Search returns a list of places along with summary information about each place; additional information is available via a Place Details query.</br>
+</br>
+The Find Place request is an HTTP URL of the following form: https://maps.googleapis.com/maps/api/place/findplacefromtext/output?parameters where output may be either of the following values: json (recommended) indicates output in JavaScript Object Notation (JSON) xml indicates output as XML We need to generate a key (from google cloud services) which can authenticate the request  we send to Google Maps place API. Since, we connect/authorize the key using our gmail account, we use one of the gmail accounts from our group. For the extension, we can provide our key/can help generate a key for you.
 
