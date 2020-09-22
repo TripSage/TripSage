@@ -5,7 +5,6 @@
   <img align="center" src="https://github.com/TripSage/TripSage/blob/master/Assets/Monk.png">
 </p>
 
-<p align="center">
 > **Developed by:**
 >
 > Dhruvil Shah dshah4\@ncsu.edu\
@@ -13,7 +12,6 @@
 > Poorvaja Penmetsa ppenmet\@ncsu.edu\
 > Sreemoyee Ray sray9\@ncsu.edu\
 > Sameer Adhikari sadhika2\@ncsu.edu
-</p>
 
 # Table of Contents
 
