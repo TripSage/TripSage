@@ -1,8 +1,6 @@
-![](media/image1.png)
+![](https://github.com/TripSage/TripSage/blob/master/Assets/TripSageLogo.png)
 
-![A picture containing drawing Description automatically
-generated](media/image5.png){width="1.9582983377077865in"
-height="1.9042465004374454in"}
+![](https://github.com/TripSage/TripSage/blob/master/Assets/DjangoArch.png)
 
 > **Developed by:**
 >
@@ -203,20 +201,19 @@ General set of features designed for TripSage: </br>
 
 **Planning a New Trip**
 
-![](https://github.com/TripSage/TripSage/blob/master/Assets/TripSageEditTrip.png){width="6.5in" height="3.564583333333333in"}
+![](https://github.com/TripSage/TripSage/blob/master/Assets/TripSageCreateTrip.png)
 
 **Saving a Trip**
 
-![](media/image9.png){width="6.15625in" height="2.6666666666666665in"}
+![](https://github.com/TripSage/TripSage/blob/master/Assets/TripSageSaveTrip.png)
 
 **Sharing a Trip**
 
-![](media/image6.png){width="6.375in" height="3.1979166666666665in"}
+![](https://github.com/TripSage/TripSage/blob/master/Assets/TripSageShareTrip.png)
 
 **Editing a Trip**
 
-![](media/image7.png){width="5.635416666666667in"
-height="2.6666666666666665in"}
+![](https://github.com/TripSage/TripSage/blob/master/Assets/TripSageEditTrip.png)
 
 # 3.0 Technical Specifications:
 
