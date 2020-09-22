@@ -6,14 +6,13 @@ The only Itinerary planner, you will ever need
 [![Maintainability](https://api.codeclimate.com/v1/badges/f04f12b5653d3a7a20ed/maintainability)](https://codeclimate.com/github/TripSage/TripSage/maintainability)![GitHub issues](https://img.shields.io/github/issues-raw/TripSage/TripSage)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/TripSage/TripSage)
 ![GitHub](https://img.shields.io/github/license/TripSage/TripSage)
-![](http://estruyf-github.azurewebsites.net/api/VisitorHit?user=estruyf&repo=github-visitors-badge&countColorcountColor&countColor=%237B1E7A)
 
 [<img src = "https://github.com/TripSage/TripSage/blob/master/Assets/TripSage%20Playable.png">](https://youtu.be/N0GYVmutWzM)
 </br>
 </br>
 </br>
 ## Hello! Welcome to TripSage! </br>
-### We use Django, Ajax, SQLite3, HTML, CSS, and Javascript. </br>
+### We use Django, SQLite3, HTML, CSS, and Javascript. </br>
 </br>
 ## New to Django? </br>
 Check out the basics: https://docs.djangoproject.com/en/3.1/intro/tutorial01/ </br>
@@ -52,10 +51,6 @@ TripSage/</br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; custom.js </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; saveData() - saves data from landing page and redirects to results.html </br>
 </br>
-</br>
-## Inspirations: </br>
-1. Sygic Travel </br>
-&nbsp; This travel website creates a personalized itinerary when users give information about where they are going for the number of days they plan for by creating a custom itinerary of the top attractions in that place, along with where they should go on which day. The app clubs nearby attractions together, along with timings of nearby attractions.
 
 </br>
 ## Group:
