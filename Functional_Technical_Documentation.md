@@ -255,7 +255,8 @@ Tags: Different tags which will be used to tag Places
 Tagged\_as: To store the mapping between Places and Tags
 
 ## 3.4 Functions
-
+(Legend: ***Italics + Bold: Directories***, **Bold: Files**, *Italics: Functions* )  </br>
+ </br>
 ***TripSage/*** </br>
    ***tripHome/*** </br>
       **models.py** - Describes tables for database. Each function describes a table in the database (check documentation for more information) </br>
