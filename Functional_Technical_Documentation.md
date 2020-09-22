@@ -15,7 +15,7 @@
 
 # Table of Contents
 
-## 1.0 [General Information](#1.0-general-information "Go to 1.0")
+## 1.0 General Information
 
 ### 1.1 Purpose
 
@@ -25,7 +25,7 @@
 
 ### 1.4 Why TripSage
 
-## 2.0 [Functional Requirements](#2.0-functional-specifications "Go to 2.0")
+## 2.0 Functional Requirements
 
 ### 2.1 Overview
 
@@ -35,7 +35,7 @@
 
 ### 2.4 Use Cases
 
-## 3.0 [Technical Specification](#3.0-technical-specifications "Go to 3.0")
+## 3.0 Technical Specification
 
 ### 3.1 Software
 
@@ -53,7 +53,7 @@
 
 ### 3.8 Code Design Tools
 
-## 4.0 [Future improvements](#4.0-future-improvements "Go to 4.0")
+## 4.0 Future improvements
 
 ### 4.1 What has been Implemented?
 
@@ -61,7 +61,7 @@
 
 ### 4.3 Ambitious Suggestions
 
-## 5.0 [Appendix and Resources](#5.0-appendix-and-resources "Go to 5.0")
+## 5.0 Appendix and Resources
 
 ### 5.1 Appendix A
 
@@ -319,7 +319,7 @@ The website uses Google Maps api to fetch the appropriate places for the given d
 
 The following functionalities have not been implemented yet:</br>
 </br>
-1. User Login: Update models.py \[Left to acquaint Team 2 about the database structure\] to include User\[[EmailId]{.underline}, Password\] and Trips\_Planned [[EmailId, TripId]{.underline}\]. Implement authentication page and retrieve Trips saved by User.</br>
+1. User Login: Update models.py \[Left to acquaint Team 2 about the database structure\] to include User \[EmailId, Password\] and Trips\_Planned \[EmailId, TripId\]. Implement authentication page and retrieve Trips saved by User.</br>
 </br>
 2. Sharing Trips: Allow users to share trips they created with other users.</br>
 </br>
@@ -359,11 +359,11 @@ Dynamic computation of Popularity and covid tags based on the no of trips genera
 
 ## 5.2 Inspirations
 
-1.  Sygic Travel  \[[https://travel.sygic.com/en]{.underline}\]
+1.  Sygic Travel  \[[https://travel.sygic.com/en](https://travel.sygic.com/en)\]
 </br>
 Tell Sygic where you\'re going and for how many days. Based on that, the app will create a custom itinerary of the top attractions in that place, along with where you should go on which day.
 
-2. Inspirock  \[[[https://www.inspirock.com]{.underline}](https://www.inspirock.com)\]
+2. Inspirock  \[[https://www.inspirock.com](https://www.inspirock.com)\]
 </br>
 A very close Itinerary planner with suggestion algorithm inbuilt into the website, with the only feature missing is the ability to suggest a cheapest route. </br>
 </br>
@@ -372,17 +372,17 @@ A very close Itinerary planner with suggestion algorithm inbuilt into the websit
 
 1.  Django
 </br>
-Check out the basics: [[Writing your first Django app, part1]{.underline}](https://docs.djangoproject.com/en/3.1/intro/tutorial01/) </br>
+Check out the basics: [Writing your first Django app, part1](https://docs.djangoproject.com/en/3.1/intro/tutorial01/) </br>
 The first three parts of this 7 part tutorial cover most of the material needed for our project. </br>
 </br>
-For a more in-depth look at server-side development using Django: [[Server-side website programming - Learn web development \|MDN]{.underline}](https://developer.mozilla.org/en-US/docs/Learn/Server-side)
+For a more in-depth look at server-side development using Django: [Server-side website programming - Learn web development \|MDN](https://developer.mozilla.org/en-US/docs/Learn/Server-side)
 </br>
 2.  AJAX
 </br>
-Check out the basics of ajax at [[https://api.jquery.com/jquery.ajax/]{.underline}](https://api.jquery.com/jquery.ajax/). </br>
+Check out the basics of ajax at [https://api.jquery.com/jquery.ajax/](https://api.jquery.com/jquery.ajax/). </br>
 The site covers all the basics of ajax about writing asynchronous calls and provides in depth information about its parameters. </br>
 </br>
-For ajax documentation, please visit [[https://api.jquery.com/category/ajax/]{.underline}](https://api.jquery.com/category/ajax/) </br>
+For ajax documentation, please visit [https://api.jquery.com/category/ajax/](https://api.jquery.com/category/ajax/) </br>
 
 3.  Google Map API
 
