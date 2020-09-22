@@ -19,6 +19,7 @@ include:
 * Gracefully accepting constructive criticism
 * Focusing on what is best for the community
 * Showing empathy towards other community members
+* Help learn and write code
 
 Examples of unacceptable behavior by participants include:
 
@@ -64,3 +65,9 @@ Further details of specific enforcement policies may be posted separately.
 Project maintainers who do not follow or enforce the Code of Conduct in good
 faith may face temporary or permanent repercussions as determined by other
 members of the project's leadership.
+
+## Respect
+
+Respecting the ideas, innovations, amendments we make is one of the top aspects required 
+in our code of conduct. We see leaders in everybody. Leader can be anyone whose are obsessed with customers, 
+requirements, purpose of the work. 
