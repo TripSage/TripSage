@@ -1,6 +1,5 @@
 Django==3.1.1
 pytest
 pytest-pylint==0.16.1
-pytest-flake8==1.0.5
 xmltodict
 requests
