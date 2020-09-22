@@ -4,8 +4,6 @@
 generated](media/image5.png){width="1.9582983377077865in"
 height="1.9042465004374454in"}
 
-**Functional and Technical Specification Document**
-
 > **Developed by:**
 >
 > Dhruvil Shah dshah4\@ncsu.edu\
@@ -14,51 +12,51 @@ height="1.9042465004374454in"}
 > Sreemoyee Ray sray9\@ncsu.edu\
 > Sameer Adhikari sadhika2\@ncsu.edu
 
-**Table of Contents**
+# Table of Contents
 
-**1.0 General Information**
+## 1.0 General Information
 
-**1.1 Purpose**
+### 1.1 Purpose
 
-**1.2 Scope**
+### 1.2 Scope
 
-**1.3 Acronyms/Definitions**
+### 1.3 Acronyms/Definitions
 
-**1.4 Why TripSage**
+### 1.4 Why TripSage
 
-**2.0 Functional Requirements**
+## 2.0 Functional Requirements
 
-**2.1 Overview**
+### 2.1 Overview
 
-**2.2 Why Django**
+### 2.2 Why Django
 
-**2.3 Features **
+### 2.3 Features
 
-**2.4 Use Cases**
+### 2.4 Use Cases
 
-**3.0 Technical Specification**
+## 3.0 Technical Specification
 
-**3.1 Software**
+### 3.1 Software
 
-**3.2 Django Architecture**
+### 3.2 Django Architecture
 
-**3.3 Description of Models**
+### 3.3 Description of Models
 
-**3.4 Description of Functions**
+### 3.4 Description of Functions
 
-**3.5 Data Models**
+### 3.5 Data Models
 
-**3.6 ER Diagram for the Models**
+### 3.6 ER Diagram for the Models
 
-**3.7 Logical Flow of Control**
+### 3.7 Logical Flow of Control
 
-**3.8 Code Design Tools**
+### 3.8 Code Design Tools
 
-**4.0 Future improvements: suggestions**
+## 4.0 Future improvements: suggestions
 
-**4.1 What has been Implemented?**
+### 4.1 What has been Implemented?
 
-**4.2 What needs to be done?**
+4.2 What needs to be done?**
 
 **4.3 Ambitious Suggestions**
 
