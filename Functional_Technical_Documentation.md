@@ -257,28 +257,27 @@ Tagged\_as: To store the mapping between Places and Tags
 ## 3.4 Functions
 
 ***TripSage/*** </br>
-
-***tripHome/*** </br>
-
-**[models.py]** - Describes tables for database. Each function describes a table in the database (check documentation for more information) </br>
-**[views.py]** - A View is a python function or classe that takes a request and provides a response. It can render the HTML pages, call APIs, push and retrieve data from tables in the database </br>
-*getResponse* - </br>
-    1. Calls Google Geolocation API to fetch locations as per user\'s trip preference </br>
-    2. Checks results for duplicates and standard number of places for each activity according to the dictionary type\_places\_map </br>
-    3. Stores results in JSON object </br>
-*resultsPage* - renders results.html </br>
-*index* - renders index.html </br>
-**[urls.py]** - maps url patterns to functions in views.py </br>
-***templates/*** </br>
-**[index.html]** - extends to base\_generic.html </br>
-**[base\_generic.html]** - landing page </br>
-**[result.html]** - results page </br>
-***static/*** </br>
-***js/*** </br>
-**[custom.js]** Functionality for base\_generic.html. </br>
-*saveData()* - saves data from landing page and redirects to results.html </br>
-**[resultsPage.js]** - Functionality for results.html. Connects results.html to getResponse in views.py </br>
-*showData()* - JS for results.html </br>
+   ***tripHome/*** </br>
+      **models.py** - Describes tables for database. Each function describes a table in the database (check documentation for more information) </br>
+      **views.py** - A View is a python function or classe that takes a request and provides a response. It can render the HTML pages, call APIs, push and retrieve
+      data from tables in the database </br>
+         *getResponse* - </br>
+            1. Calls Google Geolocation API to fetch locations as per user\'s trip preference </br>
+            2. Checks results for duplicates and standard number of places for each activity according to the dictionary type\_places\_map </br>
+            3. Stores results in JSON object </br>
+         *resultsPage* - renders results.html </br>
+         *index* - renders index.html </br>
+      **urls.py** - maps url patterns to functions in views.py </br>
+      ***templates/*** </br>
+         **index.html** - extends to base\_generic.html </br>
+         **base_generic.html** - landing page </br>
+         **result.html** - results page </br>
+      ***static/*** </br>
+         ***js/*** </br>
+            **custom.js** Functionality for base\_generic.html. </br>
+               *saveData()* - saves data from landing page and redirects to results.html </br>
+            **resultsPage.js** - Functionality for results.html. Connects results.html to getResponse in views.py </br>
+               *showData()* - JS for results.html </br>
 </br>
 </br>
 ## 3.5 Entity Relationship Diagram for the Models
