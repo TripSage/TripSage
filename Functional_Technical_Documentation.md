@@ -423,3 +423,17 @@ trips generated for the particular place on a given date.
 > [[https://api.jquery.com/category/ajax/]{.underline}](https://api.jquery.com/category/ajax/)
 
 3.  Google Map API
+
+> The Places API lets you search for place information using a variety of categories, including 	
+> establishments, prominent points of interest, and geographic locations. You can search for places 
+> either by proximity or a text string. A Place Search returns a list of places along with summary 
+> information about each place; additional information is available via a Place Details query. 
+> The Find Place request is an HTTP URL of the following form:
+> https://maps.googleapis.com/maps/api/place/findplacefromtext/output?parameters
+> where output may be either of the following values:
+> json (recommended) indicates output in JavaScript Object Notation (JSON)
+> xml indicates output as XML
+> We need to generate a key (from google cloud services) which can authenticate the request 
+> we send to Google Maps place API. Since, we connect/authorize the key using our gmail account, 
+> we use one of the gmail accounts from our group. For the extension, we can provide our key/can help generate a key for you.
+
