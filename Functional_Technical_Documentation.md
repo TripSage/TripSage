@@ -1,6 +1,9 @@
-![](https://github.com/TripSage/TripSage/blob/master/Assets/TripSageLogo.png)
-
-![](https://github.com/TripSage/TripSage/blob/master/Assets/DjangoArch.png)
+<p align="center">
+  <img align="center" src="https://github.com/TripSage/TripSage/blob/master/Assets/TripSageLogo.png"> </br>
+</p>
+<p align="center">
+  <img align="center" src="https://github.com/TripSage/TripSage/blob/master/Assets/Monk.png">
+</p>
 
 > **Developed by:**
 >
@@ -172,6 +175,9 @@ The purpose behind choosing Django was two-fold. We wanted to challenge ourselve
 </br>
 Also, Django follows MVT(model-view-template) architecture which can be used independently making it reliable, flexible and simple. Moreover, it has its own server and the learning curve is pretty minimum. Compared to Flask, Django is used for applications that serve more than just one requirement. We envision and designed TripSage to include many features, making Django the better choice.
 </br>
+
+![](https://github.com/TripSage/TripSage/blob/master/Assets/DjangoArch.png)
+
 ## 2.3 Features
 
 General set of features designed for TripSage: </br>
