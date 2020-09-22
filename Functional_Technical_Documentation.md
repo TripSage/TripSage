@@ -5,6 +5,7 @@
   <img align="center" src="https://github.com/TripSage/TripSage/blob/master/Assets/Monk.png">
 </p>
 
+<p align="center">
 > **Developed by:**
 >
 > Dhruvil Shah dshah4\@ncsu.edu\
@@ -12,6 +13,7 @@
 > Poorvaja Penmetsa ppenmet\@ncsu.edu\
 > Sreemoyee Ray sray9\@ncsu.edu\
 > Sameer Adhikari sadhika2\@ncsu.edu
+</p>
 
 # Table of Contents
 
@@ -176,8 +178,6 @@ The purpose behind choosing Django was two-fold. We wanted to challenge ourselve
 Also, Django follows MVT(model-view-template) architecture which can be used independently making it reliable, flexible and simple. Moreover, it has its own server and the learning curve is pretty minimum. Compared to Flask, Django is used for applications that serve more than just one requirement. We envision and designed TripSage to include many features, making Django the better choice.
 </br>
 
-![](https://github.com/TripSage/TripSage/blob/master/Assets/DjangoArch.png)
-
 ## 2.3 Features
 
 General set of features designed for TripSage: </br>
@@ -229,7 +229,7 @@ The TripSage application is built with Django, an open source web application fr
 
 ## 3.2 Django Architecture
 
-![](media/image4.png){width="6.5in" height="2.073611111111111in"}
+![](https://github.com/TripSage/TripSage/blob/master/Assets/DjangoArch.png)
 
 TripSage is developed with Django, a high-level Python web application framework that enables the rapid development of web applications. It follows the MTV (Model Template View) architecture:
 
@@ -286,8 +286,7 @@ Tagged\_as: To store the mapping between Places and Tags
 </br>
 ## 3.5 Entity Relationship Diagram for the Models
 
-![](media/image10.png){width="6.713542213473316in"
-height="6.958333333333333in"}
+![](https://github.com/TripSage/TripSage/blob/master/Assets/TripSageERDiag.png)
 
 ## 3.6 Logical Flow of Control:
 
