@@ -40,24 +40,22 @@ python manage.py runserver </br>
 (Disclaimer: Need some knowledge of Django to understand Project structure, please go through above resources if needed)</br>
 TripSage/</br>
 &nbsp; tripHome/</br>
-&nbsp;&nbsp; models.py - Describes tables for database</br>
-&nbsp;&nbsp;&nbsp; Each function describes a table in the database (check documentation for more information)</br>
-&nbsp;&nbsp; views.py - A View is a python function or classe that takes a request and provides a response.</br> It can render the HTML pages, call APIs, push and retrieve data from tables in the database </br>
-&nbsp;&nbsp;&nbsp; getResponse - </br>
-&nbsp;&nbsp;&nbsp;&nbsp; 1. Calls Google Geolocation API to fetch locations as per user's trip preference</br>
-&nbsp;&nbsp;&nbsp;&nbsp; 2. Checks results for duplicates and standard number of places for each activity according to the dictionary type_places_map </br>
-&nbsp;&nbsp;&nbsp;&nbsp; 3. Stores results in JSON object </br>
-&nbsp;&nbsp;&nbsp; resultsPage - renders results.html </br>
-&nbsp;&nbsp;&nbsp; index - renders index.html </br>
-&nbsp;&nbsp;&nbsp; urls.py - maps url patterns to functions in views.py </br>
+&nbsp;&nbsp; models.py </br>
+&nbsp;&nbsp; views.py </br>
+&nbsp;&nbsp;&nbsp; getResponse </br>
+&nbsp;&nbsp;&nbsp; resultsPage </br>
+&nbsp;&nbsp;&nbsp; index </br>
+&nbsp;&nbsp;&nbsp; urls.py </br>
 &nbsp;&nbsp;&nbsp; templates/ </br>
-&nbsp;&nbsp;&nbsp;&nbsp; index.html - extends to base_generic.html </br>
-&nbsp;&nbsp;&nbsp;&nbsp; base_generic.html - landing page </br>
-&nbsp;&nbsp;&nbsp;&nbsp; result.html - results page </br>
+&nbsp;&nbsp;&nbsp;&nbsp; index.html </br>
+&nbsp;&nbsp;&nbsp;&nbsp; base_generic.html </br>
+&nbsp;&nbsp;&nbsp;&nbsp; result.html</br>
 &nbsp;&nbsp;&nbsp; static/ </br>
 &nbsp;&nbsp;&nbsp;&nbsp; js/ </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; custom.js </br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; saveData() - saves data from landing page and redirects to results.html </br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; saveData() </br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resultsPage.js </br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; showData() </br>
 </br>
 
 </br>
