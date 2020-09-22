@@ -15,7 +15,7 @@
 
 # Table of Contents
 
-## 1.0 [General Information](#general-information "Go to 1.0")
+## 1.0 [General Information](#1.0-general-information "Go to 1.0")
 
 ### 1.1 Purpose
 
@@ -25,7 +25,7 @@
 
 ### 1.4 Why TripSage
 
-## 2.0 [Functional Requirements](#functional-specifications "Go to 2.0")
+## 2.0 [Functional Requirements](#2.0-functional-specifications "Go to 2.0")
 
 ### 2.1 Overview
 
@@ -35,7 +35,7 @@
 
 ### 2.4 Use Cases
 
-## 3.0 [Technical Specification](#technical-specifications "Go to 3.0")
+## 3.0 [Technical Specification](#3.0-technical-specifications "Go to 3.0")
 
 ### 3.1 Software
 
@@ -53,7 +53,7 @@
 
 ### 3.8 Code Design Tools
 
-## 4.0 [Future improvements](#future-improvements "Go to 4.0")
+## 4.0 [Future improvements](#4.0-future-improvements "Go to 4.0")
 
 ### 4.1 What has been Implemented?
 
@@ -61,7 +61,7 @@
 
 ### 4.3 Ambitious Suggestions
 
-## 5.0 [Appendix and Resources](#appendix-and-resources "Go to 5.0")
+## 5.0 [Appendix and Resources](#5.0-appendix-and-resources "Go to 5.0")
 
 ### 5.1 Appendix A
 
@@ -244,7 +244,7 @@ TripSage is developed with Django, a high-level Python web application framework
 4.  Model is a class representing table/collection in models.py
 
 ## 3.3 Models
-</br>
+
 Following is the list of Models in TripSage and a brief description of
 each: </br>
 City: To store cities </br>
@@ -254,7 +254,7 @@ Destinations: The cities that can be destinations </br>
 Contains: To store the mapping between Places and Cities </br>
 Tags: Different tags which will be used to tag Places </br>
 Tagged\_as: To store the mapping between Places and Tags </br>
-</br>
+
 ## 3.4 Functions
 (Legend: ***Italics + Bold: Directories***, **Bold: Files**, *Italics: Functions*, Plain: Descriptions )  </br>
  </br>
@@ -281,13 +281,13 @@ Tagged\_as: To store the mapping between Places and Tags </br>
             **resultsPage.js** - Functionality for results.html. Connects results.html to getResponse in views.py </br>
                *showData()* - JS for results.html </br>
 </br>
-</br>
+
 ## 3.5 Entity Relationship Diagram for the Models
 
 ![](https://github.com/TripSage/TripSage/blob/master/Assets/TripSageERDiag.png)
 
 ## 3.6 Logical Flow of Control:
-</br>
+
 The diagram below shows the flow of control from when a user enters their trip details on the landing page of tripHome to seeing their results The bold text signifies start and end states.</br>
 
 ![](https://github.com/TripSage/TripSage/blob/master/Assets/Flow%20of%20Control%20(1).png){width="6.942708880139983in" height="3.09375in"}
@@ -308,15 +308,15 @@ Black</br>
 # 4.0 Future improvements
 
 ## 4.1 What has been Implemented?
-</br>
+
 The TripSage application currently supports the following functionalities:</br>
 </br>
 Allow user to create a Trip using Flow\#2 where, the user only inputs the destination city/cities to visit and Type/types of trip along with the estimated Trip time.</br>
 </br>
 The website uses Google Maps api to fetch the appropriate places for the given destination along with their ratings and displays the list of places.</br>
-</br>
+
 ## 4.2 What needs to be done?
-</br>
+
 The following functionalities have not been implemented yet:</br>
 </br>
 1. User Login: Update models.py \[Left to acquaint Team 2 about the database structure\] to include User\[[EmailId]{.underline}, Password\] and Trips\_Planned [[EmailId, TripId]{.underline}\]. Implement authentication page and retrieve Trips saved by User.</br>
@@ -328,13 +328,13 @@ The following functionalities have not been implemented yet:</br>
 4. Implementation of functionality using Google Maps \[or any other api (decision left for next team)\] to determine the cheapest Travel route based on the destinations and number of people.</br>
 </br>
 5. Implementation of Trip Creation using Flow\#1, where a user already has a trip planned to the exact dot, including the places, they want to visit and only need our assistance to schedule and get the cheapest travel route.</br>
-</br>
+
 ## 4.3 Ambitious Suggestions:
 </br>
 While showing the suggestions itself, users can remove suggested places, modifying the itinerary dynamically. </br>
 </br>
 Dynamic computation of Popularity and covid tags based on the no of trips generated for the particular place on a given date. </br>
-</br>
+
 # 5.0 Appendix and Resources
 
 ## 5.1 Appendix A
@@ -367,6 +367,7 @@ Tell Sygic where you\'re going and for how many days. Based on that, the app wil
 </br>
 A very close Itinerary planner with suggestion algorithm inbuilt into the website, with the only feature missing is the ability to suggest a cheapest route. </br>
 </br>
+
 ## 5.3 Resources
 
 1.  Django
