@@ -244,17 +244,17 @@ TripSage is developed with Django, a high-level Python web application framework
 4.  Model is a class representing table/collection in models.py
 
 ## 3.3 Models
-
+</br>
 Following is the list of Models in TripSage and a brief description of
-each:
-City: To store cities
-Trip: To store the trips generated from the itinerary planner
-Places: Locations/spots within cities that will be displayed as part of the itinerary
-Destinations: The cities that can be destinations
-Contains: To store the mapping between Places and Cities
-Tags: Different tags which will be used to tag Places
-Tagged\_as: To store the mapping between Places and Tags
-
+each: </br>
+City: To store cities </br>
+Trip: To store the trips generated from the itinerary planner </br> 
+Places: Locations/spots within cities that will be displayed as part of the itinerary </br>
+Destinations: The cities that can be destinations </br>
+Contains: To store the mapping between Places and Cities </br>
+Tags: Different tags which will be used to tag Places </br>
+Tagged\_as: To store the mapping between Places and Tags </br>
+</br>
 ## 3.4 Functions
 (Legend: ***Italics + Bold: Directories***, **Bold: Files**, *Italics: Functions*, Plain: Descriptions )  </br>
  </br>
@@ -287,80 +287,54 @@ Tagged\_as: To store the mapping between Places and Tags
 ![](https://github.com/TripSage/TripSage/blob/master/Assets/TripSageERDiag.png)
 
 ## 3.6 Logical Flow of Control:
+</br>
+The diagram below shows the flow of control from when a user enters their trip details on the landing page of tripHome to seeing their results The bold text signifies start and end states.</br>
 
-The diagram below shows the flow of control from when a user enters
-their trip details on the landing page of tripHome to seeing their
-results The bold text signifies start and end states.
-
-*(results,js has been changed to resultsPage.js)*
-
-![](media/image2.jpg){width="6.942708880139983in" height="3.09375in"}
+![](https://github.com/TripSage/TripSage/blob/master/Assets/Flow%20of%20Control%20(1).png){width="6.942708880139983in" height="3.09375in"}
 
 ## 3.7 Code Design Tools:
 
 Our team uses VSCode and Pycharm.
-
-[Linter:]{.underline}
-
-VSCode, Pycharm: pylint
-
-[Style Checker:]{.underline}
-
-VSCode, Pycharm: pylint (pep8)
-
-[Code Formatter:]{.underline}
-
-Black
+</br>
+Linter:</br>
+VSCode, Pycharm: pylint</br>
+</br>
+Style Checker:</br>
+VSCode, Pycharm: pylint (pep8)</br>
+</br>
+Code Formatter:</br>
+Black</br>
 
 # 4.0 Future improvements
 
 ## 4.1 What has been Implemented?
-
-The TripSage application currently supports the following
-functionalities:
-
-Allow user to create a Trip using Flow\#2 where, the user only inputs
-the destination city/cities to visit and Type/types of trip along with
-the estimated Trip time.
-
-The website uses Google Maps api to fetch the appropriate places for the
-given destination along with their ratings and displays the list of
-places.
-
+</br>
+The TripSage application currently supports the following functionalities:</br>
+</br>
+Allow user to create a Trip using Flow\#2 where, the user only inputs the destination city/cities to visit and Type/types of trip along with the estimated Trip time.</br>
+</br>
+The website uses Google Maps api to fetch the appropriate places for the given destination along with their ratings and displays the list of places.</br>
+</br>
 ## 4.2 What needs to be done?
-
-The following functionalities have not been implemented yet:
-
-User Login: Update models.py \[Left to acquaint Team 2 about the
-database structure\] to include User\[[EmailId]{.underline}, Password\]
-and Trips\_Planned\[[EmailId, TripId]{.underline}\]. Implement
-authentication page and retrieve Trips saved by User.
-
-Sharing Trips: Allow users to share trips they created with other users.
-
-Implementation of an algorithm to create an itinerary from the places
-retrieved using the api. The algorithm will be a Constraint Satisfaction
-Problem, constrained by best time to visit a place and the location of a
-place. However, details of exact implementation are left for the next
-team.
-
-Implementation of functionality using Google Maps \[or any other api
-(decision left for next team)\] to determine the cheapest Travel route
-based on the destinations and number of people.
-
-Implementation of Trip Creation using Flow\#1, where a user already has
-a trip planned to the exact dot, including the places, they want to
-visit and only need our assistance to schedule and get the cheapest
-travel route.
-
+</br>
+The following functionalities have not been implemented yet:</br>
+</br>
+1. User Login: Update models.py \[Left to acquaint Team 2 about the database structure\] to include User\[[EmailId]{.underline}, Password\] and Trips\_Planned [[EmailId, TripId]{.underline}\]. Implement authentication page and retrieve Trips saved by User.</br>
+</br>
+2. Sharing Trips: Allow users to share trips they created with other users.</br>
+</br>
+3. Implementation of an algorithm to create an itinerary from the places retrieved using the api. The algorithm will be a Constraint Satisfaction Problem, constrained by best time to visit a place and the location of a place. However, details of exact implementation are left for the next team. </br>
+</br>
+4. Implementation of functionality using Google Maps \[or any other api (decision left for next team)\] to determine the cheapest Travel route based on the destinations and number of people.</br>
+</br>
+5. Implementation of Trip Creation using Flow\#1, where a user already has a trip planned to the exact dot, including the places, they want to visit and only need our assistance to schedule and get the cheapest travel route.</br>
+</br>
 ## 4.3 Ambitious Suggestions:
-
-While showing the suggestions itself, users can remove suggested places,
-modifying the itinerary dynamically.
-
-Dynamic computation of Popularity and covid tags based on the no of
-trips generated for the particular place on a given date.
-
+</br>
+While showing the suggestions itself, users can remove suggested places, modifying the itinerary dynamically. </br>
+</br>
+Dynamic computation of Popularity and covid tags based on the no of trips generated for the particular place on a given date. </br>
+</br>
 # 5.0 Appendix and Resources
 
 ## 5.1 Appendix A
@@ -379,48 +353,35 @@ trips generated for the particular place on a given date.
 
 6.  End date
 
-7.  Places to visits \-\-- optional, but have to enter if not entered
-    > the "type of the trip"
+7.  Places to visits \-- optional, but have to enter if not entered the "type of the trip"
 
-8.  Type of the trip \-- optional, but have to enter if not entered the
-    > list of places to visit
+8.  Type of the trip \-- optional, but have to enter if not entered the list of places to visit
 
 ## 5.2 Inspirations
 
-1.  Sygic Travel \[[https://travel.sygic.com/en]{.underline}\] - Tell
-    > Sygic where you\'re going and for how many days. Based on that,
-    > the app will create a custom itinerary of the top attractions in
-    > that place, along with where you should go on which day.
+1.  Sygic Travel  \[[https://travel.sygic.com/en]{.underline}\]
+</br>
+Tell Sygic where you\'re going and for how many days. Based on that, the app will create a custom itinerary of the top attractions in that place, along with where you should go on which day.
 
-2.  Inspirock
-    > \[[[https://www.inspirock.com]{.underline}](https://www.inspirock.com)\] -
-    > A very close Itinerary planner with suggestion algorithm inbuilt
-    > into the website, with the only feature missing is the ability to
-    > suggest a cheapest route.
-
+2. Inspirock  \[[[https://www.inspirock.com]{.underline}](https://www.inspirock.com)\]
+</br>
+A very close Itinerary planner with suggestion algorithm inbuilt into the website, with the only feature missing is the ability to suggest a cheapest route. </br>
+</br>
 ## 5.3 Resources
 
 1.  Django
-
-> Check out the basics: [[Writing your first Django app, part
-> 1]{.underline}](https://docs.djangoproject.com/en/3.1/intro/tutorial01/)
->
-> The first three parts of this 7 part tutorial cover most of the
-> material needed for our project.
->
-> For a more in-depth look at server-side development using Django:
-> [[Server-side website programming - Learn web development \|
-> MDN]{.underline}](https://developer.mozilla.org/en-US/docs/Learn/Server-side)
-
+</br>
+Check out the basics: [[Writing your first Django app, part1]{.underline}](https://docs.djangoproject.com/en/3.1/intro/tutorial01/) </br>
+The first three parts of this 7 part tutorial cover most of the material needed for our project. </br>
+</br>
+For a more in-depth look at server-side development using Django: [[Server-side website programming - Learn web development \|MDN]{.underline}](https://developer.mozilla.org/en-US/docs/Learn/Server-side)
+</br>
 2.  AJAX
-
-> Check out the basics of ajax at
-> [[https://api.jquery.com/jquery.ajax/]{.underline}](https://api.jquery.com/jquery.ajax/).
-> The site covers all the basics of ajax about writing asynchronous
-> calls and provides in depth information about its parameters.
->
-> For ajax documentation, please visit
-> [[https://api.jquery.com/category/ajax/]{.underline}](https://api.jquery.com/category/ajax/)
+</br>
+Check out the basics of ajax at [[https://api.jquery.com/jquery.ajax/]{.underline}](https://api.jquery.com/jquery.ajax/). </br>
+The site covers all the basics of ajax about writing asynchronous calls and provides in depth information about its parameters. </br>
+</br>
+For ajax documentation, please visit [[https://api.jquery.com/category/ajax/]{.underline}](https://api.jquery.com/category/ajax/) </br>
 
 3.  Google Map API
 
