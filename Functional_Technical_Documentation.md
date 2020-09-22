@@ -203,7 +203,7 @@ General set of features designed for TripSage: </br>
 
 **Planning a New Trip**
 
-![](media/image3.png){width="6.5in" height="3.564583333333333in"}
+![](/master/Assets/TripSageEditTrip.png){width="6.5in" height="3.564583333333333in"}
 
 **Saving a Trip**
 
