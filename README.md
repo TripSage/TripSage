@@ -1,11 +1,13 @@
 # TripSage
-The only Itinerary planner, you will ever need
+The only Itinerary planner, you will ever need 
 
 [![Build Status](https://travis-ci.com/TripSage/TripSage.svg?branch=master)](https://travis-ci.com/TripSage/TripSage) 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4019814.svg)](https://doi.org/10.5281/zenodo.4019814)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f04f12b5653d3a7a20ed/maintainability)](https://codeclimate.com/github/TripSage/TripSage/maintainability)![GitHub issues](https://img.shields.io/github/issues-raw/TripSage/TripSage)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/TripSage/TripSage)
 ![GitHub](https://img.shields.io/github/license/TripSage/TripSage)
+
+See UI Mockups at : [TRIPSAGE](http://xd.adobe.com/view/4b11902d-7907-4938-846e-cf4fd00181af-1e42/)
 
 [<img src = "https://github.com/TripSage/TripSage/blob/master/Assets/TripSage%20Playable.png">](https://youtu.be/N0GYVmutWzM)
 </br>
