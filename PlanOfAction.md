@@ -1,9 +1,5 @@
 ### Group 19 Takeover plan
 
-### Community Policy Updates
-
-Upon looking at the 
-
 ### Tasks to be completed
 
 1) Addition of style checkers
