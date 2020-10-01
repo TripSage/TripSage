@@ -1,6 +1,6 @@
 ### Group 19 Takeover plan
 
-### Tasks to be completed
+### Tasks to be completed:
 
 1) Addition of style checkers
 
