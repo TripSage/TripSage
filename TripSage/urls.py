@@ -25,6 +25,7 @@ urlpatterns = [         # pylint: disable=invalid-name
     path('admin/', admin.site.urls),
     path('tripHome/', include('tripHome.urls')),
     path('', RedirectView.as_view(url='tripHome/', permanent=True)),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
