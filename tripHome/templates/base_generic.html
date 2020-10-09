@@ -79,16 +79,22 @@
 		<header class="top-area">
 			<div class="header-area">
 				<div class="container">
-					<div class="row">
-						<div class="col-sm-2">
+					<!-- <div class="row"> -->
+						<!-- <div class="col-sm-2"> -->
 							<div class="logo">
-								<a href="#home">
+								<a href="" class="logo-left">
 									trip<span>Sage</span>
 								</a>
+								{% if user.is_authenticated %}
+									<a href="/users/logout" class="log-right">Logout</a>
+								{% else %}
+									<a href="/users/login" class="log-right">login</a>
+								{% endif %}
+								<a href=></a>
 							</div><!-- /.logo-->
-						</div><!-- /.col-->
+						<!-- </div>/.col -->
 						
-					</div><!-- /.row -->
+					<!-- </div>/.row -->
 					<div class="home-border"></div><!-- /.home-border-->
 				</div><!-- /.container-->
 			</div><!-- /.header-area -->
