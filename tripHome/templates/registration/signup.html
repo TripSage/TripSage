@@ -1,11 +1,40 @@
 <!-- templates/registration/signup.html -->
-{% block title %}Sign Up{% endblock %}
+{% include "header.html" %}
 
+{% load static %}
 {% block content %}
-  <h2>Sign up</h2>
+<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+<div class="centered">
   <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign Up</button>
+    <!-- {{ form.as_p }} -->
+
+    <form class="login-form" action="javascript:void(0);">
+      <h1>Sign Up</h1>
+      <br>
+      <div class="form-input-material">
+        <input type="text" name="username" id="id_username" placeholder=" " autocomplete="off" class="form-control-material" required />
+        <label for="username">Username</label>
+        <p class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</p>
+      </div>
+      <br>
+      <div class="form-input-material">
+        <input type="password" name="password1" id="id_password1" placeholder=" " autocomplete="off" class="form-control-material" required />
+        <label for="id_password1">Password</label>
+        <p class="helptext"> Your password can’t be too similar to your other personal information.</p>
+        <p class="helptext"> Your password must contain at least 8 characters.</p>
+        <p class="helptext"> Your password can’t be a commonly used password.</p>
+        <p class="helptext"> Your password can’t be entirely numeric.</p>
+      </div>
+      <br>
+      <div class="form-input-material">
+        <input type="password" name="password2" id="id_password2" placeholder=" " autocomplete="off" class="form-control-material" required />
+        <label for="id_password2">Re-enter Password</label>
+        <p class="helptext">Enter the same password as before, for verification.</p>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary btn-ghost">SignUp</button>
+    </form>
   </form>
+</div>
 {% endblock %}
