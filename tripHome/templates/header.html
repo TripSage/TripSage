@@ -60,21 +60,21 @@
                 <div class="header-area">
                     <div class="container">
                         <div class="row">
-                            <div class="col-sm-2">
+                            <div class="col-sm-12">
                                 <div class="logo">
                                     <a href="/tripHome" class="logo-left">
-                                        trip<span>Sage</span>
+                                        tripSage
                                     </a>
                                     {% if user.is_authenticated %}
-                                        <a href="/users/logout" class="log-right">Logout</a>
+                                        <a href="/users/logout" class="log-right" style="float: right">Logout</a>
                                     {% else %}
-                                        <a href="/users/login" class="log-right">login</a>
+                                        <a href="/users/login" class="log-right" style="float: right">login</a>
                                     {% endif %}
                                     <a href=></a>
                                 </div><!-- /.logo-->
                             </div><!-- /.col -->
                         </div><!-- /.row -->
-                        <div class="home-border"></div><!-- /.home-border-->
+                        <div class="home-border" style="margin-top: 5px"></div><!-- /.home-border-->
                     </div><!-- /.container-->
                 </div><!-- /.header-area -->
             </header><!-- /.top-area-->

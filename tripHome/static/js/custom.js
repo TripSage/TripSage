@@ -68,39 +68,39 @@ $(document).ready(function () {
 
   // 7.animation support
 
-  $(window).load(function () {
-    $(".about-us-txt h2")
+  $(".about-us-txt h2")
       .removeClass("animated fadeInUp")
       .css({ opacity: "0" });
     $(".about-us-txt button")
       .removeClass("animated fadeInDown")
       .css({ opacity: "0" });
-  });
 
-  $(window).load(function () {
     $(".about-us-txt h2").addClass("animated fadeInUp").css({ opacity: "0" });
     $(".about-us-txt button")
       .addClass("animated fadeInDown")
       .css({ opacity: "0" });
+
+  $("#destinationSelection").select2({
+  maximumSelectionLength: 2
   });
+
+  $("#sourceSelection").select2({
+    maximumSelectionLength: 1,
+    placeholder: "Select a source",
+    initSelection: function(element, callback) {
+    },
+  });
+
+  $("#travelSelection").select2({
+    maximumSelectionLength: 2
+  });
+
+  $("#transportSelection").select2({
+    maximumSelectionLength: 2
+  });
+
 });
 
-// Initializing the forms as select2, select2 provides a flexibility over select tag
-$("#destinationSelection").select2({
-  maximumSelectionLength: 2,
-});
-
-$("#sourceSelection").select2({
-  maximumSelectionLength: 1,
-});
-
-$("#travelSelection").select2({
-  maximumSelectionLength: 2,
-});
-
-$("#transportSelection").select2({
-  maximumSelectionLength: 2,
-});
 
 // Function which collects the user data in localstorage
 function saveData() {

@@ -83,7 +83,7 @@
 				<div class="about-us-content">
 					<div class="row">
 						<div class="col-sm-12">
-							<div class="single-about-us">
+							<div class="single-about-us" style="margin-top: 190px">
 								<div class="about-us-txt">
 									<h2>
 										We Plan Every Thing For You 
@@ -92,17 +92,7 @@
 							</div><!--/.single-about-us-->
 						</div><!--/.col-->
 					</div><!--/.row-->
-				</div><!--/.about-us-content--> 
-			</div><!--/.container-->
-
-		</section><!--/.about-us-->
-		<!--about-us end -->
-		
-
-		<!--travel-box start-->
-		<section  class="travel-box">
-        	<div class="container">
-        		<div class="row">
+                    <div class="row">
         			<div class="col-md-12">
         				<div class="single-travel-boxes">
         					<div id="desc-tabs" class="desc-tabs">
@@ -132,7 +122,7 @@
 									<div role="tabpanel" class="tab-pane active fade in" id="tours">
 										<div class="tab-para">
 
-											
+
 											<div class="row">
 												<div class="col-lg-4 col-md-4 col-sm-12">
 													<div class="single-tab-select-box">
@@ -172,7 +162,7 @@
 														<div class="travel-select-icon">
 															<select class="form-control " name="places[]" multiple="multiple" id = "travelSelection">
 
-															  	<option value="default">What kind of trip do you want to take?</option> 
+															  	<option value="default">What kind of trip do you want to take?</option>
 
 															  	<option value="relaxing">Relaxing</option>
 
@@ -180,7 +170,7 @@
 															  	<option value="kids">Kid Friendly</option>
 
 															</select>
-														</div>  <!-- /.travel-select-icon --> 
+														</div>  <!-- /.travel-select-icon -->
 
 														<br>
 														<h2>Mode of Transport</h2>
@@ -188,7 +178,7 @@
 														<div class="travel-select-icon">
 															<select class="form-control " name="places[]" multiple="multiple" id = "transportSelection">
 
-															  	<option value="default">Mode of Transport?</option> 
+															  	<option value="default">Mode of Transport?</option>
 
 															  	<option value="relaxing">Flight</option>
 
@@ -196,7 +186,7 @@
 															  	<option value="kids">Bus</option>
 
 															</select>
-														</div>  <!-- /.travel-select-icon --> 
+														</div>  <!-- /.travel-select-icon -->
 
 													</div><!--/.single-tab-select-box-->
 												</div><!--/.col-->
@@ -255,7 +245,7 @@
 																<div class="travel-filter">
 																	<div class="info_widget">
 																		<div class="price_filter">
-																			
+
 																			<div id="slider-range"></div><!--/.slider-range-->
 
 																			<div class="price_slider_amount">
@@ -271,7 +261,7 @@
 												<div class="clo-sm-7">
 													<div class="about-btn travel-mrt-0 pull-right">
 														<button  class="about-view travel-btn" id = "searchButton" onclick="saveData();">
-															search	
+															search
 														</button><!--/.travel-btn-->
 													</div><!--/.about-btn-->
 												</div><!--/.col-->
@@ -288,10 +278,12 @@
         				</div><!--/.single-travel-box-->
         			</div><!--/.col-->
         		</div><!--/.row-->
-        	</div><!--/.container-->
+				</div><!--/.about-us-content--> 
+			</div><!--/.container-->
 
-        </section><!--/.travel-box-->
-		<!--travel-box end-->
+		</section><!--/.about-us-->
+		<!--about-us end -->
+
 
 		<!-- footer-copyright start -->
 		<footer  class="footer-copyright">
@@ -354,7 +346,7 @@
 
 
 	
-		<script src="{% static 'js/jquery.js' %}"></script>
+		<script src="{% static 'js/jquery-3.5.1.js' %}"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 
 		<!--modernizr.min.js-->
@@ -377,8 +369,8 @@
 		<script src="{% static 'js/jquery-ui.min.js' %}"></script>
 
         <!-- counter js -->
-		<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
-		<script src="{% static 'js/waypoints.min.js' %}"></script>
+{#		<script src="{% static 'js/jquery.counterup.min.js' %}"></script>#}
+{#		<script src="{% static 'js/waypoints.min.js' %}"></script>#}
 
 		<!--owl.carousel.js-->
 		<script src="{% static 'js/owl.carousel.min.js' %}"></script>
