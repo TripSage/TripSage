@@ -2,7 +2,7 @@
 The only Itinerary planner, you will ever need 
 
 [![Build Status](https://travis-ci.com/akashsrikanth2310/TripSage.svg?branch=master)](https://travis-ci.com/akashsrikanth2310/TripSage)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4019814.svg)](https://doi.org/10.5281/zenodo.4019814)
+[![DOI](https://zenodo.org/badge/299120263.svg)](https://zenodo.org/badge/latestdoi/299120263)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f04f12b5653d3a7a20ed/maintainability)](https://codeclimate.com/github/TripSage/TripSage/maintainability)![GitHub issues](https://img.shields.io/github/issues-raw/TripSage/TripSage)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/TripSage/TripSage)
 ![GitHub](https://img.shields.io/github/license/TripSage/TripSage)
