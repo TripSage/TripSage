@@ -3,3 +3,4 @@ pytest
 pytest-pylint==0.16.1
 xmltodict
 requests
+coverage
