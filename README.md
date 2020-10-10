@@ -7,6 +7,7 @@ The only Itinerary planner, you will ever need
 [![Test Coverage](https://api.codeclimate.com/v1/badges/576c3ed7254e83498bcc/test_coverage)](https://codeclimate.com/github/akashsrikanth2310/TripSage/test_coverage)
 ![GitHub issues](https://img.shields.io/github/issues-raw/TripSage/TripSage)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/TripSage/TripSage)
+[![codecov](https://codecov.io/gh/akashsrikanth2310/TripSage/branch/master/graph/badge.svg)](https://codecov.io/gh/akashsrikanth2310/TripSage)
 ![GitHub](https://img.shields.io/github/license/TripSage/TripSage)
 
 See UI Mockups at : [TRIPSAGE](http://xd.adobe.com/view/4b11902d-7907-4938-846e-cf4fd00181af-1e42/)
