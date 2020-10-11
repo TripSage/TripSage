@@ -11,11 +11,11 @@ The only Itinerary planner, you will ever need
 
 Code Formatter : 
 
-![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) 
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) 
 
 Code Style Checker : 
 
-![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 See UI Mockups at : [TRIPSAGE](http://xd.adobe.com/view/4b11902d-7907-4938-846e-cf4fd00181af-1e42/)
 
