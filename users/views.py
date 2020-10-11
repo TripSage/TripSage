@@ -1,7 +1,10 @@
 from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
+
+""" 
+The Signup view of the users and actions related to that
+"""
 
 class SignUpView(generic.CreateView):
     form_class = UserCreationForm
