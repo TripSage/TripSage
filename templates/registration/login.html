@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="no-js"  lang="en">
+
+<head></head>
+<body>
+{% include "header.html" %}
+
+		<!--about-us start -->
+		<section id="home" class="login-form">
+			<div class="container">
+				<div class="login-form-content">
+					<div class="row">
+						<div class="col-sm-12">
+                            <form method="post">
+                              {% csrf_token %}
+                              {{ form.as_p }}
+                              <button type="submit">Log In</button>
+                              <div>
+                                <a href='/users/signup'>SignUp!</a>
+                              </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- templates/registration/login.html -->
+
+</body>
+</html>
