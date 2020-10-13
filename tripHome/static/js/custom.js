@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
   "use strict";
 
@@ -155,5 +156,10 @@ function saveData() {
 
   //redirect to results page
   var url = "search";
+
+  if (destination === "charlotte"){
+    url = "charlotterelaxcar"
+  }
+
   document.location.href = url;
 }

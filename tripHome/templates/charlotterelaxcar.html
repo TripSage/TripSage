@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {% load static %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>TripSage</title>
-    <link rel="stylesheet" type="text/css" href="../search_pages/fontawesome-5.5/css/all.min.css" />
-    <link rel="stylesheet" type="text/css" href="../search_pages/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="../search_pages/slick/slick-theme.css">
-    <link rel="stylesheet" type="text/css" href="../search_pages/magnific-popup/magnific-popup.css">
-    <link rel="stylesheet" type="text/css" href="../search_pages/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../search_pages/css/templatemo-style.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'search_pages/fontawesome-5.5/css/all.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'search_pages/slick/slick.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'search_pages/slick/slick-theme' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'search_pages/magnific-popup/magnific-popup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'search_pages/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'search_pages/css/templatemo-style.css' %}" />
   </head>
   <body>    
     <!-- Hero section -->
@@ -59,11 +60,7 @@
     </section>
     <div style="margin: 10rem;"></div>
 
-    <script src="../search_pages/js/jquery-1.9.1.min.js"></script>     
-    <script src="../search_pages/slick/slick.min.js"></script>
-    <script src="../search_pages/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="../search_pages/js/jquery.singlePageNav.min.js"></script>     
-    <script src="../search_pages/js/bootstrap.min.js"></script> 
+   
     <script>
 
       function getOffSet(){
