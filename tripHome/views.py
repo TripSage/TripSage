@@ -8,9 +8,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 import requests
 import xmltodict
-import logging
 
-logger = logging.getLogger(__name__)
 
 # Map for the type of the trip to the places user can visit
 TYPES_PLACE_MAP = {
@@ -61,9 +59,6 @@ def results_page(request):
     """
     Function to render the results page
     """
-    client_data = json.loads(request.GET)
-    s=json.dumps(client_data)
-    print("the request is ----",s)
     return render(request, "charlotterelaxcar.html", {"data": ""})
 
 
@@ -72,7 +67,6 @@ def index(request):
     Function to render the main page
     """
     # Render the HTML template index.html with the data in the context variable
-    logging.info("stuffffffffffff")
     return render(request, "index.html")
 
 def charlotterelaxcar(request):
