@@ -9,4 +9,5 @@ urlpatterns = [     # pylint: disable=invalid-name
     path("", views.index, name="index"),
     path("results", views.get_response, name="postData"),
     path("search", views.results_page, name="restaurants"),
+    path("charlotterelaxcar", views.charlotterelaxcar, name="restaurants"),
 ]

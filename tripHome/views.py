@@ -9,6 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 import requests
 import xmltodict
 
+
 # Map for the type of the trip to the places user can visit
 TYPES_PLACE_MAP = {
     "adventurous": ["tourist_attraction", "stadium"],
@@ -25,6 +26,7 @@ def get_response(request):
     # getting the landing page data in form of dictionary
     client_data = json.loads(request.POST["requestData"])
     final_data = {}
+    
     for city in client_data["destination_selected"]:
         complete_data = {}
         for types in client_data["tripType"]:
@@ -57,7 +59,7 @@ def results_page(request):
     """
     Function to render the results page
     """
-    return render(request, "result.html", {"data": ""})
+    return render(request, "charlotterelaxcar.html", {"data": ""})
 
 
 def index(request):
@@ -66,3 +68,9 @@ def index(request):
     """
     # Render the HTML template index.html with the data in the context variable
     return render(request, "index.html")
+
+def charlotterelaxcar(request):
+    """
+    Function to render the results page
+    """
+    return render(request, "charlotterelaxcar.html")
