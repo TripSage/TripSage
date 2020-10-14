@@ -121,12 +121,28 @@ function saveData() {
     source_choices.push(d.id);
   });
   source_choices = source_choices[0];
+  
+  if (source_choices == null){
+    alert("No source selected");
+    retrun;
+  }
+
+  if (destination == null){
+    alert("No destination selected");
+    retrun;
+  }
+  
 
   trip_kinds = [];
   var tripKind = $("#travelSelection").select2("data");
   tripKind.forEach(function (d) {
     trip_kinds.push(d.id);
   });
+  
+  if (trip_kinds.length < 1){
+    alert("No trip selected");
+    retrun;
+  }
 
   start_date = $("#start_date")[0].value;
   end_date = $("#end_date")[0].value;
