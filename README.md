@@ -10,17 +10,18 @@ The only Itinerary planner, you will ever need
 [![Code of Conduct](https://img.shields.io/badge/code-of%20conduct-green.svg)](https://github.com/akashsrikanth2310/TripSage/blob/master/CODE_OF_CONDUCT.md)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/akashsrikanth2310/TripSage/blob/master/LICENSE)
 
-Code Formatter : 
+**Code Formatter :**
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) 
 
-Code Style Checker : 
+**Code Coverage :**
+
+CodeCov and Coverage.py : https://github.com/marketplace/codecov
+
+**Code Style Checker : **
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-Code Coverage :
-
-CodeCov and Coverage.py : https://github.com/marketplace/codecov
 
 See UI Mockups at : [TRIPSAGE](http://xd.adobe.com/view/4b11902d-7907-4938-846e-cf4fd00181af-1e42/)
 
