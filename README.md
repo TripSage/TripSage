@@ -18,7 +18,7 @@ The only Itinerary planner, you will ever need
 
 CodeCov and Coverage.py : https://github.com/marketplace/codecov
 
-**Code Style Checker : **
+**Code Style Checker :**
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
