@@ -7,6 +7,8 @@ The only Itinerary planner, you will ever need
 [![codecov](https://codecov.io/gh/akashsrikanth2310/TripSage/branch/master/graph/badge.svg)](https://codecov.io/gh/akashsrikanth2310/TripSage)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/akashsrikanth2310/TripSage/issues)
 ![GitHub](https://img.shields.io/github/license/TripSage/TripSage)
+[![Code of Conduct](https://img.shields.io/badge/code-of%20conduct-green.svg)](https://github.com/akashsrikanth2310/TripSage/blob/master/CODE_OF_CONDUCT.md)
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/akashsrikanth2310/TripSage/blob/master/LICENSE)
 
 Code Formatter : 
 
