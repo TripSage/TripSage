@@ -18,6 +18,10 @@ Code Style Checker :
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
+Code Coverage :
+
+CodeCov and Coverage.py : https://github.com/marketplace/codecov
+
 See UI Mockups at : [TRIPSAGE](http://xd.adobe.com/view/4b11902d-7907-4938-846e-cf4fd00181af-1e42/)
 
 [<img src = "https://github.com/TripSage/TripSage/blob/master/Assets/TripSage%20Playable.png">](https://youtu.be/N0GYVmutWzM)
