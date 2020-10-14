@@ -59,7 +59,7 @@ def results_page(request):
     """
     Function to render the results page
     """
-    return render(request, "charlotterelaxcar.html", {"data": ""})
+    return render(request, "charlotterelax.html", {"data": ""})
 
 
 def index(request):
@@ -69,8 +69,20 @@ def index(request):
     # Render the HTML template index.html with the data in the context variable
     return render(request, "index.html")
 
-def charlotterelaxcar(request):
+def charlotterelax(request):
     """
     Function to render the results page
     """
-    return render(request, "charlotterelaxcar.html")
+    return render(request, "charlotterelax.html")
+
+def charlotteadventurous(request):
+    """
+    Function to render the results page
+    """
+    return render(request, "charlotteadventurous.html")
+
+def charlottekidfriendly(request):
+    """
+    Function to render the results page
+    """
+    return render(request, "charlottekidfriendly.html")
