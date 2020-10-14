@@ -99,6 +99,10 @@ $(document).ready(function () {
   $("#transportSelection").select2({
     maximumSelectionLength: 2
   });
+  
+  $('#start_date').datepicker('setStartDate', new Date()); //reference link : https://stackoverflow.com/questions/8356358/jquery-date-picker-disable-past-dates
+
+  $('#end_date').datepicker('setStartDate', new Date());
 
 });
 
