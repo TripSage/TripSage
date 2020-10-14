@@ -95,10 +95,6 @@ $(document).ready(function () {
   $("#travelSelection").select2({
     maximumSelectionLength: 2
   });
-
-  $("#transportSelection").select2({
-    maximumSelectionLength: 2
-  });
   
   $('#start_date').datepicker('setStartDate', new Date()); //reference link : https://stackoverflow.com/questions/8356358/jquery-date-picker-disable-past-dates
 
@@ -132,23 +128,15 @@ function saveData() {
     trip_kinds.push(d.id);
   });
 
-  mode_transports = [];
-  var modeTransport = $("#transportSelection").select2("data");
-  modeTransport.forEach(function (d) {
-    mode_transports.push(d.id);
-  });
-
   start_date = $("#start_date")[0].value;
   end_date = $("#end_date")[0].value;
 
-  members_count = $("#members_count")[0].value;
   budget_range = $("#amount")[0].value;
 
   data_dict["source"] = source_choices;
   data_dict["destination"] = destination;
   data_dict["destination_selected"] = destination_selected;
   data_dict["tripType"] = trip_kinds;
-  data_dict["modeTransport"] = modeTransport;
   data_dict["startDate"] = start_date;
   data_dict["endDate"] = end_date;
 
