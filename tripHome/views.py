@@ -108,51 +108,87 @@ def raleighkidfriendly(request):
 
 #adding tests
 def increment(arg_one):
+    """
+    Function to increment
+    """
     arg_one = arg_one+1
     return arg_one
 
 def add(arg_one,arg_two):
+    """
+    Function to add
+    """
     ans = arg_one + arg_two
     return ans
 
 def subtract(arg_one,arg_two):
+    """
+    Function to subtract
+    """
     ans = arg_one - arg_two
     return ans
 
 def multiply(arg_one,arg_two):
+    """
+    Function to multiply
+    """
     ans = arg_one * arg_two
     return ans
 
 def divide(arg_one,arg_two):
+    """
+    Function to divide
+    """
     ans = arg_one/arg_two
     return ans
 
 def modulo(arg_one,arg_two):
+    """
+    Function to modulo
+    """
     ans = arg_one%arg_two
     return ans
 
 
 
 def test_increment_method():
+    """
+    Function to check increment
+    """
     test_val = increment(1)
     assert test_val == 2
 
 def test_add_method():
+    """
+    Function to check add
+    """
     test_val = add(1,2)
     assert test_val == 3
 
 def test_subtract_method():
+    """
+    Function to check subtract
+    """
     test_val = subtract(1,1)
     assert test_val == 0
 
 def test_multiply_method():
+    """
+    Function to check multiply
+    """
     test_val = multiply(1,2)
     assert test_val == 2
 
 def test_divide_method():
+    """
+    Function to check divide
+    """
     test_val = divide(4,2)
     assert test_val == 2
 
 def test_modulo_method():
+    """
+    Function to check modulo
+    """
     test_val = modulo(2,2)
     assert test_val == 0
