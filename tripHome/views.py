@@ -103,6 +103,12 @@ def results_page(request):
     """
     Function to render the results page
     """
+    test_val = increment(1)
+    test_val = add(1,2)
+    test_val = subtract(1,2)
+    test_val = multiply(1,2)
+    test_val = divide(1,2)
+    test_val = modulo(1,3)
     return render(request, "charlotterelax.html", {"data": ""})
 
 
