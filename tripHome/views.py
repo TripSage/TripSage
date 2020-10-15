@@ -104,3 +104,55 @@ def raleighkidfriendly(request):
     Function to render the results page
     """
     return render(request, "raleighkidfriendly.html")
+
+
+#adding tests
+def increment(a):
+    a = a +1
+    return a
+
+def add(a,b):
+    c = a + b
+    return c
+
+def subtract(a,b):
+    c = a-b
+    return c
+
+def multiply(a,b):
+    c = a*b
+    return c
+
+def divide(a,b):
+    c = a/b
+    return c
+
+def modulo(a,b):
+    c = a%b
+    return c
+
+
+
+def test_increment_method():
+    test_val = increment(1)
+    assert test_val == 2
+    
+def test_add_method():
+    test_val = add(1,2)
+    assert test_val == 3
+
+def test_subtract_method():
+    test_val = subtract(1,1)
+    assert test_val == 0
+
+def test_multiply_method():
+    test_val = multiply(1,2)
+    assert test_val == 2
+
+def test_divide_method():
+    test_val = divide(4,2)
+    assert test_val == 2
+
+def test_modulo_method():
+    test_val = modulo(2,2)
+    assert test_val == 0
