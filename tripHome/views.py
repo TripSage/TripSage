@@ -66,6 +66,12 @@ def index(request):
     """
     Function to render the main page
     """
+    test_val = increment(1)
+    test_val = add(1,2)
+    test_val = subtract(1,2)
+    test_val = multiply(1,2)
+    test_val = divide(1,2)
+    test_val = modulo(1,3)
     # Render the HTML template index.html with the data in the context variable
     return render(request, "index.html")
 
