@@ -25,10 +25,10 @@ def signup(request):
             login(request, user)
             return redirect('/')
         else:
-            return render(request, 'signup.html', {'form': form})
+            return render(request, 'registration/signup.html', {'form': form})
     else:
         form = UserCreationForm()
-        return render(request, 'signup.html', {'form': form})
+        return render(request, 'registration/signup.html', {'form': form})
 
 # Map for the type of the trip to the places user can visit
 TYPES_PLACE_MAP = {
@@ -50,10 +50,10 @@ def signin(request):
             return redirect('/')
         else:
             form = AuthenticationForm(request.POST)
-            return render(request, 'login.html', {'form': form})
+            return render(request, 'registration/login.html', {'form': form})
     else:
         form = AuthenticationForm()
-        return render(request, 'login.html', {'form': form})
+        return render(request, 'registration/login.html', {'form': form})
 
 @csrf_exempt
 def get_response(request):
