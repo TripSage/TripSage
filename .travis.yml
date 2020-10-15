@@ -11,6 +11,7 @@ script:
   - pytest --pylint
   - python manage.py test
   - coverage run -m unittest discover
+  - npm install --dev lint-staged@^7.0.5
   - npm i prettier lint-staged husky -D
   - npx preetier --write .
 
