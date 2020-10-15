@@ -5,4 +5,4 @@ xmltodict
 requests
 coverage
 black
-npm --version=6.14.8
+npm
