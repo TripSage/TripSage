@@ -11,7 +11,24 @@ from django.views.decorators.csrf import csrf_exempt
 import requests
 import xmltodict
 
-
+# method for signing up the user
+def signup(request):
+    if request.user.is_authenticated:
+        return redirect('/')
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return redirect('/')
+        else:
+            return render(request, 'signup.html', {'form': form})
+    else:
+        form = UserCreationForm()
+        return render(request, 'signup.html', {'form': form})
 
 # Map for the type of the trip to the places user can visit
 TYPES_PLACE_MAP = {
