@@ -3,11 +3,14 @@ view for tripHome app
 """
 from __future__ import absolute_import
 import json
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.forms import UserCreationForm
 from django.views.decorators.csrf import csrf_exempt
 import requests
 import xmltodict
+
 
 
 # Map for the type of the trip to the places user can visit
@@ -104,7 +107,6 @@ def raleighkidfriendly(request):
     Function to render the results page
     """
     return render(request, "raleighkidfriendly.html")
-
 
 #adding tests
 def increment(arg_one):
