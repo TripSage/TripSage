@@ -12,6 +12,7 @@ script:
   - python manage.py test
   - coverage run -m unittest discover
   - npm install --save-dev --save-exact prettier
+  - npm install npm
   - npx prettier --write .
   
 after_success:
