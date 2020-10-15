@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   "use strict";
 
@@ -69,39 +68,34 @@ $(document).ready(function () {
 
   // 7.animation support
 
-  $(".about-us-txt h2")
-      .removeClass("animated fadeInUp")
-      .css({ opacity: "0" });
-    $(".about-us-txt button")
-      .removeClass("animated fadeInDown")
-      .css({ opacity: "0" });
+  $(".about-us-txt h2").removeClass("animated fadeInUp").css({ opacity: "0" });
+  $(".about-us-txt button")
+    .removeClass("animated fadeInDown")
+    .css({ opacity: "0" });
 
-    $(".about-us-txt h2").addClass("animated fadeInUp").css({ opacity: "0" });
-    $(".about-us-txt button")
-      .addClass("animated fadeInDown")
-      .css({ opacity: "0" });
+  $(".about-us-txt h2").addClass("animated fadeInUp").css({ opacity: "0" });
+  $(".about-us-txt button")
+    .addClass("animated fadeInDown")
+    .css({ opacity: "0" });
 
   $("#destinationSelection").select2({
-  maximumSelectionLength: 2
+    maximumSelectionLength: 2,
   });
 
   $("#sourceSelection").select2({
     maximumSelectionLength: 1,
     placeholder: "Select a source",
-    initSelection: function(element, callback) {
-    },
+    initSelection: function (element, callback) {},
   });
 
   $("#travelSelection").select2({
-    maximumSelectionLength: 2
+    maximumSelectionLength: 2,
   });
 
-  $("#transportSelection").select2({
-    maximumSelectionLength: 2
-  });
+  $("#start_date").datepicker("setStartDate", new Date()); //reference link : https://stackoverflow.com/questions/8356358/jquery-date-picker-disable-past-dates
 
+  $("#end_date").datepicker("setStartDate", new Date());
 });
-
 
 // Function which collects the user data in localstorage
 function saveData() {
@@ -122,29 +116,36 @@ function saveData() {
   });
   source_choices = source_choices[0];
 
+  if (source_choices == null) {
+    alert("No source selected");
+    retrun;
+  }
+
+  if (destination == null) {
+    alert("No destination selected");
+    retrun;
+  }
+
   trip_kinds = [];
   var tripKind = $("#travelSelection").select2("data");
   tripKind.forEach(function (d) {
     trip_kinds.push(d.id);
   });
 
-  mode_transports = [];
-  var modeTransport = $("#transportSelection").select2("data");
-  modeTransport.forEach(function (d) {
-    mode_transports.push(d.id);
-  });
+  if (trip_kinds.length < 1) {
+    alert("No trip selected");
+    retrun;
+  }
 
   start_date = $("#start_date")[0].value;
   end_date = $("#end_date")[0].value;
 
-  members_count = $("#members_count")[0].value;
   budget_range = $("#amount")[0].value;
 
   data_dict["source"] = source_choices;
   data_dict["destination"] = destination;
   data_dict["destination_selected"] = destination_selected;
   data_dict["tripType"] = trip_kinds;
-  data_dict["modeTransport"] = modeTransport;
   data_dict["startDate"] = start_date;
   data_dict["endDate"] = end_date;
 
@@ -157,8 +158,8 @@ function saveData() {
   //redirect to results page
   var url = "search";
 
-  if (destination === "charlotte"){
-    url = "charlotterelaxcar"
+  if (destination === "charlotte") {
+    url = "charlotterelaxcar";
   }
 
   document.location.href = url;

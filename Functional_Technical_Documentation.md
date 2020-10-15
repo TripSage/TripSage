@@ -71,7 +71,7 @@
 
 # 1.0 General Information
 
-## 1.1 Purpose: 
+## 1.1 Purpose:
 
 The purpose of this document is to provide information about the
 TripSage web application to the current and future software developers.
@@ -83,7 +83,7 @@ interactions with users in detail. This also acts as a kind of guideline
 and continuing reference point as the developers write the programming
 code to extend the application's features.
 
-## 1.2 Scope: 
+## 1.2 Scope:
 
 This Functional and Technical Requirements Document outlines the
 functional, performance and other system requirements for theTripSage
@@ -152,26 +152,26 @@ while adhering to the user's budget.
 The scope of TripSage can be defined using the following functionalities
 in a broad sense
 
-* Users can login to the website
-* Flow 1:
-    * Accept the inputs \[Appendix-A\] from the user.
-    * Display/suggest places to visit with the tags
-    1. Best time tovisit
-    2. Covid warnings
-    3. Type of the place (Adventurous, Sightseeing, good for food, sport, etc)
-* Users can pick the places to visit from these suggestions and press next.
-* TripSage will generate itineraries using the places users want to visit.
-* Tripsage will suggest the cheapest route to the user
-* Flow 2:
-    * Accept the inputs \[Appendix-A\] from the user.
-    * From the type of trip the user wants, TripSage generates an itinerary using the places to visit from the destination cities the user is planning to visit.
-    * Tripsage will suggest the cheapest route to the user
+- Users can login to the website
+- Flow 1:
+  - Accept the inputs \[Appendix-A\] from the user.
+  - Display/suggest places to visit with the tags
+  1. Best time tovisit
+  2. Covid warnings
+  3. Type of the place (Adventurous, Sightseeing, good for food, sport, etc)
+- Users can pick the places to visit from these suggestions and press next.
+- TripSage will generate itineraries using the places users want to visit.
+- Tripsage will suggest the cheapest route to the user
+- Flow 2:
+  - Accept the inputs \[Appendix-A\] from the user.
+  - From the type of trip the user wants, TripSage generates an itinerary using the places to visit from the destination cities the user is planning to visit.
+  - Tripsage will suggest the cheapest route to the user
 
 ## 2.2 Why Django?
 
 **Why Django?** </br>
 </br>
-The purpose behind choosing Django was two-fold. We wanted to challenge ourselves with this project, but set realistic expectations. So, instead of learning a new language for web development, we decided to use a Python framework, a language our entire team (and many others) are comfortable with.  </br>
+The purpose behind choosing Django was two-fold. We wanted to challenge ourselves with this project, but set realistic expectations. So, instead of learning a new language for web development, we decided to use a Python framework, a language our entire team (and many others) are comfortable with. </br>
 </br>
 Also, Django follows MVT(model-view-template) architecture which can be used independently making it reliable, flexible and simple. Moreover, it has its own server and the learning curve is pretty minimum. Compared to Flask, Django is used for applications that serve more than just one requirement. We envision and designed TripSage to include many features, making Django the better choice.
 </br>
@@ -179,6 +179,7 @@ Also, Django follows MVT(model-view-template) architecture which can be used ind
 ## 2.3 Features
 
 General set of features designed for TripSage: </br>
+
 1.  User account creation
 
 2.  Saving a trip
@@ -199,7 +200,7 @@ General set of features designed for TripSage: </br>
 
 10. Covid -- 19 Statistics:
 
-    a.  Specified as \"High\", \"Medium\", \"Low\" based on the population at the specified location and whether the location is indoors or outdoors.
+    a. Specified as \"High\", \"Medium\", \"Low\" based on the population at the specified location and whether the location is indoors or outdoors.
 
 ## 2.3 Use Cases
 
@@ -235,9 +236,9 @@ TripSage is developed with Django, a high-level Python web application framework
 
 2.  URL calls corresponding function in **views.py** (mapping found in urls.py)
 
-    a.  view can take a request and return a response
+    a. view can take a request and return a response
 
-    b.  view interacts with Model and Template
+    b. view interacts with Model and Template
 
 3.  Template is combination of static HTML and Django Syntax (Python)
 
@@ -248,38 +249,36 @@ TripSage is developed with Django, a high-level Python web application framework
 Following is the list of Models in TripSage and a brief description of
 each: </br>
 City: To store cities </br>
-Trip: To store the trips generated from the itinerary planner </br> 
+Trip: To store the trips generated from the itinerary planner </br>
 Places: Locations/spots within cities that will be displayed as part of the itinerary </br>
 Destinations: The cities that can be destinations </br>
 Contains: To store the mapping between Places and Cities </br>
 Tags: Different tags which will be used to tag Places </br>
-Tagged\_as: To store the mapping between Places and Tags </br>
+Tagged_as: To store the mapping between Places and Tags </br>
 
 ## 3.4 Functions
-(Legend: ***Italics + Bold: Directories***, **Bold: Files**, *Italics: Functions*, Plain: Descriptions )  </br>
- </br>
-***TripSage/*** </br>
-   ***tripHome/*** </br>
-      **models.py** - Describes tables for database. Each function describes a table in the database (check documentation for more information) </br>
-      **views.py** - A View is a python function or classe that takes a request and provides a response. It can render the HTML pages, call APIs, push and retrieve
-      data from tables in the database </br>
-         *getResponse* - </br>
-            1. Calls Google Geolocation API to fetch locations as per user\'s trip preference </br>
-            2. Checks results for duplicates and standard number of places for each activity according to the dictionary type\_places\_map </br>
-            3. Stores results in JSON object </br>
-         *resultsPage* - renders results.html </br>
-         *index* - renders index.html </br>
-      **urls.py** - maps url patterns to functions in views.py </br>
-      ***templates/*** </br>
-         **index.html** - extends to base\_generic.html </br>
-         **base_generic.html** - landing page </br>
-         **result.html** - results page </br>
-      ***static/*** </br>
-         ***js/*** </br>
-            **custom.js** Functionality for base\_generic.html. </br>
-               *saveData()* - saves data from landing page and redirects to results.html </br>
-            **resultsPage.js** - Functionality for results.html. Connects results.html to getResponse in views.py </br>
-               *showData()* - JS for results.html </br>
+
+(Legend: **_Italics + Bold: Directories_**, **Bold: Files**, _Italics: Functions_, Plain: Descriptions ) </br>
+</br>
+**_TripSage/_** </br>
+**_tripHome/_** </br>
+**models.py** - Describes tables for database. Each function describes a table in the database (check documentation for more information) </br>
+**views.py** - A View is a python function or classe that takes a request and provides a response. It can render the HTML pages, call APIs, push and retrieve
+data from tables in the database </br>
+_getResponse_ - </br> 1. Calls Google Geolocation API to fetch locations as per user\'s trip preference </br> 2. Checks results for duplicates and standard number of places for each activity according to the dictionary type*places_map </br> 3. Stores results in JSON object </br>
+\_resultsPage* - renders results.html </br>
+_index_ - renders index.html </br>
+**urls.py** - maps url patterns to functions in views.py </br>
+**_templates/_** </br>
+**index.html** - extends to base\*generic.html </br>
+**base_generic.html** - landing page </br>
+**result.html** - results page </br>
+\*\*\_static/**\* </br>
+**_js/_** </br>
+**custom.js** Functionality for base*generic.html. </br>
+\_saveData()* - saves data from landing page and redirects to results.html </br>
+**resultsPage.js\*\* - Functionality for results.html. Connects results.html to getResponse in views.py </br>
+_showData()_ - JS for results.html </br>
 </br>
 
 ## 3.5 Entity Relationship Diagram for the Models
@@ -290,7 +289,7 @@ Tagged\_as: To store the mapping between Places and Tags </br>
 
 The diagram below shows the flow of control from when a user enters their trip details on the landing page of tripHome to seeing their results The bold text signifies start and end states.</br>
 
-![](https://github.com/TripSage/TripSage/blob/master/Assets/Flow%20of%20Control%20(1).png)
+![](<https://github.com/TripSage/TripSage/blob/master/Assets/Flow%20of%20Control%20(1).png>)
 
 ## 3.7 Code Design Tools:
 
@@ -319,17 +318,14 @@ The website uses Google Maps api to fetch the appropriate places for the given d
 
 The following functionalities have not been implemented yet:</br>
 </br>
-1.User Login: Update models.py \[Left to acquaint Team 2 about the database structure\] to include User \[EmailId, Password\] and Trips\_Planned \[EmailId, TripId\]. Implement authentication page and retrieve Trips saved by User.</br>
-</br>
-2. Sharing Trips: Allow users to share trips they created with other users.</br>
-</br>
-3. Implementation of an algorithm to create an itinerary from the places retrieved using the api. The algorithm will be a Constraint Satisfaction Problem, constrained by best time to visit a place and the location of a place. However, details of exact implementation are left for the next team. </br>
-</br>
-4. Implementation of functionality using Google Maps \[or any other api (decision left for next team)\] to determine the cheapest Travel route based on the destinations and number of people.</br>
-</br>
-5. Implementation of Trip Creation using Flow\#1, where a user already has a trip planned to the exact dot, including the places, they want to visit and only need our assistance to schedule and get the cheapest travel route.</br>
+1.User Login: Update models.py \[Left to acquaint Team 2 about the database structure\] to include User \[EmailId, Password\] and Trips_Planned \[EmailId, TripId\]. Implement authentication page and retrieve Trips saved by User.</br>
+</br> 2. Sharing Trips: Allow users to share trips they created with other users.</br>
+</br> 3. Implementation of an algorithm to create an itinerary from the places retrieved using the api. The algorithm will be a Constraint Satisfaction Problem, constrained by best time to visit a place and the location of a place. However, details of exact implementation are left for the next team. </br>
+</br> 4. Implementation of functionality using Google Maps \[or any other api (decision left for next team)\] to determine the cheapest Travel route based on the destinations and number of people.</br>
+</br> 5. Implementation of Trip Creation using Flow\#1, where a user already has a trip planned to the exact dot, including the places, they want to visit and only need our assistance to schedule and get the cheapest travel route.</br>
 
 ## 4.3 Ambitious Suggestions:
+
 </br>
 While showing the suggestions itself, users can remove suggested places, modifying the itinerary dynamically. </br>
 </br>
@@ -359,34 +355,33 @@ Dynamic computation of Popularity and covid tags based on the no of trips genera
 
 ## 5.2 Inspirations
 
-1.  Sygic Travel  https://travel.sygic.com/en
-</br>
-Tell Sygic where you\'re going and for how many days. Based on that, the app will create a custom itinerary of the top attractions in that place, along with where you should go on which day.
+1.  Sygic Travel https://travel.sygic.com/en
+    </br>
+    Tell Sygic where you\'re going and for how many days. Based on that, the app will create a custom itinerary of the top attractions in that place, along with where you should go on which day.
 
-2. Inspirock  https://www.inspirock.com
-</br>
-A very close Itinerary planner with suggestion algorithm inbuilt into the website, with the only feature missing is the ability to suggest a cheapest route. </br>
-</br>
+2.  Inspirock https://www.inspirock.com
+    </br>
+    A very close Itinerary planner with suggestion algorithm inbuilt into the website, with the only feature missing is the ability to suggest a cheapest route. </br>
+    </br>
 
 ## 5.3 Resources
 
 1.  Django
-</br>
-Check out the basics: Writing your first Django app, part1 - https://docs.djangoproject.com/en/3.1/intro/tutorial01/ </br>
-The first three parts of this 7 part tutorial cover most of the material needed for our project. </br>
-</br>
-For a more in-depth look at server-side development using Django: Server-side website programming - Learn web development \|MDN - https://developer.mozilla.org/en-US/docs/Learn/Server-side
-</br>
+    </br>
+    Check out the basics: Writing your first Django app, part1 - https://docs.djangoproject.com/en/3.1/intro/tutorial01/ </br>
+    The first three parts of this 7 part tutorial cover most of the material needed for our project. </br>
+    </br>
+    For a more in-depth look at server-side development using Django: Server-side website programming - Learn web development \|MDN - https://developer.mozilla.org/en-US/docs/Learn/Server-side
+    </br>
 2.  AJAX
-</br>
-Check out the basics of ajax at https://api.jquery.com/jquery.ajax/. </br>
-The site covers all the basics of ajax about writing asynchronous calls and provides in depth information about its parameters. </br>
-</br>
-For ajax documentation, please visit https://api.jquery.com/category/ajax/ </br>
+    </br>
+    Check out the basics of ajax at https://api.jquery.com/jquery.ajax/. </br>
+    The site covers all the basics of ajax about writing asynchronous calls and provides in depth information about its parameters. </br>
+    </br>
+    For ajax documentation, please visit https://api.jquery.com/category/ajax/ </br>
 
 3.  Google Map API
 
 The Places API lets you search for place information using a variety of categories, including establishments, prominent points of interest, and geographic locations. You can search for places either by proximity or a text string. A Place Search returns a list of places along with summary information about each place; additional information is available via a Place Details query.</br>
 </br>
-The Find Place request is an HTTP URL of the following form: https://maps.googleapis.com/maps/api/place/findplacefromtext/output?parameters where output may be either of the following values: json (recommended) indicates output in JavaScript Object Notation (JSON) xml indicates output as XML We need to generate a key (from google cloud services) which can authenticate the request  we send to Google Maps place API. Since, we connect/authorize the key using our gmail account, we use one of the gmail accounts from our group. For the extension, we can provide our key/can help generate a key for you.
-
+The Find Place request is an HTTP URL of the following form: https://maps.googleapis.com/maps/api/place/findplacefromtext/output?parameters where output may be either of the following values: json (recommended) indicates output in JavaScript Object Notation (JSON) xml indicates output as XML We need to generate a key (from google cloud services) which can authenticate the request we send to Google Maps place API. Since, we connect/authorize the key using our gmail account, we use one of the gmail accounts from our group. For the extension, we can provide our key/can help generate a key for you.

@@ -1,392 +1,456 @@
-<!doctype html>
-<html class="no-js"  lang="en">
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <!-- META DATA -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- original author: ThemeSINE -->
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<head>
-		<!-- META DATA -->
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- original author: ThemeSINE -->
-		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!--font-family-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Rufina:400,700"
+      rel="stylesheet"
+    />
 
-		<!--font-family-->
-		<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
 
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
-
-		<!-- TITLE OF SITE -->
-		<title>TripSage</title>
+    <!-- TITLE OF SITE -->
+    <title>TripSage</title>
 
     <!-- favicon img -->
     {% load static %}
-    <link rel="shortcut icon" type="image/icon" href= "{% static 'logo/favicon.png' %}"/>
-
+    <link
+      rel="shortcut icon"
+      type="image/icon"
+      href="{% static 'logo/favicon.png' %}"
+    />
 
     <!--font-awesome.min.css-->
     {% load static %}
-		<link rel="stylesheet" href= "{% static 'css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
 
     <!--animate.css-->
-    
-		<link rel="stylesheet" href="{% static 'css/animate.css' %}"/>
 
-		<!--hover.css-->
-    <link rel="stylesheet" href="{% static 'css/hover-min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
 
-		<!--datepicker.css-->
-    <link rel="stylesheet" href="{% static 'css/datepicker.css' %}"/>
+    <!--hover.css-->
+    <link rel="stylesheet" href="{% static 'css/hover-min.css' %}" />
 
-		<!--owl.carousel.css-->
+    <!--datepicker.css-->
+    <link rel="stylesheet" href="{% static 'css/datepicker.css' %}" />
 
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}"/>
+    <!--owl.carousel.css-->
 
-		<!-- range css-->
-        <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/owl.theme.default.min.css' %}"
+    />
 
-		<!--bootstrap.min.css-->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+    <!-- range css-->
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}" />
 
-		<!-- bootsnav -->
-    <link rel="stylesheet" href="{% static 'css/bootsnav.css' %}"/>
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
 
-		<!--style.css-->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="{% static 'css/bootsnav.css' %}" />
 
-		<!--responsive.css-->
-    <link rel="stylesheet" href="{% static 'css/responsive.css' %}"/>
+    <!--style.css-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--responsive.css-->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
 
-		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 
-	</head>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-	
+  <body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
 
-	<body>
-		<!--[if lte IE 9]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
-			your browser</a> to improve your experience and security.</p>
-		<![endif]-->
-		
-		{% include "header.html" %}
+    {% include "header.html" %}
 
-		<!--about-us start -->
-		
-		<section id="home" class="about-us">
-			<div class="container">
-				<div class="about-us-content">
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="single-about-us" style="margin-top: 190px">
-								<div class="about-us-txt">
-									<h2>
-										We Plan Every Thing For You 
-									</h2>
-								</div><!--/.about-us-txt-->
-							</div><!--/.single-about-us-->
-						</div><!--/.col-->
-					</div><!--/.row-->
-                    <div class="row">
-        			<div class="col-md-12">
-        				<div class="single-travel-boxes">
-        					<div id="desc-tabs" class="desc-tabs">
+    <!--about-us start -->
 
-								<ul class="nav nav-tabs" role="tablist">
+    <section id="home" class="about-us">
+      <div class="container">
+        <div class="about-us-content">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="single-about-us" style="margin-top: 190px">
+                <div class="about-us-txt">
+                  <h2>We Plan Every Thing For You</h2>
+                </div>
+                <!--/.about-us-txt-->
+              </div>
+              <!--/.single-about-us-->
+            </div>
+            <!--/.col-->
+          </div>
+          <!--/.row-->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="single-travel-boxes">
+                <div id="desc-tabs" class="desc-tabs">
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                      <a
+                        href="#tours"
+                        aria-controls="tours"
+                        role="tab"
+                        data-toggle="tab"
+                      >
+                        <i class="fa fa-tree"></i>
+                        tours
+                      </a>
+                    </li>
 
-									<li role="presentation" class="active">
-									 	<a href="#tours" aria-controls="tours" role="tab" data-toggle="tab">
-									 		<i class="fa fa-tree"></i>
-									 		tours
-									 	</a>
-									</li>
-
-									<!-- Remove hotels tab
+                    <!-- Remove hotels tab
 									<li role="presentation">
 										<a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab">
 											<i class="fa fa-building"></i>
 											hotels
 										</a>
 									</li> -->
-
-								</ul>
-
-								<!-- Tab panes -->
-								<div class="tab-content">
-
-									<div role="tabpanel" class="tab-pane active fade in" id="tours">
-										<div class="tab-para">
-
-
-											<div class="row">
-												<div class="col-lg-4 col-md-4 col-sm-12">
-													<div class="single-tab-select-box">
-
-														<h2>Source</h2>
-
-														<div class="travel-select-icon">
-															<select class="form-control " name="places[]" multiple="multiple" id = "sourceSelection">
-
-															  	<option value="default">enter your destination city in NC</option><!-- /.option-->
-
-															  	<option value="raleigh">Raleigh</option><!-- /.option-->
-
-															  	<option value="charlotte">Charlotte</option><!-- /.option-->
-															  	<option value="asheville">Asheville</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-														<br>
-														<h2>destination</h2>
-
-														<div class="travel-select-icon">
-															<select class="form-control " name="places[]" multiple="multiple" id = "destinationSelection">
-
-															  	<option value="default">enter your destination city in NC</option><!-- /.option-->
-
-															  	<option value="Raleigh">Raleigh</option><!-- /.option-->
-
-															  	<option value="Charlotte">Charlotte</option><!-- /.option-->
-															  	<option value="Asheville">Asheville</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-														<br>
-														<h2>What kind of trip do you want to take?</h2>
-														<!-- BELOW IS A SECOND DROP DOWN  -->
-														<div class="travel-select-icon">
-															<select class="form-control " name="places[]" multiple="multiple" id = "travelSelection">
-
-															  	<option value="default">What kind of trip do you want to take?</option>
-
-															  	<option value="relaxing">Relaxing</option>
-
-															  	<option value="adventurous">Adventurous</option>
-															  	<option value="kids">Kid Friendly</option>
-
-															</select>
-														</div>  <!-- /.travel-select-icon -->
-
-														<br>
-														<h2>Mode of Transport</h2>
-														<!-- BELOW IS A SECOND DROP DOWN  -->
-														<div class="travel-select-icon">
-															<select class="form-control " name="places[]" multiple="multiple" id = "transportSelection">
-
-															  	<option value="default">Mode of Transport?</option>
-
-															  	<option value="relaxing">Flight</option>
-
-															  	<option value="adventurous">Car</option>
-															  	<option value="kids">Bus</option>
-
-															</select>
-														</div>  <!-- /.travel-select-icon -->
-
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-												<div class="col-lg-2 col-md-3 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>Start date</h2>
-														<div class="travel-check-icon">
-															<form action="#">
-																<input type="text" name="check_in" class="form-control" data-toggle="datepicker" placeholder="12 -01 - 2017 " id="start_date">
-															</form>
-														</div><!-- /.travel-check-icon -->
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-												<div class="col-lg-2 col-md-3 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>End date</h2>
-														<div class="travel-check-icon">
-															<form action="#">
-																<input type="text" name="check_out" class="form-control"  data-toggle="datepicker" placeholder="22 -01 - 2017 " id="end_date">
-															</form>
-														</div><!-- /.travel-check-icon -->
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-
-												<div class="col-lg-2 col-md-1 col-sm-4">
-													<div class="single-tab-select-box">
-														<h2>members</h2>
-														<div class="travel-select-icon">
-															<select class="form-control " id="members_count">
-
-															  	<option value="default">1</option><!-- /.option-->
-
-															  	<option value="2">2</option><!-- /.option-->
-
-															  	<option value="4">4</option><!-- /.option-->
-															  	<option value="8">8</option><!-- /.option-->
-
-															</select><!-- /.select-->
-														</div><!-- /.travel-select-icon -->
-													</div><!--/.single-tab-select-box-->
-												</div><!--/.col-->
-
-											</div><!--/.row-->
-
-											<div class="row">
-												<div class="col-sm-5">
-													<div class="travel-budget">
-														<div class="row">
-															<div class="col-md-3 col-sm-4">
-																<h3>budget : </h3>
-															</div><!--/.col-->
-															<div class="co-md-9 col-sm-8">
-																<div class="travel-filter">
-																	<div class="info_widget">
-																		<div class="price_filter">
-
-																			<div id="slider-range"></div><!--/.slider-range-->
-
-																			<div class="price_slider_amount">
-																				<input type="text" id="amount" name="price"  placeholder="Add Your Price" />
-																			</div><!--/.price_slider_amount-->
-																		</div><!--/.price-filter-->
-																	</div><!--/.info_widget-->
-																</div><!--/.travel-filter-->
-															</div><!--/.col-->
-														</div><!--/.row-->
-													</div><!--/.travel-budget-->
-												</div><!--/.col-->
-												<div class="clo-sm-7">
-													<div class="about-btn travel-mrt-0 pull-right">
-														<button  class="about-view travel-btn" id = "searchButton" onclick="saveData();">
-															search
-														</button><!--/.travel-btn-->
-													</div><!--/.about-btn-->
-												</div><!--/.col-->
-
-											</div><!--/.row-->
-
-										</div><!--/.tab-para-->
-
-									</div><!--/.tabpannel-->
-
-
-								</div><!--/.tab content-->
-							</div><!--/.desc-tabs-->
-        				</div><!--/.single-travel-box-->
-        			</div><!--/.col-->
-        		</div><!--/.row-->
-				</div><!--/.about-us-content--> 
-			</div><!--/.container-->
-
-		</section><!--/.about-us-->
-		<!--about-us end -->
-
-
-		<!-- footer-copyright start -->
-		<footer  class="footer-copyright">
-			<div class="container">
-				<div class="footer-content">
-					<div class="row">
-
-						<div class="col-sm-3">
-							<div class="single-footer-item">
-								<h2>link</h2>
-								<div class="single-footer-txt">
-									<p><a href="#">home</a></p>
-									<p><a href="#">destination</a></p>
-									<p><a href="#">special packages</a></p>
-									<p><a href="#">special offers</a></p>
-									<p><a href="#">blog</a></p>
-									<p><a href="#">contacts</a></p>
-								</div><!--/.single-footer-txt-->
-							</div><!--/.single-footer-item-->
-
-						</div><!--/.col-->
-
-						<div class="col-sm-3">
-							<div class="single-footer-item">
-								<h2>popular destination</h2>
-								<div class="single-footer-txt">
-									<p><a href="#">china</a></p>
-									<p><a href="#">venezuela</a></p>
-									<p><a href="#">brazil</a></p>
-									<p><a href="#">australia</a></p>
-									<p><a href="#">london</a></p>
-								</div><!--/.single-footer-txt-->
-							</div><!--/.single-footer-item-->
-						</div><!--/.col-->
-
-		
-
-					</div><!--/.row-->
-
-				</div><!--/.footer-content-->
-				<hr>
-				<div class="foot-icons ">
-					<ul class="footer-social-links list-inline list-unstyled">
-		                <li><a href="#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
-		                <li><a href="#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
-		                <li><a href="#" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
-		        	</ul>
-		        
-
-		        </div><!--/.foot-icons-->
-				<div id="scroll-Top">
-					<i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-				</div><!--/.scroll-Top-->
-			</div><!-- /.container-->
-
-		</footer><!-- /.footer-copyright-->
-		<!-- footer-copyright end -->
-
-
-
-
-	
-		<script src="{% static 'js/jquery-3.5.1.js' %}"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-
-		<!--modernizr.min.js-->
-		<script  src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-
-		<!--bootstrap.min.js-->
-		<script src="{% static 'js/bootstrap.min.js' %}"></script>
-
-		<!-- bootsnav js -->
-		<script src="{% static 'js/bootsnav.js' %}"></script>
-
-		<!-- jquery.filterizr.min.js -->
-		<script src="{% static 'js/jquery.filterizr.min.js' %}"></script>
-
-		<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-
-		<!--jquery-ui.min.js-->
-		<script src="{% static 'js/jquery-ui.min.js' %}"></script>
-
-        <!-- counter js -->
-{#		<script src="{% static 'js/jquery.counterup.min.js' %}"></script>#}
-{#		<script src="{% static 'js/waypoints.min.js' %}"></script>#}
-
-		<!--owl.carousel.js-->
-		<script src="{% static 'js/owl.carousel.min.js' %}"></script>
-
-        <!-- jquery.sticky.js -->
-		<script src="{% static 'js/jquery.sticky.js' %}"></script>
-
-        <!--datepicker.js-->
-		<script src="{% static 'js/datepicker.js' %}"></script>
-
-		<!--Custom JS-->
-		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
-		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-		<script src="{% static 'js/custom.js' %}"></script>
-
-
-	</body>
-
+                  </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div
+                      role="tabpanel"
+                      class="tab-pane active fade in"
+                      id="tours"
+                    >
+                      <div class="tab-para">
+                        <div class="row">
+                          <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="single-tab-select-box">
+                              <h2>Source</h2>
+
+                              <div class="travel-select-icon">
+                                <select
+                                  class="form-control"
+                                  name="places[]"
+                                  multiple="multiple"
+                                  id="sourceSelection"
+                                >
+                                  <option selected="selected" value="default">
+                                    Raleigh
+                                  </option>
+                                  <!-- /.option-->
+                                  <option value="charlotte">Charlotte</option>
+                                  <!-- /.option-->
+                                  <option value="asheville">Asheville</option>
+                                  <!-- /.option--></select
+                                ><!-- /.select-->
+                              </div>
+                              <!-- /.travel-select-icon -->
+                              <br />
+                              <h2>destination</h2>
+
+                              <div class="travel-select-icon">
+                                <select
+                                  class="form-control"
+                                  name="places[]"
+                                  multiple="multiple"
+                                  id="destinationSelection"
+                                >
+                                  as>>
+                                  <option selected="selected" value="default">
+                                    Raleigh
+                                  </option>
+                                  <!-- /.option-->
+                                  <option value="Charlotte">Charlotte</option>
+                                  <!-- /.option-->
+                                  <option value="Asheville">Asheville</option>
+                                  <!-- /.option--></select
+                                ><!-- /.select-->
+                              </div>
+                              <!-- /.travel-select-icon -->
+                              <br />
+                              <h2>What kind of trip do you want to take?</h2>
+                              <!-- BELOW IS A SECOND DROP DOWN  -->
+                              <div class="travel-select-icon">
+                                <select
+                                  class="form-control"
+                                  name="places[]"
+                                  multiple="multiple"
+                                  id="travelSelection"
+                                >
+                                  <option selected="selected" value="default">
+                                    Relaxing
+                                  </option>
+
+                                  <option value="adventurous">
+                                    Adventurous
+                                  </option>
+                                  <option value="kids">Kid Friendly</option>
+                                </select>
+                              </div>
+                              <!-- /.travel-select-icon -->
+                            </div>
+                            <!--/.single-tab-select-box-->
+                          </div>
+                          <!--/.col-->
+
+                          <div class="col-lg-2 col-md-3 col-sm-4">
+                            <div class="single-tab-select-box">
+                              <h2>Start date</h2>
+                              <div class="travel-check-icon">
+                                <form action="#">
+                                  <input
+                                    type="text"
+                                    name="check_in"
+                                    class="form-control"
+                                    data-toggle="datepicker"
+                                    placeholder="12 -12 - 2021 "
+                                    id="start_date"
+                                  />
+                                </form>
+                              </div>
+                              <!-- /.travel-check-icon -->
+                            </div>
+                            <!--/.single-tab-select-box-->
+                          </div>
+                          <!--/.col-->
+
+                          <div class="col-lg-2 col-md-3 col-sm-4">
+                            <div class="single-tab-select-box">
+                              <h2>End date</h2>
+                              <div class="travel-check-icon">
+                                <form action="#">
+                                  <input
+                                    type="text"
+                                    name="check_out"
+                                    class="form-control"
+                                    data-toggle="datepicker"
+                                    placeholder="22 -12 - 2020 "
+                                    id="end_date"
+                                  />
+                                </form>
+                              </div>
+                              <!-- /.travel-check-icon -->
+                            </div>
+                            <!--/.single-tab-select-box-->
+                          </div>
+                          <!--/.col-->
+                        </div>
+                        <!--/.row-->
+
+                        <div class="row">
+                          <div class="col-sm-5">
+                            <div class="travel-budget">
+                              <div class="row">
+                                <div class="col-md-3 col-sm-4">
+                                  <h3>budget :</h3>
+                                </div>
+                                <!--/.col-->
+                                <div class="co-md-9 col-sm-8">
+                                  <div class="travel-filter">
+                                    <div class="info_widget">
+                                      <div class="price_filter">
+                                        <div id="slider-range"></div>
+                                        <!--/.slider-range-->
+
+                                        <div class="price_slider_amount">
+                                          <input
+                                            type="text"
+                                            id="amount"
+                                            name="price"
+                                            placeholder="Add Your Price"
+                                          />
+                                        </div>
+                                        <!--/.price_slider_amount-->
+                                      </div>
+                                      <!--/.price-filter-->
+                                    </div>
+                                    <!--/.info_widget-->
+                                  </div>
+                                  <!--/.travel-filter-->
+                                </div>
+                                <!--/.col-->
+                              </div>
+                              <!--/.row-->
+                            </div>
+                            <!--/.travel-budget-->
+                          </div>
+                          <!--/.col-->
+                          <div class="clo-sm-7">
+                            <div class="about-btn travel-mrt-0 pull-right">
+                              <button
+                                class="about-view travel-btn"
+                                id="searchButton"
+                                onclick="saveData();"
+                              >
+                                search</button
+                              ><!--/.travel-btn-->
+                            </div>
+                            <!--/.about-btn-->
+                          </div>
+                          <!--/.col-->
+                        </div>
+                        <!--/.row-->
+                      </div>
+                      <!--/.tab-para-->
+                    </div>
+                    <!--/.tabpannel-->
+                  </div>
+                  <!--/.tab content-->
+                </div>
+                <!--/.desc-tabs-->
+              </div>
+              <!--/.single-travel-box-->
+            </div>
+            <!--/.col-->
+          </div>
+          <!--/.row-->
+        </div>
+        <!--/.about-us-content-->
+      </div>
+      <!--/.container-->
+    </section>
+    <!--/.about-us-->
+    <!--about-us end -->
+
+    <!-- footer-copyright start -->
+    <footer class="footer-copyright">
+      <div class="container">
+        <div class="footer-content">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="single-footer-item">
+                <h2>link</h2>
+                <div class="single-footer-txt">
+                  <p><a href="#">home</a></p>
+                  <p><a href="#">destination</a></p>
+                  <p><a href="#">special packages</a></p>
+                  <p><a href="#">special offers</a></p>
+                  <p><a href="#">blog</a></p>
+                  <p><a href="#">contacts</a></p>
+                </div>
+                <!--/.single-footer-txt-->
+              </div>
+              <!--/.single-footer-item-->
+            </div>
+            <!--/.col-->
+
+            <div class="col-sm-3">
+              <div class="single-footer-item">
+                <h2>popular destination</h2>
+                <div class="single-footer-txt">
+                  <p><a href="#">china</a></p>
+                  <p><a href="#">venezuela</a></p>
+                  <p><a href="#">brazil</a></p>
+                  <p><a href="#">australia</a></p>
+                  <p><a href="#">london</a></p>
+                </div>
+                <!--/.single-footer-txt-->
+              </div>
+              <!--/.single-footer-item-->
+            </div>
+            <!--/.col-->
+          </div>
+          <!--/.row-->
+        </div>
+        <!--/.footer-content-->
+        <hr />
+        <div class="foot-icons">
+          <ul class="footer-social-links list-inline list-unstyled">
+            <li>
+              <a href="#" target="_blank" class="foot-icon-bg-1"
+                ><i class="fa fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="foot-icon-bg-2"
+                ><i class="fa fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="foot-icon-bg-3"
+                ><i class="fa fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <!--/.foot-icons-->
+        <div id="scroll-Top">
+          <i
+            class="fa fa-angle-double-up return-to-top"
+            id="scroll-top"
+            data-toggle="tooltip"
+            data-placement="top"
+            title=""
+            data-original-title="Back to Top"
+            aria-hidden="true"
+          ></i>
+        </div>
+        <!--/.scroll-Top-->
+      </div>
+      <!-- /.container-->
+    </footer>
+    <!-- /.footer-copyright-->
+    <!-- footer-copyright end -->
+
+    <script src="{% static 'js/jquery-3.5.1.js' %}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <!--modernizr.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <!--bootstrap.min.js-->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- bootsnav js -->
+    <script src="{% static 'js/bootsnav.js' %}"></script>
+
+    <!-- jquery.filterizr.min.js -->
+    <script src="{% static 'js/jquery.filterizr.min.js' %}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <!--jquery-ui.min.js-->
+    <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+
+    <!-- counter js -->
+    {#
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    #} {#
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    #}
+
+    <!--owl.carousel.js-->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <!-- jquery.sticky.js -->
+    <script src="{% static 'js/jquery.sticky.js' %}"></script>
+
+    <!--datepicker.js-->
+    <script src="{% static 'js/datepicker.js' %}"></script>
+
+    <!--Custom JS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+  </body>
 </html>

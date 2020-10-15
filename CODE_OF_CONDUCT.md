@@ -14,24 +14,24 @@ appearance, race, religion, or sexual identity and orientation.
 Examples of behavior that contributes to creating a positive environment
 include:
 
-* Using welcoming and inclusive language
-* Being respectful of differing viewpoints and experiences
-* Gracefully accepting constructive criticism
-* Focusing on what is best for the community
-* Showing empathy towards other community members
-* Help learn and write code
+- Using welcoming and inclusive language
+- Being respectful of differing viewpoints and experiences
+- Gracefully accepting constructive criticism
+- Focusing on what is best for the community
+- Showing empathy towards other community members
+- Help learn and write code
 
 Examples of unacceptable behavior by participants include:
 
-* The use of sexualized language or imagery and unwelcome sexual attention or
- advances
-* Trolling, insulting/derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or electronic
- address, without explicit permission
-* Isolation, deliberate exclusion and/or non co-operation 
-* Other conduct which could reasonably be considered inappropriate in a
- professional setting
+- The use of sexualized language or imagery and unwelcome sexual attention or
+  advances
+- Trolling, insulting/derogatory comments, and personal or political attacks
+- Public or private harassment
+- Publishing others' private information, such as a physical or electronic
+  address, without explicit permission
+- Isolation, deliberate exclusion and/or non co-operation
+- Other conduct which could reasonably be considered inappropriate in a
+  professional setting
 
 ## Our Responsibilities
 
@@ -69,6 +69,6 @@ members of the project's leadership.
 
 ## Respect
 
-Respecting the ideas, innovations, amendments we make is one of the top aspects required 
-in our code of conduct. We see leaders in everybody. Leader can be anyone whose are obsessed with customers, 
-requirements, purpose of the work. 
+Respecting the ideas, innovations, amendments we make is one of the top aspects required
+in our code of conduct. We see leaders in everybody. Leader can be anyone whose are obsessed with customers,
+requirements, purpose of the work.

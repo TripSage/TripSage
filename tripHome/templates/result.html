@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>TripSage</title>
     {% load static %}
-    <link rel="stylesheet" href= "{% static 'css/result.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/result.css' %}" />
     <style>
-        #ral{
-          color: red;
-          background: lightcyan;
-            margin: 3%;
-        }
-
-      #ashe{
-          color: red;
-          background: lightcyan;
-          margin: 3%;
+      #ral {
+        color: red;
+        background: lightcyan;
+        margin: 3%;
       }
 
-      #char{
-          color: red;
-          background: lightcyan;
-          margin: 3%;
+      #ashe {
+        color: red;
+        background: lightcyan;
+        margin: 3%;
       }
 
-      h3{
-          color: blue;
-          text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+      #char {
+        color: red;
+        background: lightcyan;
+        margin: 3%;
       }
-      h2{
-          color: purple;
+
+      h3 {
+        color: blue;
+        text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+      }
+      h2 {
+        color: purple;
       }
     </style>
-</head>
-<body>
-{% load static %}
-<script src="{% static 'js/jquery-3.5.1.js' %}"></script>
-<script src="{% static 'js/resultsPage.js' %}"></script>
-<div class="container">
-    <p>ok</p>
-</div>
+  </head>
+  <body>
+    {% load static %}
+    <script src="{% static 'js/jquery-3.5.1.js' %}"></script>
+    <script src="{% static 'js/resultsPage.js' %}"></script>
+    <div class="container">
+      <p>ok</p>
+    </div>
 
-<div class="loader"></div>
-<div id="ral">
-</div>
-<div id="ashe">
-</div>
-<div id="char">
-</div>
-<div>
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1i48ZZiIxICp4OHooMMDP26Tik2vfKQ83" width="500" height="500"></iframe>
-</div>
-
-</body>
+    <div class="loader"></div>
+    <div id="ral"></div>
+    <div id="ashe"></div>
+    <div id="char"></div>
+    <div>
+      <iframe
+        src="https://www.google.com/maps/d/u/0/embed?mid=1i48ZZiIxICp4OHooMMDP26Tik2vfKQ83"
+        width="500"
+        height="500"
+      ></iframe>
+    </div>
+  </body>
 </html>

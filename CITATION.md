@@ -2,7 +2,7 @@
 
 Dhruvil Shah, PPenmetsa, & sameeradh. <br>
 (2020, September 8).
-TripSage/TripSage: Initial Release  <br>
+TripSage/TripSage: Initial Release <br>
 (Version v1.0.0). Zenodo. <br>
 https://doi.org/10.5281/zenodo.4019814
 
@@ -20,4 +20,3 @@ https://doi.org/10.5281/zenodo.4019814
   url          = {https://doi.org/10.5281/zenodo.4019814}
 }
 ```
-
