@@ -109,6 +109,7 @@ def results_page(request):
     test_val = multiply(1,2)
     test_val = divide(1,2)
     test_val = modulo(1,3)
+    test_val = test_val + 1
     return render(request, "charlotterelax.html", {"data": ""})
 
 
