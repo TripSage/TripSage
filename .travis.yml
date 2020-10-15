@@ -11,8 +11,8 @@ script:
   - pytest --pylint
   - python manage.py test
   - coverage run -m unittest discover
-  - npm install prettier
-  - prettier --write .
-
+  - npm install --save-dev --save-exact prettier
+  - npx prettier --write .
+  
 after_success:
   - bash <(curl -s https://codecov.io/bash)
