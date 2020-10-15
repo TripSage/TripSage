@@ -11,8 +11,8 @@ script:
   - pytest --pylint
   - python manage.py test
   - npm install --save-dev --save-exact prettier
-  - cd tripHome; pytest views.py; cd ..;
-  - coverage run -m unittest discover
+  - cd tripHome; pytest views.py; 
+  - coverage run -m views.py; coverage report; cd ..
   
 after_success:
   - bash <(curl -s https://codecov.io/bash)
