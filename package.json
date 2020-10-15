@@ -1,0 +1,35 @@
+{
+  "name": "tripsage",
+  "version": "1.0.0",
+  "description": "itenary planner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akashsrikanth2310/TripSage.git"
+  },
+  "keywords": [
+    "trip"
+  ],
+  "author": "team14",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akashsrikanth2310/TripSage/issues"
+  },
+  "homepage": "https://github.com/akashsrikanth2310/TripSage#readme",
+  "dependencies": {
+    "prettier": "^2.1.2"
+  },
+  "devDependencies": {
+    "git-format-staged": "^2.1.0",
+    "husky": "^4.3.0",
+    "pretty-quick": "^3.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
