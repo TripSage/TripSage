@@ -5,7 +5,7 @@ from __future__ import absolute_import
 import json
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.views.decorators.csrf import csrf_exempt
 import requests
@@ -54,6 +54,12 @@ def signin(request):
     else:
         form = AuthenticationForm()
         return render(request, 'registration/login.html', {'form': form})
+
+# method for logout of the user
+def signout(request):
+    logout(request)
+    return redirect('/')
+
 
 @csrf_exempt
 def get_response(request):
