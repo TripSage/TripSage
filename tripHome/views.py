@@ -86,3 +86,21 @@ def charlottekidfriendly(request):
     Function to render the results page
     """
     return render(request, "charlottekidfriendly.html")
+
+def raleighrelax(request):
+    """
+    Function to render the results page
+    """
+    return render(request, "raleighrelax.html")
+
+def raleighadventurous(request):
+    """
+    Function to render the results page
+    """
+    return render(request, "raleighadventurous.html")
+
+def raleighkidfriendly(request):
+    """
+    Function to render the results page
+    """
+    return render(request, "raleighkidfriendly.html")

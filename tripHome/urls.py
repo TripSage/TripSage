@@ -12,5 +12,7 @@ urlpatterns = [     # pylint: disable=invalid-name
     path("charlotterelax", views.charlotterelax, name="restaurants"),
     path("charlotteadventurous", views.charlotteadventurous, name="restaurants"),
     path("charlottekidfriendly", views.charlottekidfriendly, name="restaurants"),
-    
+    path("raleighadventurous", views.raleighadventurous, name="restaurants"),
+    path("raleighrelax", views.raleighrelax, name="restaurants"),
+    path("raleighkidfriendly", views.raleighkidfriendly, name="restaurants"),
 ]
