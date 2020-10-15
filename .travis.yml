@@ -10,7 +10,7 @@ script:
   - black .
   - pytest --pylint
   - python manage.py test
-  - coverage run -m unittest discover
+  - cd tripHome; coverage run -m unittest discover; cd ..;
   - npm install --save-dev --save-exact prettier
   - cd tripHome; pytest views.py; cd ..;
   
