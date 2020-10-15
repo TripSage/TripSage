@@ -55,6 +55,50 @@ def get_response(request):
     return HttpResponse(json.dumps(final_data))
 
 
+#adding tests
+def increment(arg_one):
+    """
+    Function to increment
+    """
+    arg_one = arg_one+1
+    return arg_one
+
+def add(arg_one,arg_two):
+    """
+    Function to add
+    """
+    ans = arg_one + arg_two
+    return ans
+
+def subtract(arg_one,arg_two):
+    """
+    Function to subtract
+    """
+    ans = arg_one - arg_two
+    return ans
+
+def multiply(arg_one,arg_two):
+    """
+    Function to multiply
+    """
+    ans = arg_one * arg_two
+    return ans
+
+def divide(arg_one,arg_two):
+    """
+    Function to divide
+    """
+    ans = arg_one/arg_two
+    return ans
+
+def modulo(arg_one,arg_two):
+    """
+    Function to modulo
+    """
+    ans = arg_one%arg_two
+    return ans
+
+
 def results_page(request):
     """
     Function to render the results page
@@ -110,51 +154,6 @@ def raleighkidfriendly(request):
     Function to render the results page
     """
     return render(request, "raleighkidfriendly.html")
-
-
-#adding tests
-def increment(arg_one):
-    """
-    Function to increment
-    """
-    arg_one = arg_one+1
-    return arg_one
-
-def add(arg_one,arg_two):
-    """
-    Function to add
-    """
-    ans = arg_one + arg_two
-    return ans
-
-def subtract(arg_one,arg_two):
-    """
-    Function to subtract
-    """
-    ans = arg_one - arg_two
-    return ans
-
-def multiply(arg_one,arg_two):
-    """
-    Function to multiply
-    """
-    ans = arg_one * arg_two
-    return ans
-
-def divide(arg_one,arg_two):
-    """
-    Function to divide
-    """
-    ans = arg_one/arg_two
-    return ans
-
-def modulo(arg_one,arg_two):
-    """
-    Function to modulo
-    """
-    ans = arg_one%arg_two
-    return ans
-
 
 
 def test_increment_method():
