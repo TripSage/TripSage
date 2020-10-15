@@ -55,7 +55,7 @@ def get_response(request):
     return HttpResponse(json.dumps(final_data))
 
 
-#adding tests
+#adding increment and add methods
 def increment(arg_one):
     """
     Function to increment
@@ -98,6 +98,47 @@ def modulo(arg_one,arg_two):
     ans = arg_one%arg_two
     return ans
 
+def add_by_two(arg_one):
+    """
+    Function to add 2
+    """
+    ans = arg_one + 2
+    return ans
+
+def add_by_three(arg_one):
+    """
+    Function to add 3
+    """
+    ans = arg_one + 3
+    return ans
+
+def add_by_four(arg_one):
+    """
+    Function to add 4
+    """
+    ans = arg_one + 4
+    return ans
+
+def add_by_five(arg_one):
+    """
+    Function to add 5
+    """
+    ans = arg_one + 5
+    return ans
+
+def add_by_six(arg_one):
+    """
+    Function to add 6
+    """
+    ans = arg_one + 6
+    return ans
+
+def add_by_seven(arg_one):
+    """
+    Function to add 7
+    """
+    ans = arg_one + 7
+    return ans
 
 def results_page(request):
     """
@@ -109,6 +150,12 @@ def results_page(request):
     test_val = multiply(1,2)
     test_val = divide(1,2)
     test_val = modulo(1,3)
+    test_val = add_by_two(1)
+    test_val = add_by_three(1)
+    test_val = add_by_four(1)
+    test_val = add_by_five(1)
+    test_val = add_by_six(1)
+    test_val = add_by_seven(1)
     test_val = test_val + 1
     return render(request, "charlotterelax.html", {"data": ""})
 
@@ -156,7 +203,7 @@ def raleighkidfriendly(request):
     """
     return render(request, "raleighkidfriendly.html")
 
-
+#adding tests to check
 def test_increment_method():
     """
     Function to check increment
@@ -198,3 +245,46 @@ def test_modulo_method():
     """
     test_val = modulo(2,2)
     assert test_val == 0
+    
+def test_add_two_method():
+    """
+    Function to check increment by 2
+    """
+    test_val = add_by_two(1)
+    assert test_val == 3
+
+def test_add_three_method():
+    """
+    Function to check increment by 3
+    """
+    test_val = add_by_three(1)
+    assert test_val == 4
+
+def test_add_four_method():
+    """
+    Function to check increment by 4
+    """
+    test_val = add_by_four(1)
+    assert test_val == 5
+
+def test_add_five_method():
+    """
+    Function to check increment by 5
+    """
+    test_val = add_by_five(1)
+    assert test_val == 6
+
+def test_add_six_method():
+    """
+    Function to check increment by 6
+    """
+    test_val = add_by_six(1)
+    assert test_val == 7
+
+def test_add_seven_method():
+    """
+    Function to check increment by 7
+    """
+    test_val = add_by_seven(1)
+    assert test_val == 8
+
