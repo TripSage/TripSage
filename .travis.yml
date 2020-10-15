@@ -12,7 +12,7 @@ script:
   - python manage.py test
   - npm install --save-dev --save-exact prettier
   - cd tripHome; pytest views.py; 
-  - coverage run -m views.py; coverage report; cd ..
+  - coverage run -m py.test views.py; coverage report; cd ..
   
 after_success:
   - bash <(curl -s https://codecov.io/bash)
