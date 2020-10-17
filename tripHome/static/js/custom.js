@@ -173,7 +173,7 @@ function saveData() {
     }
   }
 
-  if (destination == "charlotte") {
+  if (destination == "Charlotte") {
     var index = trip_kinds.indexOf("adventurous");
     if (index != -1){
       url = "charlotteadventurous"
