@@ -158,8 +158,34 @@ function saveData() {
   //redirect to results page
   var url = "search";
 
-  if (destination === "charlotte") {
-    url = "charlotterelaxcar";
+  if (destination == "raleigh") {
+    var index = trip_kinds.indexOf("adventurous");
+    if (index != -1){
+      url = "raleighadventurous"
+    }
+    var index = trip_kinds.indexOf("kids");
+    if (index != -1){
+      url = "raleighkidfriendly"
+    }
+    var index = trip_kinds.indexOf("relaxing");
+    if (index != -1){
+      url = "raleighrelax"
+    }
+  }
+
+  if (destination == "charlotte") {
+    var index = trip_kinds.indexOf("adventurous");
+    if (index != -1){
+      url = "charlotteadventurous"
+    }
+    var index = trip_kinds.indexOf("kids");
+    if (index != -1){
+      url = "charlottekidfriendly"
+    }
+    var index = trip_kinds.indexOf("relaxing");
+    if (index != -1){
+      url = "charlotterelax"
+    }
   }
 
   document.location.href = url;
