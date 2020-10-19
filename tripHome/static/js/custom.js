@@ -188,5 +188,20 @@ function saveData() {
     }
   }
 
+  if (destination == "Asheville") {
+    var index = trip_kinds.indexOf("adventurous");
+    if (index != -1){
+      url = "ashevilleadventurous"
+    }
+    var index = trip_kinds.indexOf("kids");
+    if (index != -1){
+      url = "ashevillekidfriendly"
+    }
+    var index = trip_kinds.indexOf("relaxing");
+    if (index != -1){
+      url = "ashevillerelax"
+    }
+  }
+
   document.location.href = url;
 }
