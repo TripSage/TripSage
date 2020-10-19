@@ -139,6 +139,14 @@ a:focus {
   position: relative;
 }
 
+#hero-asheville {
+  background-image: url(../img/asheville.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+  min-height: 375px;
+  position: relative;
+}
+
 #hero-raleigh {
   background-image: url(../img/raleigh.jpg);
   background-repeat: no-repeat;

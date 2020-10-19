@@ -203,6 +203,24 @@ def raleighkidfriendly(request):
     """
     return render(request, "raleighkidfriendly.html")
 
+def ashevillerelax(request):
+    """
+    Function to render the results page
+    """
+    return render(request, "ashevillerelax.html")
+
+def ashevilleadventurous(request):
+    """
+    Function to render the results page
+    """
+    return render(request, "ashevilleadventurous.html")
+
+def ashevillekidfriendly(request):
+    """
+    Function to render the results page
+    """
+    return render(request, "ashevillekidfriendly.html")
+
 #adding tests to check
 def test_increment_method():
     """
