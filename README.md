@@ -57,3 +57,19 @@ TripSage/</br>
 
 </br>
 
+### Phase 1 Completed Deliverables
+
+<ul>
+  <li>Setup design and architecture of project (Django MVC)</li>
+  <li>Implemented call to Google Maps API to retrieve location details.</li>
+  <li>Setup Database Models required for the application. </li>
+  <li>Designed UI Mockups for the front end of the application.</li>
+</ul>
+
+### Phase 2 Planned Deliverables
+<ul>
+<li>Improve the front-end of the design</li>
+ <li>Addition of style checkers for codebase</li>
+  <li>Adding Formatting guide and Code coverage to the code</li>
+  <li>Implementing core functionalities using the UI Mockups as a reference</li>
+</ul>
