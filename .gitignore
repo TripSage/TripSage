@@ -9,7 +9,8 @@ __pycache__/
 *.so
 
 # Virtual Env
-sengproj2/
+seng20proj/
+
 
 # Distribution / packaging
 .Python
