@@ -9,7 +9,7 @@ The only Itinerary planner, you will ever need
 
 See UI Mockups at : [TRIPSAGE](http://xd.adobe.com/view/4b11902d-7907-4938-846e-cf4fd00181af-1e42/)
 
-[<img src = "https://github.com/TripSage/TripSage/blob/master/Assets/TripSage%20Playable.png">](https://youtu.be/N0GYVmutWzM)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/yO8Xo6UvWUQ/0.jpg)](https://www.youtube.com/watch?v=yO8Xo6UvWUQ)
 </br>
 </br>
 </br>
@@ -56,10 +56,20 @@ TripSage/</br>
 </br>
 
 </br>
-### Group:
 
-1. [Dhruvil Shah](mailto:dshah4@ncsu.edu) (dshah4)<br>
-2. [Neeraj Shukla](mailto:nshukla2@ncsu.edu) (nshukla2)<br>
-3. [Poorvaja Penmetsa](mailto:ppenmet@ncsu.edu) (ppenmet)<br>
-4. [Sreemoyee Ray](mailto:sray9@ncsu.edu) (sray9)<br>
-5. [Sameer Adhikari](mailto:sadhika2@ncsu.edu) (sadhika2)<br>
+### Phase 1 Completed Deliverables
+
+<ul>
+  <li>Setup design and architecture of project (Django MVC)</li>
+  <li>Implemented call to Google Maps API to retrieve location details.</li>
+  <li>Setup Database Models required for the application. </li>
+  <li>Designed UI Mockups for the front end of the application.</li>
+</ul>
+
+### Phase 2 Planned Deliverables
+<ul>
+<li>Improve the front-end of the design</li>
+ <li>Addition of style checkers for codebase</li>
+  <li>Adding Formatting guide and Code coverage to the code</li>
+  <li>Implementing core functionalities using the UI Mockups as a reference</li>
+</ul>

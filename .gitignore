@@ -8,6 +8,10 @@ __pycache__/
 # C extensions
 *.so
 
+# Virtual Env
+seng20proj/
+
+
 # Distribution / packaging
 .Python
 build/

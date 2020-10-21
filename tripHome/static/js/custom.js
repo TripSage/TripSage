@@ -38,7 +38,6 @@ $(document).ready(function () {
 
   // 5. datepicker
   $('[data-toggle="datepicker"]').datepicker();
-
   // 6. Smooth Scroll spy
 
   $(".header-area").sticky({
