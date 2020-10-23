@@ -6,10 +6,7 @@ import sys
 import os
 import json
 from django.shortcuts import render
-from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-import requests
-import xmltodict
 import django
 from django.test import RequestFactory
 
@@ -33,8 +30,9 @@ def get_response(request):
     # getting the landing page data in form of dictionary
     client_data = json.loads(request.POST["requestData"])
     final_data = {}
-    client_data = 1
-    final_data = 1
+    client_data = client_data + 1
+    final_data = final_data + 2
+
 #     for city in client_data["destination_selected"]:
 #         complete_data = {}
 #         for types in client_data["tripType"]:
