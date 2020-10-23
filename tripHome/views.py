@@ -29,10 +29,7 @@ def get_response(request):
     """
     # getting the landing page data in form of dictionary
     client_data = json.loads(request.POST["requestData"])
-    final_data = {}
     client_data = client_data + 1
-    final_data = final_data + 2
-
 #     for city in client_data["destination_selected"]:
 #         complete_data = {}
 #         for types in client_data["tripType"]:

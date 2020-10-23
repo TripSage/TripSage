@@ -4,7 +4,6 @@ The only Itinerary planner, you will ever need
 
 [![Build Status](https://travis-ci.com/akashsrikanth2310/TripSage.svg?branch=master)](https://travis-ci.com/akashsrikanth2310/TripSage)
 [![DOI](https://zenodo.org/badge/299120263.svg)](https://zenodo.org/badge/latestdoi/299120263)
-[![Maintainability](https://api.codeclimate.com/v1/badges/576c3ed7254e83498bcc/maintainability)](https://codeclimate.com/github/akashsrikanth2310/TripSage/maintainability)
 [![codecov](https://codecov.io/gh/akashsrikanth2310/TripSage/branch/master/graph/badge.svg)](https://codecov.io/gh/akashsrikanth2310/TripSage)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/akashsrikanth2310/TripSage/issues)
 ![GitHub](https://img.shields.io/github/license/TripSage/TripSage)
