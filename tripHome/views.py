@@ -2,14 +2,14 @@
 view for tripHome app
 """
 from __future__ import absolute_import
+import sys
+import os
 import json
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 import requests
 import xmltodict
-import sys
-import os
 import django
 from django.test import TestCase, RequestFactory
 
