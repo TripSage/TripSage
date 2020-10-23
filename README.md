@@ -13,8 +13,8 @@ The only Itinerary planner, you will ever need
 
 **UI Pages Designed**
 
-[![Home Page](https://github.com/akashsrikanth2310/TripSage/blob/master/Assets/home.png)]
-[![Search Page](https://github.com/akashsrikanth2310/TripSage/blob/master/Assets/char.png)]
+!(https://github.com/akashsrikanth2310/TripSage/blob/master/Assets/home.png)
+!(https://github.com/akashsrikanth2310/TripSage/blob/master/Assets/char.png)
 
 **Code Formatter :**
 
