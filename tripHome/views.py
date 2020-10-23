@@ -73,43 +73,43 @@ def index(request):
 
 def charlotterelax(request):
     """
-    Function to render the results page
+    Function to render the charlotte results page
     """
     return render(request, "charlotterelax.html")
 
 def charlotteadventurous(request):
     """
-    Function to render the results page
+    Function to render the adventourous results page
     """
     return render(request, "charlotteadventurous.html")
 
 def charlottekidfriendly(request):
     """
-    Function to render the results page
+    Function to render the friendly results page
     """
     return render(request, "charlottekidfriendly.html")
 
 def raleighrelax(request):
     """
-    Function to render the results page
+    Function to render the religh results page
     """
     return render(request, "raleighrelax.html")
 
 def raleighadventurous(request):
     """
-    Function to render the results page
+    Function to render the adventurous results page
     """
     return render(request, "raleighadventurous.html")
 
 def raleighkidfriendly(request):
     """
-    Function to render the results page
+    Function to render the friendly results page
     """
     return render(request, "raleighkidfriendly.html")
 
 def ashevillerelax(request):
     """
-    Function to render the results page
+    Function to render the ashville results page
     """
     return render(request, "ashevillerelax.html")
 
@@ -121,14 +121,14 @@ def ashevilleadventurous(request):
 
 def ashevillekidfriendly(request):
     """
-    Function to render the results page
+    Function to render the kid friendly results page
     """
     return render(request, "ashevillekidfriendly.html")
 
 #adding tests to check
 def test_charlotterelax_method():
     """
-    Function to check increment
+    Function to check charlotterelax_method
     """
     request = RequestFactory().get(('tripHome//charlotterelax'))
     response = charlotterelax(request)
@@ -136,7 +136,7 @@ def test_charlotterelax_method():
 
 def test_charlotteadventurous_method():
     """
-    Function to check increment
+    Function to check charlotteadventurous_method
     """
     request = RequestFactory().get(('tripHome//charlotteadventurous'))
     response = charlotteadventurous(request)
@@ -144,7 +144,7 @@ def test_charlotteadventurous_method():
 
 def test_charlottekidfriendly_method():
     """
-    Function to check increment
+    Function to check charlottekidfriendly_method
     """
     request = RequestFactory().get(('tripHome//charlottekidfriendly'))
     response = charlottekidfriendly(request)
@@ -152,7 +152,7 @@ def test_charlottekidfriendly_method():
 
 def test_raleighrelax_method():
     """
-    Function to check increment
+    Function to check raleighrelax_method
     """
     request = RequestFactory().get(('tripHome//raleighrelax'))
     response = raleighrelax(request)
@@ -160,7 +160,7 @@ def test_raleighrelax_method():
 
 def test_raleighadventurous_method():
     """
-    Function to check increment
+    Function to check raleighadventurous_metho
     """
     request = RequestFactory().get(('tripHome//raleighadventurous'))
     response = raleighadventurous(request)
@@ -168,7 +168,7 @@ def test_raleighadventurous_method():
 
 def test_raleighkidfriendly_method():
     """
-    Function to check increment
+    Function to check raleighkidfriendly_method
     """
     request = RequestFactory().get(('tripHome//raleighkidfriendly'))
     response = raleighkidfriendly(request)
@@ -176,7 +176,7 @@ def test_raleighkidfriendly_method():
 
 def test_ashevillerelax_method():
     """
-    Function to check increment
+    Function to check ashevillerelax_method
     """
     request = RequestFactory().get(('tripHome//ashevillerelax'))
     response = ashevillerelax(request)
@@ -184,7 +184,7 @@ def test_ashevillerelax_method():
 
 def test_ashevilleadventurous_method():
     """
-    Function to check increment
+    Function to check ashevilleadventurous_method
     """
     request = RequestFactory().get(('tripHome//ashevilleadventurous'))
     response = ashevilleadventurous(request)
@@ -192,7 +192,7 @@ def test_ashevilleadventurous_method():
 
 def test_ashevillekidfriendly_method():
     """
-    Function to check increment
+    Function to check ashevillekidfriendly_method
     """
     request = RequestFactory().get(('tripHome//ashevillekidfriendly'))
     response = ashevillekidfriendly(request)
@@ -200,7 +200,7 @@ def test_ashevillekidfriendly_method():
 
 def test_results_page_method():
     """
-    Function to check increment
+    Function to check results_page_method
     """
     request = RequestFactory().get(('tripHome//charlotterelax'))
     response = results_page(request)
@@ -208,7 +208,7 @@ def test_results_page_method():
 
 def test_index_method():
     """
-    Function to check increment
+    Function to check index_method
     """
     request = RequestFactory().get(('tripHome//inde'))
     response = index(request)
