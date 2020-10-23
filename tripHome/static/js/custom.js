@@ -1,3 +1,4 @@
+//Dcoument ready function for getting the index page ready - arguments [None]
 $(document).ready(function () {
   "use strict";
 
