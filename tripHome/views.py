@@ -11,7 +11,7 @@ from django.views.decorators.csrf import csrf_exempt
 import requests
 import xmltodict
 import django
-from django.test import TestCase, RequestFactory
+from django.test import RequestFactory
 
 sys.path.append(".")
 os.environ['DJANGO_SETTINGS_MODULE'] = 'TripSage.settings'
