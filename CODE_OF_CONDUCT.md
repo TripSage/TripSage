@@ -12,7 +12,7 @@ appearance, race, religion, or sexual identity and orientation.
 ## Our Standards
 
 Examples of behavior that contributes to creating a positive environment
-include:
+includes:
 
 - Using welcoming and inclusive language
 - Being respectful of differing viewpoints and experiences
@@ -71,4 +71,4 @@ members of the project's leadership.
 
 Respecting the ideas, innovations, amendments we make is one of the top aspects required
 in our code of conduct. We see leaders in everybody. Leader can be anyone whose are obsessed with customers,
-requirements, purpose of the work.
+requirements, purpose of the work. Creativity will also be treated with respect.
