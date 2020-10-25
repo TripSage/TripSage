@@ -4,13 +4,20 @@ The only Itinerary planner, you will ever need
 
 [![Build Status](https://travis-ci.com/akashsrikanth2310/TripSage.svg?branch=master)](https://travis-ci.com/akashsrikanth2310/TripSage)
 [![DOI](https://zenodo.org/badge/299120263.svg)](https://zenodo.org/badge/latestdoi/299120263)
-[![Maintainability](https://api.codeclimate.com/v1/badges/576c3ed7254e83498bcc/maintainability)](https://codeclimate.com/github/akashsrikanth2310/TripSage/maintainability)
 [![codecov](https://codecov.io/gh/akashsrikanth2310/TripSage/branch/master/graph/badge.svg)](https://codecov.io/gh/akashsrikanth2310/TripSage)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/akashsrikanth2310/TripSage/issues)
 ![GitHub](https://img.shields.io/github/license/TripSage/TripSage)
 [![Code of Conduct](https://img.shields.io/badge/code-of%20conduct-green.svg)](https://github.com/akashsrikanth2310/TripSage/blob/master/CODE_OF_CONDUCT.md)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/akashsrikanth2310/TripSage/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/akashsrikanth2310/TripSage)](https://github.com/akashsrikanth2310/TripSage/issues)
+
+**UI Pages Designed**
+
+Home Page :
+![Home Page](https://github.com/akashsrikanth2310/TripSage/blob/master/Assets/home.png)
+
+Search Page :
+![Search Page](https://github.com/akashsrikanth2310/TripSage/blob/master/Assets/char.png)
 
 **Code Formatter :**
 
@@ -26,7 +33,7 @@ CodeCov and Coverage.py : https://github.com/marketplace/codecov
 
 See UI Mockups at : [TRIPSAGE](http://xd.adobe.com/view/4b11902d-7907-4938-846e-cf4fd00181af-1e42/)
 
-[<img src = "https://github.com/TripSage/TripSage/blob/master/Assets/TripSage%20Playable.png">](https://youtu.be/N0GYVmutWzM)
+[<img src = "https://github.com/akashsrikanth2310/TripSage/blob/master/Assets/imageLInk.png">](https://youtu.be/6ZF-kuAXmGc)
 </br>
 </br>
 </br>

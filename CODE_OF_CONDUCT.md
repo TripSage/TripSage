@@ -12,7 +12,7 @@ appearance, race, religion, or sexual identity and orientation.
 ## Our Standards
 
 Examples of behavior that contributes to creating a positive environment
-include:
+includes:
 
 - Using welcoming and inclusive language
 - Being respectful of differing viewpoints and experiences
@@ -57,7 +57,7 @@ further defined and clarified by project maintainers.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the project team at ppenmet@ncsu.edu or sadhika2@ncsu.edu. All
+reported by contacting the project team at asrikan2@ncsu.edu. All
 complaints will be reviewed and investigated and will result in a response that
 is deemed necessary and appropriate to the circumstances. The project team is
 obligated to maintain confidentiality with regard to the reporter of an incident.
@@ -71,4 +71,4 @@ members of the project's leadership.
 
 Respecting the ideas, innovations, amendments we make is one of the top aspects required
 in our code of conduct. We see leaders in everybody. Leader can be anyone whose are obsessed with customers,
-requirements, purpose of the work.
+requirements, purpose of the work. Creativity will also be treated with respect.

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TripSage</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'search_pages/fontawesome-5.5/css/all.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'search_pages/slick/slick.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'search_pages/slick/slick-theme' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'search_pages/magnific-popup/magnific-popup.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'search_pages/css/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'search_pages/css/templatemo-style.css' %}"
+    />
+  </head>
+  <body>
+    <!-- Hero section -->
+    <section id="hero-asheville" class="text-white tm-font-big tm-parallax">
+      <div class="text-center tm-hero-text-container">
+        <div class="tm-hero-text-container-inner">
+          <h2 class="tm-hero-title">Asheville, NC</h2>
+          <p class="tm-hero-subtitle">
+            Enjoy your kid-friendly vacation in Asheville!
+            <br />This itenary is designed to show you places that you can drive
+            to. Happy driving!
+          </p>
+        </div>
+      </div>
+
+      <div class="tm-next tm-intro-next">
+        <a href="#introduction" class="text-center tm-down-arrow-link">
+          <i class="fas fa-3x fa-caret-down tm-down-arrow"></i>
+        </a>
+      </div>
+    </section>
+
+    <section id="introduction" class="tm-section-pad-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <iframe
+              src="https://www.google.com/maps/d/u/0/embed?mid=1NlNsqdfo0nOMGKep-wybm_YXyf-jMkn8"
+              width="600"
+              height="500"
+            ></iframe>
+          </div>
+          <div class="col-lg-6">
+            <div class="tm-intro-text-container">
+              <h2 class="tm-text-primary mb-4 tm-section-title">
+                Places to visit
+              </h2>
+              <p class="mb-4 tm-intro-text"></p>
+              <ol type="A">
+                <li>Asheville Pinball Museum</li>
+                <li>Asheville Museum of Science </li>
+                <li>Fun Depot</li>
+                <li>Mountain Play Lodge</li>
+                <li>Biltmore Estate</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div style="margin: 10rem;"></div>
+    <script src="../static/search_pages/js/jquery-1.9.1.min.js"></script>
+    <script src="../static/search_pages/slick/slick.min.js"></script>
+    <script src="../static/search_pages/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="../static/search_pages/js/jquery.singlePageNav.min.js"></script>
+    <script src="../static/search_pages/js/bootstrap.min.js"></script>
+    <script>
+      function getOffSet() {
+        var _offset = 450;
+        var windowHeight = window.innerHeight;
+
+        if (windowHeight > 500) {
+          _offset = 400;
+        }
+        if (windowHeight > 680) {
+          _offset = 300;
+        }
+        if (windowHeight > 830) {
+          _offset = 210;
+        }
+
+        return _offset;
+      }
+
+      function setParallaxPosition($doc, multiplier, $object) {
+        var offset = getOffSet();
+        var from_top = $doc.scrollTop(),
+          bg_css = "center " + (multiplier * from_top - offset) + "px";
+        $object.css({ "background-position": bg_css });
+      }
+
+      // Parallax function
+      // Adapted based on https://codepen.io/roborich/pen/wpAsm
+      var background_image_parallax = function ($object, multiplier, forceSet) {
+        multiplier = typeof multiplier !== "undefined" ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        // $object.css({"background-attatchment" : "fixed"});
+
+        if (forceSet) {
+          setParallaxPosition($doc, multiplier, $object);
+        } else {
+          $(window).scroll(function () {
+            setParallaxPosition($doc, multiplier, $object);
+          });
+        }
+      };
+
+      var background_image_parallax_2 = function ($object, multiplier) {
+        multiplier = typeof multiplier !== "undefined" ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        $object.css({ "background-attachment": "fixed" });
+        $(window).scroll(function () {
+          var firstTop = $object.offset().top,
+            pos = $(window).scrollTop(),
+            yPos = Math.round(multiplier * (firstTop - pos) - 186);
+
+          var bg_css = "center " + yPos + "px";
+
+          $object.css({ "background-position": bg_css });
+        });
+      };
+
+      $(function () {
+        // Hero Section - Background Parallax
+        background_image_parallax($(".tm-parallax"), 0.3, false);
+        background_image_parallax_2($("#contact"), 0.8);
+
+        // Handle window resize
+        window.addEventListener(
+          "resize",
+          function () {
+            background_image_parallax($(".tm-parallax"), 0.3, true);
+          },
+          true
+        );
+
+        // Detect window scroll and update navbar
+        $(window).scroll(function (e) {
+          if ($(document).scrollTop() > 120) {
+            $(".tm-navbar").addClass("scroll");
+          } else {
+            $(".tm-navbar").removeClass("scroll");
+          }
+        });
+
+        // Close mobile menu after click
+        $("#tmNav a").on("click", function () {
+          $(".navbar-collapse").removeClass("show");
+        });
+
+        // Scroll to corresponding section with animation
+        $("#tmNav").singlePageNav();
+
+        // Add smooth scrolling to all links
+        // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+        $("a").on("click", function (event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              400,
+              function () {
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+
+        // Pop up
+        $(".tm-gallery").magnificPopup({
+          delegate: "a",
+          type: "image",
+          gallery: { enabled: true },
+        });
+
+        // Gallery
+        $(".tm-gallery").slick({
+          dots: true,
+          infinite: false,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          responsive: [
+            {
+              breakpoint: 1199,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 2,
+              },
+            },
+            {
+              breakpoint: 991,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2,
+              },
+            },
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>

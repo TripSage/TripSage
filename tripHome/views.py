@@ -2,13 +2,17 @@
 view for tripHome app
 """
 from __future__ import absolute_import
+import sys
+import os
 import json
 from django.shortcuts import render
-from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-import requests
-import xmltodict
+import django
+from django.test import RequestFactory
 
+sys.path.append(".")
+os.environ['DJANGO_SETTINGS_MODULE'] = 'TripSage.settings'
+django.setup()
 
 # Map for the type of the trip to the places user can visit
 TYPES_PLACE_MAP = {
@@ -25,138 +29,38 @@ def get_response(request):
     """
     # getting the landing page data in form of dictionary
     client_data = json.loads(request.POST["requestData"])
-    final_data = {}
-    
-    for city in client_data["destination_selected"]:
-        complete_data = {}
-        for types in client_data["tripType"]:
-            for place in TYPES_PLACE_MAP[types]:
-                api = (
-                    "https://maps.googleapis.com/maps/api/" +
-                    "place/textsearch/xml?query="
-                    + place
-                    + "+in+"
-                    + city
-                    + "&key=AIzaSyAIsboWfXVchmgBxPGKG5lUF9AENUKcSI8"
-                )
-                data_dict = xmltodict.parse(requests.get(api).content)
-                results = json.loads(json.dumps(data_dict))
-                list_items = []
-                for item in results.items():
-                    list_items = item
-                val = []
-                for values in list_items[1].items():
-                    val.append(values)
-                if len(val) > 1:
-                    for values in val[1][1][:3]:
-                        loaded_r = json.loads(json.dumps(values))
-                        complete_data[str(loaded_r["name"])] = str(loaded_r["rating"])
-        final_data[city] = complete_data
-    return HttpResponse(json.dumps(final_data))
-
-
-#adding increment and add methods
-def increment(arg_one):
-    """
-    Function to increment
-    """
-    arg_one = arg_one+1
-    return arg_one
-
-def add(arg_one,arg_two):
-    """
-    Function to add
-    """
-    ans = arg_one + arg_two
-    return ans
-
-def subtract(arg_one,arg_two):
-    """
-    Function to subtract
-    """
-    ans = arg_one - arg_two
-    return ans
-
-def multiply(arg_one,arg_two):
-    """
-    Function to multiply
-    """
-    ans = arg_one * arg_two
-    return ans
-
-def divide(arg_one,arg_two):
-    """
-    Function to divide
-    """
-    ans = arg_one/arg_two
-    return ans
-
-def modulo(arg_one,arg_two):
-    """
-    Function to modulo
-    """
-    ans = arg_one%arg_two
-    return ans
-
-def add_by_two(arg_one):
-    """
-    Function to add 2
-    """
-    ans = arg_one + 2
-    return ans
-
-def add_by_three(arg_one):
-    """
-    Function to add 3
-    """
-    ans = arg_one + 3
-    return ans
-
-def add_by_four(arg_one):
-    """
-    Function to add 4
-    """
-    ans = arg_one + 4
-    return ans
-
-def add_by_five(arg_one):
-    """
-    Function to add 5
-    """
-    ans = arg_one + 5
-    return ans
-
-def add_by_six(arg_one):
-    """
-    Function to add 6
-    """
-    ans = arg_one + 6
-    return ans
-
-def add_by_seven(arg_one):
-    """
-    Function to add 7
-    """
-    ans = arg_one + 7
-    return ans
+    client_data = client_data + 1
+#     for city in client_data["destination_selected"]:
+#         complete_data = {}
+#         for types in client_data["tripType"]:
+#             for place in TYPES_PLACE_MAP[types]:
+#                 api = (
+#                     "https://maps.googleapis.com/maps/api/" +
+#                     "place/textsearch/xml?query="
+#                     + place
+#                     + "+in+"
+#                     + city
+#                     + "&key=AIzaSyAIsboWfXVchmgBxPGKG5lUF9AENUKcSI8"
+#                 )
+#                 data_dict = xmltodict.parse(requests.get(api).content)
+#                 results = json.loads(json.dumps(data_dict))
+#                 list_items = []
+#                 for item in results.items():
+#                     list_items = item
+#                 val = []
+#                 for values in list_items[1].items():
+#                     val.append(values)
+#                 if len(val) > 1:
+#                     for values in val[1][1][:3]:
+#                         loaded_r = json.loads(json.dumps(values))
+#                         complete_data[str(loaded_r["name"])] = str(loaded_r["rating"])
+#         final_data[city] = complete_data
+#     return HttpResponse(json.dumps(final_data))
 
 def results_page(request):
     """
     Function to render the results page
     """
-    test_val = increment(1)
-    test_val = add(1,2)
-    test_val = subtract(1,2)
-    test_val = multiply(1,2)
-    test_val = divide(1,2)
-    test_val = modulo(1,3)
-    test_val = add_by_two(1)
-    test_val = add_by_three(1)
-    test_val = add_by_four(1)
-    test_val = add_by_five(1)
-    test_val = add_by_six(1)
-    test_val = add_by_seven(1)
-    test_val = test_val + 1
     return render(request, "charlotterelax.html", {"data": ""})
 
 
@@ -169,122 +73,143 @@ def index(request):
 
 def charlotterelax(request):
     """
-    Function to render the results page
+    Function to render the charlotte results page
     """
     return render(request, "charlotterelax.html")
 
 def charlotteadventurous(request):
     """
-    Function to render the results page
+    Function to render the adventourous results page
     """
     return render(request, "charlotteadventurous.html")
 
 def charlottekidfriendly(request):
     """
-    Function to render the results page
+    Function to render the friendly results page
     """
     return render(request, "charlottekidfriendly.html")
 
 def raleighrelax(request):
     """
-    Function to render the results page
+    Function to render the religh results page
     """
     return render(request, "raleighrelax.html")
 
 def raleighadventurous(request):
     """
-    Function to render the results page
+    Function to render the adventurous results page
     """
     return render(request, "raleighadventurous.html")
 
 def raleighkidfriendly(request):
     """
-    Function to render the results page
+    Function to render the friendly results page
     """
     return render(request, "raleighkidfriendly.html")
 
+def ashevillerelax(request):
+    """
+    Function to render the ashville results page
+    """
+    return render(request, "ashevillerelax.html")
+
+def ashevilleadventurous(request):
+    """
+    Function to render the results page
+    """
+    return render(request, "ashevilleadventurous.html")
+
+def ashevillekidfriendly(request):
+    """
+    Function to render the kid friendly results page
+    """
+    return render(request, "ashevillekidfriendly.html")
+
 #adding tests to check
-def test_increment_method():
+def test_charlotterelax_method():
     """
-    Function to check increment
+    Function to check charlotterelax_method
     """
-    test_val = increment(1)
-    assert test_val == 2
+    request = RequestFactory().get(('tripHome//charlotterelax'))
+    response = charlotterelax(request)
+    assert response.status_code == 200
 
-def test_add_method():
+def test_charlotteadventurous_method():
     """
-    Function to check add
+    Function to check charlotteadventurous_method
     """
-    test_val = add(1,2)
-    assert test_val == 3
+    request = RequestFactory().get(('tripHome//charlotteadventurous'))
+    response = charlotteadventurous(request)
+    assert response.status_code == 200
 
-def test_subtract_method():
+def test_charlottekidfriendly_method():
     """
-    Function to check subtract
+    Function to check charlottekidfriendly_method
     """
-    test_val = subtract(1,1)
-    assert test_val == 0
+    request = RequestFactory().get(('tripHome//charlottekidfriendly'))
+    response = charlottekidfriendly(request)
+    assert response.status_code == 200
 
-def test_multiply_method():
+def test_raleighrelax_method():
     """
-    Function to check multiply
+    Function to check raleighrelax_method
     """
-    test_val = multiply(1,2)
-    assert test_val == 2
+    request = RequestFactory().get(('tripHome//raleighrelax'))
+    response = raleighrelax(request)
+    assert response.status_code == 200
 
-def test_divide_method():
+def test_raleighadventurous_method():
     """
-    Function to check divide
+    Function to check raleighadventurous_metho
     """
-    test_val = divide(4,2)
-    assert test_val == 2
+    request = RequestFactory().get(('tripHome//raleighadventurous'))
+    response = raleighadventurous(request)
+    assert response.status_code == 200
 
-def test_modulo_method():
+def test_raleighkidfriendly_method():
     """
-    Function to check modulo
+    Function to check raleighkidfriendly_method
     """
-    test_val = modulo(2,2)
-    assert test_val == 0
-    
-def test_add_two_method():
-    """
-    Function to check increment by 2
-    """
-    test_val = add_by_two(1)
-    assert test_val == 3
+    request = RequestFactory().get(('tripHome//raleighkidfriendly'))
+    response = raleighkidfriendly(request)
+    assert response.status_code == 200
 
-def test_add_three_method():
+def test_ashevillerelax_method():
     """
-    Function to check increment by 3
+    Function to check ashevillerelax_method
     """
-    test_val = add_by_three(1)
-    assert test_val == 4
+    request = RequestFactory().get(('tripHome//ashevillerelax'))
+    response = ashevillerelax(request)
+    assert response.status_code == 200
 
-def test_add_four_method():
+def test_ashevilleadventurous_method():
     """
-    Function to check increment by 4
+    Function to check ashevilleadventurous_method
     """
-    test_val = add_by_four(1)
-    assert test_val == 5
+    request = RequestFactory().get(('tripHome//ashevilleadventurous'))
+    response = ashevilleadventurous(request)
+    assert response.status_code == 200
 
-def test_add_five_method():
+def test_ashevillekidfriendly_method():
     """
-    Function to check increment by 5
+    Function to check ashevillekidfriendly_method
     """
-    test_val = add_by_five(1)
-    assert test_val == 6
+    request = RequestFactory().get(('tripHome//ashevillekidfriendly'))
+    response = ashevillekidfriendly(request)
+    assert response.status_code == 200
 
-def test_add_six_method():
+def test_results_page_method():
     """
-    Function to check increment by 6
+    Function to check results_page_method
     """
-    test_val = add_by_six(1)
-    assert test_val == 7
+    request = RequestFactory().get(('tripHome//charlotterelax'))
+    response = results_page(request)
+    assert response.status_code == 200
 
-def test_add_seven_method():
+def test_index_method():
     """
-    Function to check increment by 7
+    Function to check index_method
     """
-    test_val = add_by_seven(1)
-    assert test_val == 8
-
+    request = RequestFactory().get(('tripHome//inde'))
+    response = index(request)
+    assert response.status_code == 200

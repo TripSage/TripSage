@@ -1,3 +1,4 @@
+//Dcoument ready function for getting the index page ready - arguments [None]
 $(document).ready(function () {
   "use strict";
 
@@ -185,6 +186,21 @@ function saveData() {
     var index = trip_kinds.indexOf("relaxing");
     if (index != -1){
       url = "charlotterelax"
+    }
+  }
+
+  if (destination == "Asheville") {
+    var index = trip_kinds.indexOf("adventurous");
+    if (index != -1){
+      url = "ashevilleadventurous"
+    }
+    var index = trip_kinds.indexOf("kids");
+    if (index != -1){
+      url = "ashevillekidfriendly"
+    }
+    var index = trip_kinds.indexOf("relaxing");
+    if (index != -1){
+      url = "ashevillerelax"
     }
   }
 

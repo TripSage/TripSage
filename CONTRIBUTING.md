@@ -2,7 +2,7 @@
 
 First off, thanks for taking the time to contribute!
 
-The following is a set of guidelines for contributing to Project and its packages, which are hosted in the [Link](https://github.com/dhruvil009/HW01) on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
+The following is a set of guidelines for contributing to Project and its packages, which are hosted in the [Link](https://github.com/dhruvil009/HW01) on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request. Contributions must not be violation of any code of ethics.
 
 ## Table Of Contents
 
@@ -65,6 +65,7 @@ Refer [LICENSE](https://github.com/TripSage/TripSage/blob/master/LICENSE) for mo
 - Take a look at views.py - It is responsible for making requests via APIs and can get required response for you!
 - Take a look at URL.py under TripHome. This can save your life from dealing with different urls paths.
 - Then, it all break down to HTML pages, CSS and js files under templates and static folder respectively.
+- For setup instructions please visit: https://github.com/akashsrikanth2310/TripSage/wiki/How-to-Download-and-Run-Application%3F
 
 ## Issues for you to take care of!
 
